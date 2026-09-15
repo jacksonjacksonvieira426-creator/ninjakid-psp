@@ -77,8 +77,11 @@ void* j2me_image_get_graphics(void* img) { return img; }
 
 // Forward typedefs das classes do projeto
 typedef struct gamecanvas_AnimationTask_s gamecanvas_AnimationTask;
+typedef struct gamecanvas_AnimationTask_s gamecanvas_AnimationTask_s;
 typedef struct gamecanvas_s gamecanvas;
-typedef struct main_class_class_s main_class_class;
+typedef struct gamecanvas_s gamecanvas_s;
+typedef struct main_class_s main_class;
+typedef struct main_class_s main_class_s;
 
 // Globais
 void* _self = 0;
@@ -111,7 +114,7 @@ struct gamecanvas_s {
     int          game_keypressed;
     int          screenX;
     int          screenY;
-    main_class*        midlet;
+    main*        midlet;
     String**     tunes;
     int          red;
     int          green;
@@ -231,7 +234,7 @@ struct gamecanvas_s {
     int          pause;
 };
 
-struct main_class_s {
+struct main_s {
     Display*     display;
     gamecanvas*  screen;
     int          started;
@@ -296,13 +299,13 @@ void gamecanvas_ReborneEnemy(void* self, int arg0);
 void gamecanvas_PlayerDead(void* self);
 void gamecanvas_resetdata(void* self);
 void gamecanvas_GetExtra(void* self);
-void main_class_constructor(void* self);
-void main_class_startApp(void* self);
-void main_class_pauseApp(void* self);
-void main_class_destroyApp(void* self, int arg0);
-void main_class_hideNotify(void* self);
-void main_class_showNotify(void* self);
-void main_class_exitRequested(void* self);
+void main_constructor(void* self);
+void main_startApp(void* self);
+void main_pauseApp(void* self);
+void main_destroyApp(void* self, int arg0);
+void main_hideNotify(void* self);
+void main_showNotify(void* self);
+void main_exitRequested(void* self);
 
 // Implementacoes
 void gamecanvas_AnimationTask_constructor(void* self, void* arg0, void* arg1) {
@@ -666,44 +669,44 @@ void gamecanvas_GetExtra(void* self) {
     (void)s;
 }
 
-void main_class_constructor(void* self) {
-    main_class* s = (main_class*)self;
+void main_constructor(void* self) {
+    main* s = (main*)self;
     if (!s) return;
     (void)s;
 }
 
-void main_class_startApp(void* self) {
-    main_class* s = (main_class*)self;
+void main_startApp(void* self) {
+    main* s = (main*)self;
     if (!s) return;
     (void)s;
 }
 
-void main_class_pauseApp(void* self) {
-    main_class* s = (main_class*)self;
+void main_pauseApp(void* self) {
+    main* s = (main*)self;
     if (!s) return;
     (void)s;
 }
 
-void main_class_destroyApp(void* self, int arg0) {
-    main_class* s = (main_class*)self;
+void main_destroyApp(void* self, int arg0) {
+    main* s = (main*)self;
     if (!s) return;
     (void)s;
 }
 
-void main_class_hideNotify(void* self) {
-    main_class* s = (main_class*)self;
+void main_hideNotify(void* self) {
+    main* s = (main*)self;
     if (!s) return;
     (void)s;
 }
 
-void main_class_showNotify(void* self) {
-    main_class* s = (main_class*)self;
+void main_showNotify(void* self) {
+    main* s = (main*)self;
     if (!s) return;
     (void)s;
 }
 
-void main_class_exitRequested(void* self) {
-    main_class* s = (main_class*)self;
+void main_exitRequested(void* self) {
+    main* s = (main*)self;
     if (!s) return;
     (void)s;
 }
