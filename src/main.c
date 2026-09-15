@@ -54,6 +54,20 @@ typedef void* Character;
 typedef void* Boolean;
 typedef void* Float;
 typedef void* Double;
+typedef void* Sound;
+typedef void* DeviceControl;
+typedef void* SpriteEvent;
+typedef void* SpriteListener;
+typedef void* SpriteAction;
+typedef void* MIDP;
+typedef void* SoundListener;
+typedef void* Player;
+typedef void* PlayerListener;
+typedef void* Control;
+typedef void* Manager;
+typedef void* DataInputStream2;
+typedef void* ByteArrayInputStream;
+typedef void* ByteArrayOutputStream;
 
 // Stubs de biblioteca
 void j2me_canvas_repaint(void) { }
@@ -62,7 +76,7 @@ void j2me_gc(void) { }
 void* j2me_image_get_graphics(void* img) { return img; }
 
 // Forward typedefs das classes do projeto
-typedef struct ofusc_096d_s ofusc_096d;
+typedef struct gamecanvas_AnimationTask_s gamecanvas_AnimationTask;
 typedef struct gamecanvas_s gamecanvas;
 typedef struct main_s main;
 
@@ -81,8 +95,8 @@ int MapCanvas_still = 0;
 int MapCanvas_lightflag = 0;
 
 // Structs
-struct ofusc_096d_s {
-    gamecanvas*  ofusc_020c;
+struct gamecanvas_AnimationTask_s {
+    gamecanvas*  this_0;
 };
 
 struct gamecanvas_s {
@@ -224,8 +238,8 @@ struct main_s {
 };
 
 // Prototipos
-void ofusc_096d_constructor(void* self, void* arg0, void* arg1);
-void ofusc_096d_run(void* self);
+void gamecanvas_AnimationTask_constructor(void* self, void* arg0, void* arg1);
+void gamecanvas_AnimationTask_run(void* self);
 void gamecanvas_constructor(void* self, void* arg0);
 void gamecanvas_keyPressed(void* self, int arg0);
 void gamecanvas_keyReleased(void* self, int arg0);
@@ -291,14 +305,14 @@ void main_showNotify(void* self);
 void main_exitRequested(void* self);
 
 // Implementacoes
-void ofusc_096d_constructor(void* self, void* arg0, void* arg1) {
-    ofusc_096d* s = (ofusc_096d*)self;
+void gamecanvas_AnimationTask_constructor(void* self, void* arg0, void* arg1) {
+    gamecanvas_AnimationTask* s = (gamecanvas_AnimationTask*)self;
     if (!s) return;
     (void)s;
 }
 
-void ofusc_096d_run(void* self) {
-    ofusc_096d* s = (ofusc_096d*)self;
+void gamecanvas_AnimationTask_run(void* self) {
+    gamecanvas_AnimationTask* s = (gamecanvas_AnimationTask*)self;
     if (!s) return;
     (void)s;
 }
