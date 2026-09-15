@@ -78,7 +78,7 @@ void* j2me_image_get_graphics(void* img) { return img; }
 // Forward typedefs das classes do projeto
 typedef struct gamecanvas_AnimationTask_s gamecanvas_AnimationTask;
 typedef struct gamecanvas_s gamecanvas;
-typedef struct main_s main;
+typedef struct main_class_s main_class;
 
 // Globais
 void* _self = 0;
