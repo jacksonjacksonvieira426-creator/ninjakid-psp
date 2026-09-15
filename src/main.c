@@ -117,7 +117,7 @@ struct gamecanvas_s {
     int          game_keypressed;
     int          screenX;
     int          screenY;
-    main*        midlet;
+    main_cls* midlet;
     String**     tunes;
     int          red;
     int          green;
@@ -673,43 +673,43 @@ void gamecanvas_GetExtra(void* self) {
 }
 
 void main_constructor(void* self) {
-    main* s = (main*)self;
+    main_cls* s = (main_cls*)self;
     if (!s) return;
     (void)s;
 }
 
 void main_startApp(void* self) {
-    main* s = (main*)self;
+    main_cls* s = (main_cls*)self;
     if (!s) return;
     (void)s;
 }
 
 void main_pauseApp(void* self) {
-    main* s = (main*)self;
+    main_cls* s = (main_cls*)self;
     if (!s) return;
     (void)s;
 }
 
 void main_destroyApp(void* self, int arg0) {
-    main* s = (main*)self;
+    main_cls* s = (main_cls*)self;
     if (!s) return;
     (void)s;
 }
 
 void main_hideNotify(void* self) {
-    main* s = (main*)self;
+    main_cls* s = (main_cls*)self;
     if (!s) return;
     (void)s;
 }
 
 void main_showNotify(void* self) {
-    main* s = (main*)self;
+    main_cls* s = (main_cls*)self;
     if (!s) return;
     (void)s;
 }
 
 void main_exitRequested(void* self) {
-    main* s = (main*)self;
+    main_cls* s = (main_cls*)self;
     if (!s) return;
     (void)s;
 }
