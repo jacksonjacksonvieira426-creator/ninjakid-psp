@@ -68,6 +68,9 @@ typedef void* Manager;
 typedef void* DataInputStream2;
 typedef void* ByteArrayInputStream;
 typedef void* ByteArrayOutputStream;
+// Auto-fix: tipos faltantes
+typedef void* main;
+
 
 // Stubs de biblioteca
 void j2me_canvas_repaint(void) { }
