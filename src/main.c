@@ -69,7 +69,6 @@ typedef void* DataInputStream2;
 typedef void* ByteArrayInputStream;
 typedef void* ByteArrayOutputStream;
 // Auto-fix: tipos faltantes
-typedef void* main;
 
 
 // Stubs de biblioteca
@@ -83,7 +82,7 @@ typedef struct gamecanvas_AnimationTask_s gamecanvas_AnimationTask;
 typedef struct gamecanvas_AnimationTask_s gamecanvas_AnimationTask_s;
 typedef struct gamecanvas_s gamecanvas;
 typedef struct gamecanvas_s gamecanvas_s;
-typedef struct main_class_s main_class;
+typedef struct main_class_s main_cls;
 typedef struct main_class_s main_class_s;
 
 // Globais
@@ -237,7 +236,7 @@ struct gamecanvas_s {
     int          pause;
 };
 
-struct main_s {
+struct main_cls_s {
     Display*     display;
     gamecanvas*  screen;
     int          started;
