@@ -1,0 +1,16 @@
+// Gerado automaticamente de PNG
+// 6x4, 24 pixels ARGB
+
+#ifndef _NINJAKID_BURNER_H
+#define _NINJAKID_BURNER_H
+
+#define NINJAKID_BURNER_W 6
+#define NINJAKID_BURNER_H 4
+
+static const unsigned int ninjakid_burner_pixels[24] = {
+    0xFF000000u, 0xFF000000u, 0x00000000u, 0x00000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u,
+    0x00000000u, 0x00000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u,
+    0xFF000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u, 0xFF000000u,
+};
+
+#endif

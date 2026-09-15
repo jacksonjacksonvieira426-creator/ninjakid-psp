@@ -1,0 +1,7909 @@
+{
+  "jar": "NinjaKid.jar",
+  "nome_projeto": "ninjakid",
+  "midlet": "main",
+  "canvas": "gamecanvas",
+  "classes": [
+    {
+      "arquivo": "game/gamecanvas$AnimationTask.class",
+      "nome": "gamecanvas$AnimationTask",
+      "super": "Object",
+      "campos": [
+        {
+          "nome": "this$0",
+          "desc": "Lgame/gamecanvas;",
+          "tipo_c": "gamecanvas*"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "(Lgame/gamecanvas;Lgame/main;)V",
+          "tipo_ret": "void",
+          "n_instr": 8,
+          "apis": {
+            "java/util/TimerTask.<init>": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              1,
+              "java/util/TimerTask.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "gamecanvas$AnimationTask.this$0"
+            ]
+          ]
+        },
+        {
+          "nome": "run",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 15,
+          "apis": {
+            "java/lang/String.valueOf": 2,
+            "java/lang/String.concat": 1,
+            "java/io/PrintStream.println": 1,
+            "java/lang/Throwable.printStackTrace": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              8,
+              "java/lang/String.valueOf"
+            ],
+            [
+              9,
+              "java/lang/String.valueOf"
+            ],
+            [
+              10,
+              "java/lang/String.concat"
+            ],
+            [
+              11,
+              "java/io/PrintStream.println"
+            ],
+            [
+              13,
+              "java/lang/Throwable.printStackTrace"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas$AnimationTask.this$0"
+            ],
+            [
+              5,
+              "getstatic",
+              "System.out"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "java/util/TimerTask.<init>": 1,
+        "java/lang/String.valueOf": 2,
+        "java/lang/String.concat": 1,
+        "java/io/PrintStream.println": 1,
+        "java/lang/Throwable.printStackTrace": 1
+      },
+      "padroes": [
+        "TEM_RUN",
+        "USA_TIMER"
+      ]
+    },
+    {
+      "arquivo": "game/gamecanvas.class",
+      "nome": "gamecanvas",
+      "super": "Canvas",
+      "campos": [
+        {
+          "nome": "offimage",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "offscreenbuffer",
+          "desc": "Ljavax/microedition/lcdui/Graphics;",
+          "tipo_c": "Graphics*"
+        },
+        {
+          "nome": "DGoffscreenbuffer",
+          "desc": "Lcom/nokia/mid/ui/DirectGraphics;",
+          "tipo_c": "DirectGraphics*"
+        },
+        {
+          "nome": "tileimage",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "tileimagebuffer",
+          "desc": "Ljavax/microedition/lcdui/Graphics;",
+          "tipo_c": "Graphics*"
+        },
+        {
+          "nome": "DGtileimagebuffer",
+          "desc": "Lcom/nokia/mid/ui/DirectGraphics;",
+          "tipo_c": "DirectGraphics*"
+        },
+        {
+          "nome": "bobgfx",
+          "desc": "[Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image**"
+        },
+        {
+          "nome": "keypressed",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "game_keypressed",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "screenX",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "screenY",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "midlet",
+          "desc": "Lgame/main;",
+          "tipo_c": "main*"
+        },
+        {
+          "nome": "tunes",
+          "desc": "[Ljava/lang/String;",
+          "tipo_c": "String**"
+        },
+        {
+          "nome": "red",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "green",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "blue",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "i",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "mode",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "textmode",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "waiter",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "HighScore",
+          "desc": "Ljavax/microedition/rms/RecordStore;",
+          "tipo_c": "RecordStore*"
+        },
+        {
+          "nome": "animTimer",
+          "desc": "Ljava/util/Timer;",
+          "tipo_c": "Timer*"
+        },
+        {
+          "nome": "animperiod",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerName",
+          "desc": "Ljava/lang/String;",
+          "tipo_c": "String*"
+        },
+        {
+          "nome": "score",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "soundopt",
+          "desc": "Ljava/lang/String;",
+          "tipo_c": "String*"
+        },
+        {
+          "nome": "musicopt",
+          "desc": "Ljava/lang/String;",
+          "tipo_c": "String*"
+        },
+        {
+          "nome": "levelopt",
+          "desc": "Ljava/lang/String;",
+          "tipo_c": "String*"
+        },
+        {
+          "nome": "difficulty",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "optioncur",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "hy",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "highscoreplayers",
+          "desc": "[Ljava/lang/String;",
+          "tipo_c": "String**"
+        },
+        {
+          "nome": "highscorepoints",
+          "desc": "[I",
+          "tipo_c": "int*"
+        },
+        {
+          "nome": "arrow_x",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerNamechars",
+          "desc": "[C",
+          "tipo_c": "unsigned short*"
+        },
+        {
+          "nome": "lives",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "random",
+          "desc": "Ljava/util/Random;",
+          "tipo_c": "Random*"
+        },
+        {
+          "nome": "sprites",
+          "desc": "[[I",
+          "tipo_c": "int**"
+        },
+        {
+          "nome": "anzahlsprites",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "spritecount",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "icons",
+          "desc": "[Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image**"
+        },
+        {
+          "nome": "loadicon",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "anzahl_icons",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "loadfont",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "fontwidth",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "fontheight",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerXpos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerYpos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "player",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerdir",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lastmm",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playeranimdelay",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "logo",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "iecom",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "titel",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "door1",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "door2",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "explo",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "extra",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "leveldata",
+          "desc": "[B",
+          "tipo_c": "signed char*"
+        },
+        {
+          "nome": "leveldata2",
+          "desc": "[B",
+          "tipo_c": "signed char*"
+        },
+        {
+          "nome": "maskdata",
+          "desc": "[B",
+          "tipo_c": "signed char*"
+        },
+        {
+          "nome": "levelbreite",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "levelhoehe",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "levelxpos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "levelypos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lastlevelxpos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lastlevelypos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "levelinfo",
+          "desc": "[[I",
+          "tipo_c": "int**"
+        },
+        {
+          "nome": "level",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "MASK_PLAYER_RELEASE",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_WALKWAY",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_WALL",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_LADDER",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_PLAYERRELEASE",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_VASE_START",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_VASE_END",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_FIRERELEASE",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_FIREDIRCHANGE",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_PLASMARELEASE",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_GATE",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "MASK_DEAD",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "skycolor",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "faderdir",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "faderypos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "fading",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "startTime",
+          "desc": "J",
+          "tipo_c": "int64_t"
+        },
+        {
+          "nome": "endTime",
+          "desc": "J",
+          "tipo_c": "int64_t"
+        },
+        {
+          "nome": "gateblocks",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "titelscrolldir",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "titelwaiter",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "scrollX",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "scrollY",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "softxpos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "softypos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "jumpspeed",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerjumps",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lastlevelnr",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lastenemynr",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "keyuppressed",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerfalling",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "XposOffset",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "aufleiter",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "explowaiter",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "extrajumps",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "extrajumpspeed",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "extraypos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "keys",
+          "desc": "B",
+          "tipo_c": "signed char"
+        },
+        {
+          "nome": "diamant",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerhit",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerhitdir",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerpower",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerflashing",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerlostlive",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "hitrotate",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "hitrotatedelay",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lastplayerxpos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lastplayerypos",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lastscrollx",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lastscrolly",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "exploonly",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "firereleased",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "playerONlift",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "extralife",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "swordpower",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "energyfound",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "levelok",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "sound",
+          "desc": "Lcom/nokia/mid/sound/Sound;",
+          "tipo_c": "Sound*"
+        },
+        {
+          "nome": "pause",
+          "desc": "I",
+          "tipo_c": "int"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "(Lgame/main;)V",
+          "tipo_ret": "void",
+          "n_instr": 543,
+          "apis": {
+            "com/nokia/mid/ui/FullCanvas.<init>": 1,
+            "java/util/Random.<init>": 1,
+            "java/util/Timer.<init>": 1,
+            "java/util/Timer.schedule": 1
+          },
+          "constantes": [
+            [
+              3,
+              128
+            ],
+            [
+              6,
+              128
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              18,
+              25
+            ],
+            [
+              24,
+              0
+            ],
+            [
+              36,
+              1
+            ],
+            [
+              39,
+              1
+            ],
+            [
+              42,
+              0
+            ],
+            [
+              45,
+              0
+            ],
+            [
+              48,
+              3
+            ],
+            [
+              51,
+              60
+            ],
+            [
+              54,
+              0
+            ],
+            [
+              57,
+              0
+            ],
+            [
+              60,
+              8
+            ],
+            [
+              63,
+              8
+            ],
+            [
+              66,
+              0
+            ],
+            [
+              69,
+              0
+            ],
+            [
+              72,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "com/nokia/mid/ui/FullCanvas.<init>"
+            ],
+            [
+              479,
+              "java/util/Random.<init>"
+            ],
+            [
+              527,
+              "java/util/Timer.<init>"
+            ],
+            [
+              541,
+              "java/util/Timer.schedule"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "gamecanvas.screenX"
+            ],
+            [
+              7,
+              "putfield",
+              "gamecanvas.screenY"
+            ],
+            [
+              10,
+              "putfield",
+              "gamecanvas.mode"
+            ],
+            [
+              13,
+              "putfield",
+              "gamecanvas.textmode"
+            ],
+            [
+              16,
+              "putfield",
+              "gamecanvas.waiter"
+            ],
+            [
+              19,
+              "putfield",
+              "gamecanvas.animperiod"
+            ],
+            [
+              22,
+              "putfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              25,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              28,
+              "putfield",
+              "gamecanvas.soundopt"
+            ],
+            [
+              31,
+              "putfield",
+              "gamecanvas.musicopt"
+            ],
+            [
+              34,
+              "putfield",
+              "gamecanvas.levelopt"
+            ],
+            [
+              37,
+              "putfield",
+              "gamecanvas.difficulty"
+            ],
+            [
+              40,
+              "putfield",
+              "gamecanvas.optioncur"
+            ],
+            [
+              43,
+              "putfield",
+              "gamecanvas.hy"
+            ],
+            [
+              46,
+              "putfield",
+              "gamecanvas.arrow_x"
+            ],
+            [
+              49,
+              "putfield",
+              "gamecanvas.lives"
+            ],
+            [
+              52,
+              "putfield",
+              "gamecanvas.anzahlsprites"
+            ],
+            [
+              55,
+              "putfield",
+              "gamecanvas.spritecount"
+            ],
+            [
+              58,
+              "putfield",
+              "gamecanvas.anzahl_icons"
+            ],
+            [
+              61,
+              "putfield",
+              "gamecanvas.fontwidth"
+            ]
+          ]
+        },
+        {
+          "nome": "keyPressed",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 9,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.getGameAction": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              3,
+              "javax/microedition/lcdui/Canvas.getGameAction"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "gamecanvas.game_keypressed"
+            ],
+            [
+              7,
+              "putfield",
+              "gamecanvas.keypressed"
+            ]
+          ]
+        },
+        {
+          "nome": "keyReleased",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 7,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "gamecanvas.game_keypressed"
+            ],
+            [
+              5,
+              "putfield",
+              "gamecanvas.keypressed"
+            ]
+          ]
+        },
+        {
+          "nome": "DoAll",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 1790,
+          "apis": {
+            "java/lang/System.currentTimeMillis": 1,
+            "javax/microedition/lcdui/Graphics.setColor": 2,
+            "javax/microedition/lcdui/Graphics.fillRect": 2,
+            "java/lang/System.gc": 3,
+            "javax/microedition/lcdui/Image.createImage": 1,
+            "javax/microedition/lcdui/Graphics.setClip": 2,
+            "javax/microedition/lcdui/Graphics.drawImage": 2,
+            "java/lang/String.charAt": 7,
+            "java/lang/StringBuffer.<init>": 1,
+            "java/lang/StringBuffer.append": 7,
+            "java/lang/String.valueOf": 2,
+            "javax/microedition/lcdui/Canvas.repaint": 1,
+            "javax/microedition/lcdui/Canvas.serviceRepaints": 1
+          },
+          "constantes": [
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              70
+            ],
+            [
+              13,
+              71
+            ],
+            [
+              16,
+              250
+            ],
+            [
+              19,
+              250
+            ],
+            [
+              22,
+              250
+            ],
+            [
+              31,
+              25
+            ],
+            [
+              37,
+              25
+            ],
+            [
+              43,
+              25
+            ],
+            [
+              57,
+              0
+            ],
+            [
+              58,
+              0
+            ],
+            [
+              66,
+              71
+            ],
+            [
+              69,
+              71
+            ],
+            [
+              74,
+              21
+            ],
+            [
+              75,
+              56
+            ],
+            [
+              84,
+              250
+            ],
+            [
+              89,
+              25
+            ],
+            [
+              95,
+              25
+            ],
+            [
+              101,
+              25
+            ],
+            [
+              115,
+              21
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "java/lang/System.currentTimeMillis"
+            ],
+            [
+              54,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              63,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              112,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              119,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              133,
+              "java/lang/System.gc"
+            ],
+            [
+              152,
+              "java/lang/System.gc"
+            ],
+            [
+              168,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              271,
+              "java/lang/System.gc"
+            ],
+            [
+              366,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              376,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              1352,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              1362,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              1569,
+              "java/lang/String.charAt"
+            ],
+            [
+              1577,
+              "java/lang/String.charAt"
+            ],
+            [
+              1585,
+              "java/lang/String.charAt"
+            ],
+            [
+              1593,
+              "java/lang/String.charAt"
+            ],
+            [
+              1601,
+              "java/lang/String.charAt"
+            ],
+            [
+              1609,
+              "java/lang/String.charAt"
+            ],
+            [
+              1617,
+              "java/lang/String.charAt"
+            ]
+          ],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "gamecanvas.startTime"
+            ],
+            [
+              4,
+              "getfield",
+              "gamecanvas.mode"
+            ],
+            [
+              8,
+              "putfield",
+              "gamecanvas.waiter"
+            ],
+            [
+              11,
+              "putfield",
+              "gamecanvas.mode"
+            ],
+            [
+              14,
+              "putfield",
+              "gamecanvas.textmode"
+            ],
+            [
+              17,
+              "putfield",
+              "gamecanvas.red"
+            ],
+            [
+              20,
+              "putfield",
+              "gamecanvas.green"
+            ],
+            [
+              23,
+              "putfield",
+              "gamecanvas.blue"
+            ],
+            [
+              26,
+              "getfield",
+              "gamecanvas.red"
+            ],
+            [
+              30,
+              "getfield",
+              "gamecanvas.red"
+            ],
+            [
+              33,
+              "putfield",
+              "gamecanvas.red"
+            ],
+            [
+              36,
+              "getfield",
+              "gamecanvas.green"
+            ],
+            [
+              39,
+              "putfield",
+              "gamecanvas.green"
+            ],
+            [
+              42,
+              "getfield",
+              "gamecanvas.blue"
+            ],
+            [
+              45,
+              "putfield",
+              "gamecanvas.blue"
+            ],
+            [
+              47,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              49,
+              "getfield",
+              "gamecanvas.red"
+            ],
+            [
+              51,
+              "getfield",
+              "gamecanvas.green"
+            ],
+            [
+              53,
+              "getfield",
+              "gamecanvas.blue"
+            ],
+            [
+              56,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ]
+          ]
+        },
+        {
+          "nome": "paint",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 1560,
+          "apis": {
+            "java/lang/StringBuffer.<init>": 5,
+            "java/lang/StringBuffer.append": 7,
+            "java/lang/String.valueOf": 56,
+            "java/lang/String.concat": 23,
+            "javax/microedition/lcdui/Graphics.setColor": 11,
+            "javax/microedition/lcdui/Graphics.fillRect": 9,
+            "java/util/Random.nextInt": 6,
+            "javax/microedition/lcdui/Graphics.drawImage": 3,
+            "javax/microedition/lcdui/Graphics.drawLine": 2,
+            "javax/microedition/lcdui/Graphics.drawRect": 1,
+            "java/lang/String.charAt": 7,
+            "javax/microedition/lcdui/Graphics.setClip": 1,
+            "javax/microedition/lcdui/Graphics.fillRoundRect": 1,
+            "javax/microedition/lcdui/Graphics.drawRoundRect": 1
+          },
+          "constantes": [
+            [
+              14,
+              2
+            ],
+            [
+              16,
+              100
+            ],
+            [
+              17,
+              3
+            ],
+            [
+              21,
+              5
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              33,
+              3
+            ],
+            [
+              34,
+              117
+            ],
+            [
+              35,
+              0
+            ],
+            [
+              44,
+              1
+            ],
+            [
+              49,
+              10
+            ],
+            [
+              55,
+              69
+            ],
+            [
+              56,
+              117
+            ],
+            [
+              57,
+              0
+            ],
+            [
+              64,
+              100
+            ],
+            [
+              72,
+              1
+            ],
+            [
+              81,
+              2
+            ],
+            [
+              83,
+              10
+            ],
+            [
+              84,
+              3
+            ],
+            [
+              86,
+              0
+            ],
+            [
+              89,
+              6
+            ]
+          ],
+          "chamadas": [
+            [
+              97,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              101,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              103,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              108,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              109,
+              "java/lang/String.valueOf"
+            ],
+            [
+              110,
+              "java/lang/String.valueOf"
+            ],
+            [
+              127,
+              "java/lang/String.valueOf"
+            ],
+            [
+              128,
+              "java/lang/String.valueOf"
+            ],
+            [
+              129,
+              "java/lang/String.concat"
+            ],
+            [
+              175,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              184,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              223,
+              "java/lang/String.valueOf"
+            ],
+            [
+              224,
+              "java/lang/String.valueOf"
+            ],
+            [
+              225,
+              "java/lang/String.concat"
+            ],
+            [
+              260,
+              "java/util/Random.nextInt"
+            ],
+            [
+              267,
+              "java/util/Random.nextInt"
+            ],
+            [
+              274,
+              "java/util/Random.nextInt"
+            ],
+            [
+              279,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              288,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              376,
+              "java/lang/String.valueOf"
+            ]
+          ],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "gamecanvas.DGtileimagebuffer"
+            ],
+            [
+              5,
+              "getfield",
+              "gamecanvas.textmode"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              13,
+              "getfield",
+              "gamecanvas.screenX"
+            ],
+            [
+              20,
+              "getfield",
+              "gamecanvas.waiter"
+            ],
+            [
+              25,
+              "getfield",
+              "gamecanvas.waiter"
+            ],
+            [
+              28,
+              "putfield",
+              "gamecanvas.waiter"
+            ],
+            [
+              31,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              39,
+              "getfield",
+              "gamecanvas.waiter"
+            ],
+            [
+              43,
+              "getfield",
+              "gamecanvas.waiter"
+            ],
+            [
+              46,
+              "putfield",
+              "gamecanvas.waiter"
+            ],
+            [
+              50,
+              "putfield",
+              "gamecanvas.waiter"
+            ],
+            [
+              53,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              60,
+              "getfield",
+              "gamecanvas.titelwaiter"
+            ],
+            [
+              63,
+              "getfield",
+              "gamecanvas.titelwaiter"
+            ],
+            [
+              67,
+              "getfield",
+              "gamecanvas.faderypos"
+            ],
+            [
+              71,
+              "getfield",
+              "gamecanvas.titelwaiter"
+            ],
+            [
+              74,
+              "putfield",
+              "gamecanvas.titelwaiter"
+            ],
+            [
+              77,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              80,
+              "getfield",
+              "gamecanvas.screenX"
+            ]
+          ]
+        },
+        {
+          "nome": "InitGFX",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 137,
+          "apis": {
+            "javax/microedition/lcdui/Image.createImage": 2,
+            "javax/microedition/lcdui/Image.getGraphics": 2,
+            "com/nokia/mid/ui/DirectUtils.getDirectGraphics": 2,
+            "javax/microedition/lcdui/Graphics.setClip": 2
+          },
+          "constantes": [
+            [
+              27,
+              0
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              40,
+              16
+            ],
+            [
+              44,
+              16
+            ],
+            [
+              60,
+              0
+            ],
+            [
+              61,
+              0
+            ],
+            [
+              64,
+              16
+            ],
+            [
+              68,
+              16
+            ],
+            [
+              73,
+              0
+            ],
+            [
+              74,
+              0
+            ],
+            [
+              75,
+              0
+            ],
+            [
+              76,
+              20
+            ],
+            [
+              77,
+              0
+            ],
+            [
+              78,
+              1
+            ],
+            [
+              79,
+              0
+            ],
+            [
+              80,
+              0
+            ],
+            [
+              81,
+              0
+            ],
+            [
+              86,
+              1
+            ],
+            [
+              87,
+              0
+            ],
+            [
+              88,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              13,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              18,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              23,
+              "com/nokia/mid/ui/DirectUtils.getDirectGraphics"
+            ],
+            [
+              33,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              46,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              51,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              56,
+              "com/nokia/mid/ui/DirectUtils.getDirectGraphics"
+            ],
+            [
+              70,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ]
+          ],
+          "fields": [
+            [
+              6,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.screenX"
+            ],
+            [
+              12,
+              "getfield",
+              "gamecanvas.screenY"
+            ],
+            [
+              14,
+              "putfield",
+              "gamecanvas.tileimage"
+            ],
+            [
+              17,
+              "getfield",
+              "gamecanvas.tileimage"
+            ],
+            [
+              19,
+              "putfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              22,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              24,
+              "putfield",
+              "gamecanvas.DGtileimagebuffer"
+            ],
+            [
+              26,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              30,
+              "getfield",
+              "gamecanvas.screenX"
+            ],
+            [
+              32,
+              "getfield",
+              "gamecanvas.screenY"
+            ],
+            [
+              35,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              39,
+              "getfield",
+              "gamecanvas.screenX"
+            ],
+            [
+              43,
+              "getfield",
+              "gamecanvas.screenY"
+            ],
+            [
+              47,
+              "putfield",
+              "gamecanvas.offimage"
+            ],
+            [
+              50,
+              "getfield",
+              "gamecanvas.offimage"
+            ],
+            [
+              52,
+              "putfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              55,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              57,
+              "putfield",
+              "gamecanvas.DGoffscreenbuffer"
+            ],
+            [
+              59,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ]
+          ]
+        },
+        {
+          "nome": "LoadGFX",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 146,
+          "apis": {
+            "javax/microedition/lcdui/Image.createImage": 22,
+            "java/lang/String.valueOf": 2,
+            "java/lang/String.concat": 1,
+            "java/io/PrintStream.println": 1
+          },
+          "constantes": [
+            [
+              1,
+              31
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              24,
+              5
+            ],
+            [
+              30,
+              6
+            ],
+            [
+              36,
+              7
+            ],
+            [
+              42,
+              8
+            ],
+            [
+              48,
+              9
+            ],
+            [
+              54,
+              10
+            ],
+            [
+              60,
+              11
+            ],
+            [
+              66,
+              12
+            ],
+            [
+              72,
+              13
+            ],
+            [
+              78,
+              15
+            ],
+            [
+              84,
+              16
+            ],
+            [
+              90,
+              17
+            ],
+            [
+              96,
+              18
+            ],
+            [
+              102,
+              19
+            ],
+            [
+              108,
+              20
+            ],
+            [
+              114,
+              21
+            ]
+          ],
+          "chamadas": [
+            [
+              8,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              14,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              20,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              26,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              32,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              38,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              44,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              50,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              56,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              62,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              68,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              74,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              80,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              86,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              92,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              98,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              104,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              110,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              116,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              122,
+              "javax/microedition/lcdui/Image.createImage"
+            ]
+          ],
+          "fields": [
+            [
+              3,
+              "putfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              5,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              11,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              17,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              23,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              29,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              35,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              41,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              47,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              53,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              59,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              65,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              71,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              77,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              83,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              89,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              95,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              101,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              107,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              113,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ]
+          ]
+        },
+        {
+          "nome": "InitScores",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 75,
+          "apis": {
+            "javax/microedition/rms/RecordStore.openRecordStore": 1,
+            "javax/microedition/rms/RecordStore.getNumRecords": 1
+          },
+          "constantes": [
+            [
+              1,
+              1
+            ],
+            [
+              11,
+              5000
+            ],
+            [
+              19,
+              4000
+            ],
+            [
+              27,
+              3000
+            ],
+            [
+              35,
+              2000
+            ],
+            [
+              43,
+              1000
+            ],
+            [
+              51,
+              500
+            ],
+            [
+              56,
+              0
+            ],
+            [
+              69,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              2,
+              "javax/microedition/rms/RecordStore.openRecordStore"
+            ],
+            [
+              5,
+              "javax/microedition/rms/RecordStore.getNumRecords"
+            ]
+          ],
+          "fields": [
+            [
+              3,
+              "putstatic",
+              "gamecanvas.HighScore"
+            ],
+            [
+              4,
+              "getstatic",
+              "gamecanvas.HighScore"
+            ],
+            [
+              9,
+              "putfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              12,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              17,
+              "putfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              20,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              25,
+              "putfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              28,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              33,
+              "putfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              36,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              41,
+              "putfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              44,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              49,
+              "putfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              52,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              57,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              60,
+              "putfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              70,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              73,
+              "putfield",
+              "gamecanvas.playerName"
+            ]
+          ]
+        },
+        {
+          "nome": "InsertScore",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 105,
+          "apis": {
+            "java/io/ByteArrayOutputStream.<init>": 1,
+            "java/io/DataOutputStream.<init>": 1,
+            "java/io/DataOutputStream.writeUTF": 1,
+            "java/io/DataOutputStream.writeInt": 1,
+            "java/io/DataOutputStream.close": 1,
+            "java/io/ByteArrayOutputStream.toByteArray": 1,
+            "javax/microedition/rms/RecordStore.setRecord": 1,
+            "java/io/ByteArrayOutputStream.close": 1
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              23,
+              1
+            ],
+            [
+              33,
+              1
+            ],
+            [
+              52,
+              0
+            ],
+            [
+              56,
+              1
+            ],
+            [
+              59,
+              7
+            ],
+            [
+              74,
+              1
+            ],
+            [
+              82,
+              1
+            ],
+            [
+              94,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              63,
+              "java/io/ByteArrayOutputStream.<init>"
+            ],
+            [
+              68,
+              "java/io/DataOutputStream.<init>"
+            ],
+            [
+              77,
+              "java/io/DataOutputStream.writeUTF"
+            ],
+            [
+              85,
+              "java/io/DataOutputStream.writeInt"
+            ],
+            [
+              87,
+              "java/io/DataOutputStream.close"
+            ],
+            [
+              89,
+              "java/io/ByteArrayOutputStream.toByteArray"
+            ],
+            [
+              97,
+              "javax/microedition/rms/RecordStore.setRecord"
+            ],
+            [
+              99,
+              "java/io/ByteArrayOutputStream.close"
+            ]
+          ],
+          "fields": [
+            [
+              6,
+              "getfield",
+              "gamecanvas.score"
+            ],
+            [
+              8,
+              "getfield",
+              "gamecanvas.highscorepoints"
+            ],
+            [
+              18,
+              "getfield",
+              "gamecanvas.highscorepoints"
+            ],
+            [
+              21,
+              "getfield",
+              "gamecanvas.highscorepoints"
+            ],
+            [
+              28,
+              "getfield",
+              "gamecanvas.highscoreplayers"
+            ],
+            [
+              31,
+              "getfield",
+              "gamecanvas.highscoreplayers"
+            ],
+            [
+              40,
+              "getfield",
+              "gamecanvas.highscorepoints"
+            ],
+            [
+              43,
+              "getfield",
+              "gamecanvas.score"
+            ],
+            [
+              46,
+              "getfield",
+              "gamecanvas.highscoreplayers"
+            ],
+            [
+              49,
+              "getfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              53,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              72,
+              "getfield",
+              "gamecanvas.highscoreplayers"
+            ],
+            [
+              80,
+              "getfield",
+              "gamecanvas.highscorepoints"
+            ],
+            [
+              91,
+              "getstatic",
+              "gamecanvas.HighScore"
+            ]
+          ]
+        },
+        {
+          "nome": "GetHighScore",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 40,
+          "apis": {
+            "javax/microedition/rms/RecordStore.getRecord": 1,
+            "java/io/ByteArrayInputStream.<init>": 1,
+            "java/io/DataInputStream.<init>": 1,
+            "java/io/DataInputStream.readUTF": 1,
+            "java/io/DataInputStream.readInt": 1,
+            "java/io/DataInputStream.close": 1
+          },
+          "constantes": [
+            [
+              0,
+              1
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              20,
+              1
+            ],
+            [
+              28,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              7,
+              "javax/microedition/rms/RecordStore.getRecord"
+            ],
+            [
+              14,
+              "java/io/ByteArrayInputStream.<init>"
+            ],
+            [
+              15,
+              "java/io/DataInputStream.<init>"
+            ],
+            [
+              23,
+              "java/io/DataInputStream.readUTF"
+            ],
+            [
+              31,
+              "java/io/DataInputStream.readInt"
+            ],
+            [
+              34,
+              "java/io/DataInputStream.close"
+            ]
+          ],
+          "fields": [
+            [
+              5,
+              "getstatic",
+              "gamecanvas.HighScore"
+            ],
+            [
+              18,
+              "getfield",
+              "gamecanvas.highscoreplayers"
+            ],
+            [
+              26,
+              "getfield",
+              "gamecanvas.highscorepoints"
+            ]
+          ]
+        },
+        {
+          "nome": "AddHighScore",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 34,
+          "apis": {
+            "java/io/ByteArrayOutputStream.<init>": 1,
+            "java/io/DataOutputStream.<init>": 1,
+            "java/io/DataOutputStream.writeUTF": 1,
+            "java/io/DataOutputStream.writeInt": 1,
+            "java/io/DataOutputStream.close": 1,
+            "java/io/ByteArrayOutputStream.toByteArray": 1,
+            "javax/microedition/rms/RecordStore.addRecord": 1,
+            "java/io/ByteArrayOutputStream.close": 1
+          },
+          "constantes": [
+            [
+              24,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              2,
+              "java/io/ByteArrayOutputStream.<init>"
+            ],
+            [
+              7,
+              "java/io/DataOutputStream.<init>"
+            ],
+            [
+              12,
+              "java/io/DataOutputStream.writeUTF"
+            ],
+            [
+              16,
+              "java/io/DataOutputStream.writeInt"
+            ],
+            [
+              18,
+              "java/io/DataOutputStream.close"
+            ],
+            [
+              20,
+              "java/io/ByteArrayOutputStream.toByteArray"
+            ],
+            [
+              27,
+              "javax/microedition/rms/RecordStore.addRecord"
+            ],
+            [
+              30,
+              "java/io/ByteArrayOutputStream.close"
+            ]
+          ],
+          "fields": [
+            [
+              11,
+              "getfield",
+              "gamecanvas.playerName"
+            ],
+            [
+              15,
+              "getfield",
+              "gamecanvas.score"
+            ],
+            [
+              22,
+              "getstatic",
+              "gamecanvas.HighScore"
+            ]
+          ]
+        },
+        {
+          "nome": "InitSpriteMaster",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 30,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              10
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              20,
+              -1
+            ],
+            [
+              25,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "gamecanvas.anzahlsprites"
+            ],
+            [
+              5,
+              "putfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              8,
+              "putfield",
+              "gamecanvas.i"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              12,
+              "getfield",
+              "gamecanvas.anzahlsprites"
+            ],
+            [
+              15,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              17,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              24,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              27,
+              "putfield",
+              "gamecanvas.i"
+            ]
+          ]
+        },
+        {
+          "nome": "bornSprite",
+          "desc": "(IIIIIIIII)I",
+          "tipo_ret": "int",
+          "n_instr": 124,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              -1
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              20,
+              -1
+            ],
+            [
+              27,
+              0
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              35,
+              1
+            ],
+            [
+              43,
+              2
+            ],
+            [
+              51,
+              3
+            ],
+            [
+              59,
+              4
+            ],
+            [
+              67,
+              5
+            ],
+            [
+              75,
+              6
+            ],
+            [
+              83,
+              7
+            ],
+            [
+              91,
+              8
+            ],
+            [
+              99,
+              9
+            ],
+            [
+              112,
+              1
+            ],
+            [
+              118,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "gamecanvas.spritecount"
+            ],
+            [
+              7,
+              "putfield",
+              "gamecanvas.i"
+            ],
+            [
+              9,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              11,
+              "getfield",
+              "gamecanvas.anzahlsprites"
+            ],
+            [
+              14,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              16,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              23,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              25,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              31,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              33,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              39,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              41,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              47,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              49,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              55,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              57,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              63,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              65,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              71,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              73,
+              "getfield",
+              "gamecanvas.i"
+            ]
+          ]
+        },
+        {
+          "nome": "MoveEnemies",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 2673,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 4,
+            "javax/microedition/lcdui/Graphics.fillRect": 3,
+            "javax/microedition/lcdui/Graphics.drawLine": 4,
+            "java/util/Random.nextInt": 1
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              20,
+              -99
+            ],
+            [
+              26,
+              7
+            ],
+            [
+              28,
+              500
+            ],
+            [
+              34,
+              7
+            ],
+            [
+              36,
+              510
+            ],
+            [
+              42,
+              8
+            ],
+            [
+              47,
+              8
+            ],
+            [
+              54,
+              8
+            ],
+            [
+              59,
+              8
+            ],
+            [
+              81,
+              8
+            ],
+            [
+              84,
+              16
+            ],
+            [
+              91,
+              7
+            ],
+            [
+              93,
+              500
+            ],
+            [
+              99,
+              7
+            ],
+            [
+              100,
+              501
+            ],
+            [
+              106,
+              7
+            ]
+          ],
+          "chamadas": [
+            [
+              1425,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              1478,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              1875,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              1882,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              1889,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              1929,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              1940,
+              "javax/microedition/lcdui/Graphics.drawLine"
+            ],
+            [
+              1951,
+              "javax/microedition/lcdui/Graphics.drawLine"
+            ],
+            [
+              1957,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              1969,
+              "javax/microedition/lcdui/Graphics.drawLine"
+            ],
+            [
+              1981,
+              "javax/microedition/lcdui/Graphics.drawLine"
+            ],
+            [
+              1984,
+              "java/util/Random.nextInt"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "getfield",
+              "gamecanvas.anzahlsprites"
+            ],
+            [
+              7,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              15,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              23,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              31,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              40,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              52,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              64,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              72,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              78,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              88,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              96,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              103,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              112,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              118,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              141,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              150,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              156,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              179,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              200,
+              "getfield",
+              "gamecanvas.player"
+            ]
+          ]
+        },
+        {
+          "nome": "drawSprites",
+          "desc": "(Lcom/nokia/mid/ui/DirectGraphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 182,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setClip": 2,
+            "com/nokia/mid/ui/DirectGraphics.drawImage": 2
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              14,
+              2
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              30,
+              0
+            ],
+            [
+              32,
+              1
+            ],
+            [
+              39,
+              6
+            ],
+            [
+              47,
+              2
+            ],
+            [
+              51,
+              16
+            ],
+            [
+              63,
+              3
+            ],
+            [
+              67,
+              16
+            ],
+            [
+              75,
+              -32
+            ],
+            [
+              83,
+              160
+            ],
+            [
+              86,
+              -32
+            ],
+            [
+              94,
+              160
+            ],
+            [
+              104,
+              1
+            ],
+            [
+              114,
+              4
+            ]
+          ],
+          "chamadas": [
+            [
+              16,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              123,
+              "com/nokia/mid/ui/DirectGraphics.drawImage"
+            ],
+            [
+              164,
+              "com/nokia/mid/ui/DirectGraphics.drawImage"
+            ],
+            [
+              180,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ]
+          ],
+          "fields": [
+            [
+              5,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              9,
+              "getfield",
+              "gamecanvas.screenX"
+            ],
+            [
+              13,
+              "getfield",
+              "gamecanvas.screenY"
+            ],
+            [
+              19,
+              "putfield",
+              "gamecanvas.i"
+            ],
+            [
+              21,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              23,
+              "getfield",
+              "gamecanvas.anzahlsprites"
+            ],
+            [
+              26,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              28,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              35,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              37,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              43,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              45,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              50,
+              "getfield",
+              "gamecanvas.levelxpos"
+            ],
+            [
+              55,
+              "getfield",
+              "gamecanvas.softxpos"
+            ],
+            [
+              59,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              61,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              66,
+              "getfield",
+              "gamecanvas.levelypos"
+            ],
+            [
+              71,
+              "getfield",
+              "gamecanvas.softypos"
+            ],
+            [
+              80,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              91,
+              "getfield",
+              "gamecanvas.i"
+            ]
+          ]
+        },
+        {
+          "nome": "hideSprite",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 8,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "showSprite",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 8,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "killSprite",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 71,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              -1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              18,
+              2
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              25,
+              3
+            ],
+            [
+              26,
+              0
+            ],
+            [
+              32,
+              4
+            ],
+            [
+              33,
+              0
+            ],
+            [
+              39,
+              5
+            ],
+            [
+              40,
+              0
+            ],
+            [
+              46,
+              6
+            ],
+            [
+              47,
+              0
+            ],
+            [
+              53,
+              7
+            ],
+            [
+              54,
+              0
+            ],
+            [
+              60,
+              8
+            ],
+            [
+              61,
+              0
+            ],
+            [
+              67,
+              9
+            ],
+            [
+              68,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              8,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              15,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              22,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              29,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              36,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              43,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              50,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              57,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              64,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "setSpritePos",
+          "desc": "(III)V",
+          "tipo_ret": "void",
+          "n_instr": 15,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              2
+            ],
+            [
+              11,
+              3
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              8,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "setSpriteManipulation",
+          "desc": "(II)V",
+          "tipo_ret": "void",
+          "n_instr": 8,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              5
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "getSpriteManipulation",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 7,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              5
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "getSpriteXpos",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 7,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              2
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "getSpriteYpos",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 7,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              3
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "setSpriteAnim",
+          "desc": "(II)V",
+          "tipo_ret": "void",
+          "n_instr": 8,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "getSpriteAnim",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 7,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "getSpriteHeight",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 8,
+          "apis": {
+            "javax/microedition/lcdui/Image.getHeight": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              6,
+              "javax/microedition/lcdui/Image.getHeight"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ]
+          ]
+        },
+        {
+          "nome": "getSpriteWidth",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 8,
+          "apis": {
+            "javax/microedition/lcdui/Image.getWidth": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              6,
+              "javax/microedition/lcdui/Image.getWidth"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ]
+          ]
+        },
+        {
+          "nome": "getGFXHeight",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 6,
+          "apis": {
+            "javax/microedition/lcdui/Image.getHeight": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              4,
+              "javax/microedition/lcdui/Image.getHeight"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ]
+          ]
+        },
+        {
+          "nome": "getGFXWidth",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 6,
+          "apis": {
+            "javax/microedition/lcdui/Image.getWidth": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              4,
+              "javax/microedition/lcdui/Image.getWidth"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ]
+          ]
+        },
+        {
+          "nome": "getHide",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 7,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "LoadIcons",
+          "desc": "(Ljava/lang/String;)V",
+          "tipo_ret": "void",
+          "n_instr": 22,
+          "apis": {
+            "java/lang/System.gc": 1,
+            "java/lang/String.valueOf": 2,
+            "java/lang/String.concat": 1,
+            "javax/microedition/lcdui/Image.createImage": 1,
+            "javax/microedition/lcdui/Image.getWidth": 1
+          },
+          "constantes": [
+            [
+              16,
+              16
+            ]
+          ],
+          "chamadas": [
+            [
+              3,
+              "java/lang/System.gc"
+            ],
+            [
+              7,
+              "java/lang/String.valueOf"
+            ],
+            [
+              8,
+              "java/lang/String.valueOf"
+            ],
+            [
+              9,
+              "java/lang/String.concat"
+            ],
+            [
+              10,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              15,
+              "javax/microedition/lcdui/Image.getWidth"
+            ]
+          ],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "gamecanvas.loadicon"
+            ],
+            [
+              11,
+              "putfield",
+              "gamecanvas.loadicon"
+            ],
+            [
+              14,
+              "getfield",
+              "gamecanvas.loadicon"
+            ],
+            [
+              18,
+              "putfield",
+              "gamecanvas.anzahl_icons"
+            ]
+          ]
+        },
+        {
+          "nome": "DrawText",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V",
+          "tipo_ret": "void",
+          "n_instr": 382,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.getClipX": 1,
+            "javax/microedition/lcdui/Graphics.getClipY": 1,
+            "javax/microedition/lcdui/Graphics.getClipHeight": 1,
+            "javax/microedition/lcdui/Graphics.getClipWidth": 1,
+            "java/lang/String.length": 3,
+            "java/lang/String.charAt": 2,
+            "javax/microedition/lcdui/Graphics.setClip": 9,
+            "javax/microedition/lcdui/Graphics.drawImage": 8
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              15,
+              3
+            ],
+            [
+              23,
+              2
+            ],
+            [
+              27,
+              0
+            ],
+            [
+              32,
+              0
+            ],
+            [
+              45,
+              46
+            ],
+            [
+              47,
+              36
+            ],
+            [
+              58,
+              8
+            ],
+            [
+              59,
+              8
+            ],
+            [
+              77,
+              20
+            ],
+            [
+              80,
+              99
+            ],
+            [
+              82,
+              37
+            ],
+            [
+              93,
+              8
+            ],
+            [
+              94,
+              8
+            ],
+            [
+              112,
+              20
+            ],
+            [
+              115,
+              47
+            ],
+            [
+              118,
+              58
+            ],
+            [
+              121,
+              48
+            ],
+            [
+              133,
+              8
+            ],
+            [
+              134,
+              8
+            ]
+          ],
+          "chamadas": [
+            [
+              3,
+              "javax/microedition/lcdui/Graphics.getClipX"
+            ],
+            [
+              6,
+              "javax/microedition/lcdui/Graphics.getClipY"
+            ],
+            [
+              9,
+              "javax/microedition/lcdui/Graphics.getClipHeight"
+            ],
+            [
+              12,
+              "javax/microedition/lcdui/Graphics.getClipWidth"
+            ],
+            [
+              19,
+              "java/lang/String.length"
+            ],
+            [
+              37,
+              "java/lang/String.length"
+            ],
+            [
+              42,
+              "java/lang/String.charAt"
+            ],
+            [
+              60,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              78,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              95,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              113,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              135,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              153,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              176,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              194,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              209,
+              "java/lang/String.length"
+            ],
+            [
+              220,
+              "java/lang/String.charAt"
+            ],
+            [
+              237,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              254,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              270,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ]
+          ],
+          "fields": [
+            [
+              21,
+              "getfield",
+              "gamecanvas.fontwidth"
+            ],
+            [
+              33,
+              "putfield",
+              "gamecanvas.i"
+            ],
+            [
+              35,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              41,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              52,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              54,
+              "getfield",
+              "gamecanvas.fontwidth"
+            ],
+            [
+              63,
+              "getfield",
+              "gamecanvas.loadfont"
+            ],
+            [
+              66,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              68,
+              "getfield",
+              "gamecanvas.fontwidth"
+            ],
+            [
+              72,
+              "getfield",
+              "gamecanvas.fontwidth"
+            ],
+            [
+              87,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              89,
+              "getfield",
+              "gamecanvas.fontwidth"
+            ],
+            [
+              98,
+              "getfield",
+              "gamecanvas.loadfont"
+            ],
+            [
+              101,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              103,
+              "getfield",
+              "gamecanvas.fontwidth"
+            ],
+            [
+              107,
+              "getfield",
+              "gamecanvas.fontwidth"
+            ],
+            [
+              127,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              129,
+              "getfield",
+              "gamecanvas.fontwidth"
+            ],
+            [
+              138,
+              "getfield",
+              "gamecanvas.loadfont"
+            ],
+            [
+              141,
+              "getfield",
+              "gamecanvas.i"
+            ]
+          ]
+        },
+        {
+          "nome": "LoadFont",
+          "desc": "(Ljava/lang/String;)V",
+          "tipo_ret": "void",
+          "n_instr": 11,
+          "apis": {
+            "java/lang/String.valueOf": 2,
+            "java/lang/String.concat": 1,
+            "javax/microedition/lcdui/Image.createImage": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              3,
+              "java/lang/String.valueOf"
+            ],
+            [
+              4,
+              "java/lang/String.valueOf"
+            ],
+            [
+              5,
+              "java/lang/String.concat"
+            ],
+            [
+              6,
+              "javax/microedition/lcdui/Image.createImage"
+            ]
+          ],
+          "fields": [
+            [
+              7,
+              "putfield",
+              "gamecanvas.loadfont"
+            ]
+          ]
+        },
+        {
+          "nome": "LoadLevel",
+          "desc": "(Ljava/lang/String;)V",
+          "tipo_ret": "void",
+          "n_instr": 102,
+          "apis": {
+            "java/lang/System.gc": 1,
+            "java/lang/Object.getClass": 1,
+            "java/lang/String.valueOf": 2,
+            "java/lang/String.concat": 1,
+            "java/lang/Class.getResourceAsStream": 1,
+            "java/io/InputStream.read": 5,
+            "java/io/InputStream.close": 1
+          },
+          "constantes": [
+            [
+              10,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              16,
+              1
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              32,
+              0
+            ],
+            [
+              33,
+              1
+            ],
+            [
+              38,
+              0
+            ],
+            [
+              39,
+              1
+            ],
+            [
+              43,
+              0
+            ],
+            [
+              46,
+              0
+            ],
+            [
+              65,
+              0
+            ],
+            [
+              72,
+              0
+            ],
+            [
+              79,
+              0
+            ],
+            [
+              89,
+              0
+            ],
+            [
+              94,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              9,
+              "java/lang/System.gc"
+            ],
+            [
+              22,
+              "java/lang/Object.getClass"
+            ],
+            [
+              25,
+              "java/lang/String.valueOf"
+            ],
+            [
+              26,
+              "java/lang/String.valueOf"
+            ],
+            [
+              27,
+              "java/lang/String.concat"
+            ],
+            [
+              28,
+              "java/lang/Class.getResourceAsStream"
+            ],
+            [
+              34,
+              "java/io/InputStream.read"
+            ],
+            [
+              40,
+              "java/io/InputStream.read"
+            ],
+            [
+              67,
+              "java/io/InputStream.read"
+            ],
+            [
+              74,
+              "java/io/InputStream.read"
+            ],
+            [
+              81,
+              "java/io/InputStream.read"
+            ],
+            [
+              84,
+              "java/io/InputStream.close"
+            ]
+          ],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "gamecanvas.leveldata"
+            ],
+            [
+              5,
+              "putfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              8,
+              "putfield",
+              "gamecanvas.maskdata"
+            ],
+            [
+              53,
+              "putfield",
+              "gamecanvas.leveldata"
+            ],
+            [
+              57,
+              "putfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              61,
+              "putfield",
+              "gamecanvas.maskdata"
+            ],
+            [
+              64,
+              "getfield",
+              "gamecanvas.leveldata"
+            ],
+            [
+              71,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              78,
+              "getfield",
+              "gamecanvas.maskdata"
+            ],
+            [
+              91,
+              "putfield",
+              "gamecanvas.levelbreite"
+            ],
+            [
+              96,
+              "putfield",
+              "gamecanvas.levelhoehe"
+            ]
+          ]
+        },
+        {
+          "nome": "DrawIcons",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 220,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 1,
+            "javax/microedition/lcdui/Graphics.fillRect": 5,
+            "javax/microedition/lcdui/Graphics.setClip": 5,
+            "javax/microedition/lcdui/Graphics.drawImage": 4
+          },
+          "constantes": [
+            [
+              5,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              21,
+              9
+            ],
+            [
+              33,
+              0
+            ],
+            [
+              34,
+              0
+            ],
+            [
+              35,
+              144
+            ],
+            [
+              36,
+              144
+            ],
+            [
+              39,
+              2
+            ],
+            [
+              41,
+              0
+            ],
+            [
+              43,
+              9
+            ],
+            [
+              45,
+              0
+            ],
+            [
+              47,
+              1
+            ],
+            [
+              50,
+              128
+            ],
+            [
+              57,
+              0
+            ],
+            [
+              60,
+              144
+            ]
+          ],
+          "chamadas": [
+            [
+              4,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              37,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              62,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              70,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              84,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              91,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              110,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              117,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              142,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              150,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              164,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              171,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              190,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              197,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              216,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              3,
+              "getfield",
+              "gamecanvas.skycolor"
+            ],
+            [
+              25,
+              "getfield",
+              "gamecanvas.levelxpos"
+            ],
+            [
+              26,
+              "putfield",
+              "gamecanvas.lastlevelxpos"
+            ],
+            [
+              29,
+              "getfield",
+              "gamecanvas.levelypos"
+            ],
+            [
+              30,
+              "putfield",
+              "gamecanvas.lastlevelypos"
+            ],
+            [
+              32,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              51,
+              "putfield",
+              "gamecanvas.i"
+            ],
+            [
+              53,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              56,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              59,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              64,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              66,
+              "getfield",
+              "gamecanvas.offimage"
+            ],
+            [
+              73,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              76,
+              "putfield",
+              "gamecanvas.i"
+            ],
+            [
+              79,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              86,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              104,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              106,
+              "getfield",
+              "gamecanvas.offimage"
+            ],
+            [
+              112,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ]
+          ]
+        },
+        {
+          "nome": "MakeSprites",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 146,
+          "apis": {
+            "java/lang/System.gc": 1,
+            "javax/microedition/lcdui/Image.createImage": 1,
+            "javax/microedition/lcdui/Image.getGraphics": 3,
+            "javax/microedition/lcdui/Graphics.drawImage": 4,
+            "com/nokia/mid/ui/DirectUtils.createImage": 2
+          },
+          "constantes": [
+            [
+              2,
+              14
+            ],
+            [
+              7,
+              30
+            ],
+            [
+              12,
+              23
+            ],
+            [
+              18,
+              14
+            ],
+            [
+              19,
+              8
+            ],
+            [
+              20,
+              27
+            ],
+            [
+              25,
+              14
+            ],
+            [
+              31,
+              0
+            ],
+            [
+              38,
+              1
+            ],
+            [
+              40,
+              16
+            ],
+            [
+              43,
+              -5
+            ],
+            [
+              44,
+              20
+            ],
+            [
+              48,
+              0
+            ],
+            [
+              49,
+              0
+            ],
+            [
+              53,
+              1
+            ],
+            [
+              60,
+              1
+            ],
+            [
+              62,
+              16
+            ],
+            [
+              65,
+              11
+            ],
+            [
+              66,
+              20
+            ],
+            [
+              70,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              15,
+              "java/lang/System.gc"
+            ],
+            [
+              21,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              27,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              45,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              67,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              79,
+              "com/nokia/mid/ui/DirectUtils.createImage"
+            ],
+            [
+              85,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              103,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              115,
+              "com/nokia/mid/ui/DirectUtils.createImage"
+            ],
+            [
+              121,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              139,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              6,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              11,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              17,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              24,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              30,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              36,
+              "getfield",
+              "gamecanvas.loadicon"
+            ],
+            [
+              47,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              52,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              58,
+              "getfield",
+              "gamecanvas.loadicon"
+            ],
+            [
+              69,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              74,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              82,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              88,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              94,
+              "getfield",
+              "gamecanvas.loadicon"
+            ],
+            [
+              105,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              110,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              118,
+              "getfield",
+              "gamecanvas.bobgfx"
+            ],
+            [
+              124,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              130,
+              "getfield",
+              "gamecanvas.loadicon"
+            ]
+          ]
+        },
+        {
+          "nome": "DrawIt",
+          "desc": "(IIII)V",
+          "tipo_ret": "void",
+          "n_instr": 217,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setClip": 2,
+            "com/nokia/mid/ui/DirectGraphics.drawImage": 2,
+            "javax/microedition/lcdui/Graphics.drawImage": 2
+          },
+          "constantes": [
+            [
+              6,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              27,
+              16
+            ],
+            [
+              30,
+              16
+            ],
+            [
+              32,
+              16
+            ],
+            [
+              33,
+              16
+            ],
+            [
+              68,
+              256
+            ],
+            [
+              70,
+              128
+            ],
+            [
+              82,
+              0
+            ],
+            [
+              90,
+              16
+            ],
+            [
+              93,
+              16
+            ],
+            [
+              97,
+              16
+            ],
+            [
+              99,
+              0
+            ],
+            [
+              101,
+              20
+            ],
+            [
+              104,
+              8192
+            ],
+            [
+              113,
+              1
+            ],
+            [
+              121,
+              16
+            ],
+            [
+              124,
+              16
+            ]
+          ],
+          "chamadas": [
+            [
+              34,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              105,
+              "com/nokia/mid/ui/DirectGraphics.drawImage"
+            ],
+            [
+              133,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              176,
+              "com/nokia/mid/ui/DirectGraphics.drawImage"
+            ],
+            [
+              204,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              215,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.levelxpos"
+            ],
+            [
+              4,
+              "getfield",
+              "gamecanvas.levelypos"
+            ],
+            [
+              25,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              36,
+              "getfield",
+              "gamecanvas.leveldata"
+            ],
+            [
+              41,
+              "getfield",
+              "gamecanvas.levelbreite"
+            ],
+            [
+              50,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              55,
+              "getfield",
+              "gamecanvas.levelbreite"
+            ],
+            [
+              74,
+              "getfield",
+              "gamecanvas.anzahl_icons"
+            ],
+            [
+              78,
+              "getfield",
+              "gamecanvas.anzahl_icons"
+            ],
+            [
+              86,
+              "getfield",
+              "gamecanvas.DGoffscreenbuffer"
+            ],
+            [
+              88,
+              "getfield",
+              "gamecanvas.loadicon"
+            ],
+            [
+              110,
+              "getfield",
+              "gamecanvas.anzahl_icons"
+            ],
+            [
+              117,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ],
+            [
+              119,
+              "getfield",
+              "gamecanvas.loadicon"
+            ],
+            [
+              145,
+              "getfield",
+              "gamecanvas.anzahl_icons"
+            ],
+            [
+              149,
+              "getfield",
+              "gamecanvas.anzahl_icons"
+            ],
+            [
+              157,
+              "getfield",
+              "gamecanvas.DGoffscreenbuffer"
+            ],
+            [
+              159,
+              "getfield",
+              "gamecanvas.loadicon"
+            ],
+            [
+              181,
+              "getfield",
+              "gamecanvas.anzahl_icons"
+            ],
+            [
+              188,
+              "getfield",
+              "gamecanvas.offscreenbuffer"
+            ]
+          ]
+        },
+        {
+          "nome": "Scroll",
+          "desc": "(II)V",
+          "tipo_ret": "void",
+          "n_instr": 268,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              1000
+            ],
+            [
+              8,
+              16
+            ],
+            [
+              13,
+              16
+            ],
+            [
+              15,
+              2
+            ],
+            [
+              21,
+              2
+            ],
+            [
+              39,
+              1000
+            ],
+            [
+              43,
+              16
+            ],
+            [
+              48,
+              16
+            ],
+            [
+              50,
+              2
+            ],
+            [
+              56,
+              2
+            ],
+            [
+              66,
+              1000
+            ],
+            [
+              71,
+              16000
+            ],
+            [
+              83,
+              1000
+            ],
+            [
+              87,
+              16
+            ],
+            [
+              92,
+              16
+            ],
+            [
+              94,
+              2
+            ],
+            [
+              100,
+              2
+            ],
+            [
+              110,
+              1000
+            ],
+            [
+              115,
+              16000
+            ],
+            [
+              127,
+              1000
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              3,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              7,
+              "getfield",
+              "gamecanvas.levelypos"
+            ],
+            [
+              12,
+              "getfield",
+              "gamecanvas.screenY"
+            ],
+            [
+              19,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              26,
+              "getfield",
+              "gamecanvas.scrollY"
+            ],
+            [
+              32,
+              "getfield",
+              "gamecanvas.scrollY"
+            ],
+            [
+              35,
+              "putfield",
+              "gamecanvas.scrollY"
+            ],
+            [
+              38,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              42,
+              "getfield",
+              "gamecanvas.levelypos"
+            ],
+            [
+              47,
+              "getfield",
+              "gamecanvas.screenY"
+            ],
+            [
+              54,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              61,
+              "getfield",
+              "gamecanvas.scrollY"
+            ],
+            [
+              65,
+              "getfield",
+              "gamecanvas.screenY"
+            ],
+            [
+              70,
+              "getfield",
+              "gamecanvas.levelhoehe"
+            ],
+            [
+              76,
+              "getfield",
+              "gamecanvas.scrollY"
+            ],
+            [
+              79,
+              "putfield",
+              "gamecanvas.scrollY"
+            ],
+            [
+              82,
+              "getfield",
+              "gamecanvas.playerXpos"
+            ],
+            [
+              86,
+              "getfield",
+              "gamecanvas.levelxpos"
+            ],
+            [
+              91,
+              "getfield",
+              "gamecanvas.screenX"
+            ],
+            [
+              98,
+              "getfield",
+              "gamecanvas.player"
+            ]
+          ]
+        },
+        {
+          "nome": "GetIcon",
+          "desc": "(II)I",
+          "tipo_ret": "int",
+          "n_instr": 29,
+          "apis": {},
+          "constantes": [
+            [
+              7,
+              16
+            ],
+            [
+              13,
+              16
+            ],
+            [
+              20,
+              0
+            ],
+            [
+              25,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              5,
+              "getfield",
+              "gamecanvas.maskdata"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.levelbreite"
+            ]
+          ]
+        },
+        {
+          "nome": "SetIcon",
+          "desc": "(IIBBB)V",
+          "tipo_ret": "void",
+          "n_instr": 54,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              -1
+            ],
+            [
+              6,
+              16
+            ],
+            [
+              12,
+              16
+            ],
+            [
+              18,
+              -1
+            ],
+            [
+              23,
+              16
+            ],
+            [
+              29,
+              16
+            ],
+            [
+              35,
+              -1
+            ],
+            [
+              40,
+              16
+            ],
+            [
+              46,
+              16
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              4,
+              "getfield",
+              "gamecanvas.maskdata"
+            ],
+            [
+              9,
+              "getfield",
+              "gamecanvas.levelbreite"
+            ],
+            [
+              21,
+              "getfield",
+              "gamecanvas.leveldata"
+            ],
+            [
+              26,
+              "getfield",
+              "gamecanvas.levelbreite"
+            ],
+            [
+              38,
+              "getfield",
+              "gamecanvas.leveldata2"
+            ],
+            [
+              43,
+              "getfield",
+              "gamecanvas.levelbreite"
+            ]
+          ]
+        },
+        {
+          "nome": "checkkollision",
+          "desc": "(IIII)I",
+          "tipo_ret": "int",
+          "n_instr": 63,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              59,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "GetLevelInfo",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 764,
+          "apis": {
+            "java/lang/StringBuffer.<init>": 6,
+            "java/lang/StringBuffer.append": 12,
+            "java/lang/String.valueOf": 12,
+            "java/lang/System.gc": 1,
+            "javax/microedition/lcdui/Image.createImage": 4
+          },
+          "constantes": [
+            [
+              1,
+              5
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              20,
+              0
+            ],
+            [
+              22,
+              0
+            ],
+            [
+              24,
+              0
+            ],
+            [
+              30,
+              0
+            ],
+            [
+              40,
+              0
+            ],
+            [
+              45,
+              100
+            ],
+            [
+              51,
+              100
+            ],
+            [
+              86,
+              2
+            ],
+            [
+              93,
+              1
+            ],
+            [
+              103,
+              1
+            ],
+            [
+              110,
+              1
+            ],
+            [
+              115,
+              26
+            ],
+            [
+              120,
+              27
+            ],
+            [
+              125,
+              28
+            ],
+            [
+              130,
+              29
+            ],
+            [
+              136,
+              26
+            ],
+            [
+              151,
+              27
+            ],
+            [
+              166,
+              28
+            ]
+          ],
+          "chamadas": [
+            [
+              59,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              61,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              63,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              64,
+              "java/lang/String.valueOf"
+            ],
+            [
+              65,
+              "java/lang/String.valueOf"
+            ],
+            [
+              71,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              73,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              75,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              76,
+              "java/lang/String.valueOf"
+            ],
+            [
+              77,
+              "java/lang/String.valueOf"
+            ],
+            [
+              133,
+              "java/lang/System.gc"
+            ],
+            [
+              140,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              142,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              144,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              145,
+              "java/lang/String.valueOf"
+            ],
+            [
+              146,
+              "java/lang/String.valueOf"
+            ],
+            [
+              147,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              155,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              157,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              159,
+              "java/lang/StringBuffer.append"
+            ]
+          ],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "gamecanvas.i"
+            ],
+            [
+              4,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              6,
+              "getfield",
+              "gamecanvas.anzahlsprites"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              14,
+              "getfield",
+              "gamecanvas.i"
+            ],
+            [
+              17,
+              "putfield",
+              "gamecanvas.i"
+            ],
+            [
+              21,
+              "putfield",
+              "gamecanvas.keys"
+            ],
+            [
+              27,
+              "getfield",
+              "gamecanvas.levelinfo"
+            ],
+            [
+              33,
+              "getfield",
+              "gamecanvas.lastlevelnr"
+            ],
+            [
+              37,
+              "getfield",
+              "gamecanvas.levelinfo"
+            ],
+            [
+              42,
+              "putfield",
+              "gamecanvas.lastlevelnr"
+            ],
+            [
+              44,
+              "getfield",
+              "gamecanvas.lastlevelnr"
+            ],
+            [
+              49,
+              "getfield",
+              "gamecanvas.lastlevelnr"
+            ],
+            [
+              83,
+              "getfield",
+              "gamecanvas.levelinfo"
+            ],
+            [
+              88,
+              "putfield",
+              "gamecanvas.skycolor"
+            ],
+            [
+              90,
+              "getfield",
+              "gamecanvas.levelinfo"
+            ],
+            [
+              96,
+              "getfield",
+              "gamecanvas.lastenemynr"
+            ],
+            [
+              100,
+              "getfield",
+              "gamecanvas.levelinfo"
+            ],
+            [
+              105,
+              "putfield",
+              "gamecanvas.lastenemynr"
+            ],
+            [
+              107,
+              "getfield",
+              "gamecanvas.levelinfo"
+            ]
+          ]
+        },
+        {
+          "nome": "MovePlayer",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 295,
+          "apis": {},
+          "constantes": [
+            [
+              5,
+              0
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              17,
+              -5000
+            ],
+            [
+              20,
+              0
+            ],
+            [
+              26,
+              3000
+            ],
+            [
+              30,
+              2
+            ],
+            [
+              31,
+              3000
+            ],
+            [
+              39,
+              1
+            ],
+            [
+              44,
+              5
+            ],
+            [
+              49,
+              12
+            ],
+            [
+              59,
+              8192
+            ],
+            [
+              65,
+              0
+            ],
+            [
+              71,
+              3000
+            ],
+            [
+              75,
+              8
+            ],
+            [
+              76,
+              3000
+            ],
+            [
+              84,
+              1
+            ],
+            [
+              89,
+              5
+            ],
+            [
+              94,
+              12
+            ],
+            [
+              104,
+              8192
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "gamecanvas.lastmm"
+            ],
+            [
+              6,
+              "putfield",
+              "gamecanvas.playeranimdelay"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.playerjumps"
+            ],
+            [
+              15,
+              "putfield",
+              "gamecanvas.playerjumps"
+            ],
+            [
+              18,
+              "putfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              21,
+              "putfield",
+              "gamecanvas.playerONlift"
+            ],
+            [
+              25,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              28,
+              "putfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              34,
+              "getfield",
+              "gamecanvas.playeranimdelay"
+            ],
+            [
+              38,
+              "getfield",
+              "gamecanvas.playeranimdelay"
+            ],
+            [
+              41,
+              "putfield",
+              "gamecanvas.playeranimdelay"
+            ],
+            [
+              45,
+              "putfield",
+              "gamecanvas.playeranimdelay"
+            ],
+            [
+              48,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              53,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              58,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              64,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              70,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              73,
+              "putfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              79,
+              "getfield",
+              "gamecanvas.playeranimdelay"
+            ],
+            [
+              83,
+              "getfield",
+              "gamecanvas.playeranimdelay"
+            ]
+          ]
+        },
+        {
+          "nome": "checkHit",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 117,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              7,
+              24
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              13,
+              -10
+            ],
+            [
+              18,
+              1000
+            ],
+            [
+              24,
+              1000
+            ],
+            [
+              26,
+              10
+            ],
+            [
+              46,
+              1000
+            ],
+            [
+              52,
+              1000
+            ],
+            [
+              54,
+              10
+            ],
+            [
+              56,
+              -1
+            ],
+            [
+              57,
+              0
+            ],
+            [
+              58,
+              80
+            ],
+            [
+              65,
+              1000
+            ],
+            [
+              71,
+              1000
+            ],
+            [
+              73,
+              10
+            ],
+            [
+              79,
+              3
+            ],
+            [
+              86,
+              5
+            ],
+            [
+              89,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              5,
+              "getfield",
+              "gamecanvas.playerdir"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.playerdir"
+            ],
+            [
+              17,
+              "getfield",
+              "gamecanvas.playerXpos"
+            ],
+            [
+              23,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              32,
+              "getfield",
+              "gamecanvas.MASK_VASE_START"
+            ],
+            [
+              36,
+              "getfield",
+              "gamecanvas.MASK_VASE_END"
+            ],
+            [
+              40,
+              "getfield",
+              "gamecanvas.MASK_VASE_START"
+            ],
+            [
+              45,
+              "getfield",
+              "gamecanvas.playerXpos"
+            ],
+            [
+              51,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              62,
+              "getfield",
+              "gamecanvas.explo"
+            ],
+            [
+              64,
+              "getfield",
+              "gamecanvas.playerXpos"
+            ],
+            [
+              70,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              78,
+              "getfield",
+              "gamecanvas.explo"
+            ],
+            [
+              83,
+              "getfield",
+              "gamecanvas.explo"
+            ],
+            [
+              87,
+              "putfield",
+              "gamecanvas.explowaiter"
+            ],
+            [
+              90,
+              "putfield",
+              "gamecanvas.exploonly"
+            ],
+            [
+              93,
+              "getfield",
+              "gamecanvas.extra"
+            ],
+            [
+              101,
+              "getfield",
+              "gamecanvas.extra"
+            ],
+            [
+              107,
+              "getfield",
+              "gamecanvas.soundopt"
+            ]
+          ]
+        },
+        {
+          "nome": "JumpPlayer",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 144,
+          "apis": {},
+          "constantes": [
+            [
+              2,
+              1
+            ],
+            [
+              9,
+              4450
+            ],
+            [
+              14,
+              350
+            ],
+            [
+              28,
+              2
+            ],
+            [
+              31,
+              -1
+            ],
+            [
+              36,
+              8
+            ],
+            [
+              46,
+              7
+            ],
+            [
+              50,
+              1
+            ],
+            [
+              55,
+              8192
+            ],
+            [
+              61,
+              0
+            ],
+            [
+              65,
+              0
+            ],
+            [
+              73,
+              6
+            ],
+            [
+              77,
+              1
+            ],
+            [
+              82,
+              8192
+            ],
+            [
+              88,
+              0
+            ],
+            [
+              99,
+              1000
+            ],
+            [
+              101,
+              10
+            ],
+            [
+              105,
+              1000
+            ],
+            [
+              107,
+              23
+            ],
+            [
+              114,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.playerjumps"
+            ],
+            [
+              5,
+              "getfield",
+              "gamecanvas.playerONlift"
+            ],
+            [
+              8,
+              "getfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              13,
+              "getfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              16,
+              "putfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              19,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              21,
+              "getfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              23,
+              "putfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              25,
+              "getfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              30,
+              "getfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              38,
+              "getfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              41,
+              "getfield",
+              "gamecanvas.playerlostlive"
+            ],
+            [
+              45,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              49,
+              "getfield",
+              "gamecanvas.playerdir"
+            ],
+            [
+              54,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              60,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              66,
+              "putfield",
+              "gamecanvas.playerjumps"
+            ],
+            [
+              68,
+              "getfield",
+              "gamecanvas.playerlostlive"
+            ],
+            [
+              72,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              76,
+              "getfield",
+              "gamecanvas.playerdir"
+            ]
+          ]
+        },
+        {
+          "nome": "FallPlayer",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 132,
+          "apis": {},
+          "constantes": [
+            [
+              13,
+              1
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              23,
+              1000
+            ],
+            [
+              25,
+              10
+            ],
+            [
+              29,
+              1000
+            ],
+            [
+              31,
+              23
+            ],
+            [
+              40,
+              1000
+            ],
+            [
+              42,
+              10
+            ],
+            [
+              46,
+              1000
+            ],
+            [
+              48,
+              23
+            ],
+            [
+              57,
+              1000
+            ],
+            [
+              61,
+              8
+            ],
+            [
+              62,
+              1000
+            ],
+            [
+              67,
+              7
+            ],
+            [
+              71,
+              1
+            ],
+            [
+              76,
+              8192
+            ],
+            [
+              82,
+              0
+            ],
+            [
+              85,
+              4
+            ],
+            [
+              93,
+              1000
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.playerjumps"
+            ],
+            [
+              4,
+              "getfield",
+              "gamecanvas.aufleiter"
+            ],
+            [
+              7,
+              "getfield",
+              "gamecanvas.playerlostlive"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.playerONlift"
+            ],
+            [
+              14,
+              "putfield",
+              "gamecanvas.playerfalling"
+            ],
+            [
+              22,
+              "getfield",
+              "gamecanvas.playerXpos"
+            ],
+            [
+              28,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              35,
+              "getfield",
+              "gamecanvas.MASK_WALKWAY"
+            ],
+            [
+              39,
+              "getfield",
+              "gamecanvas.playerXpos"
+            ],
+            [
+              45,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              52,
+              "getfield",
+              "gamecanvas.MASK_LADDER"
+            ],
+            [
+              56,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              59,
+              "putfield",
+              "gamecanvas.playerYpos"
+            ],
+            [
+              66,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              70,
+              "getfield",
+              "gamecanvas.playerdir"
+            ],
+            [
+              75,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              81,
+              "getfield",
+              "gamecanvas.player"
+            ],
+            [
+              88,
+              "getfield",
+              "gamecanvas.playerONlift"
+            ],
+            [
+              92,
+              "getfield",
+              "gamecanvas.playerXpos"
+            ],
+            [
+              98,
+              "getfield",
+              "gamecanvas.playerYpos"
+            ]
+          ]
+        },
+        {
+          "nome": "ExtraJump",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 34,
+          "apis": {},
+          "constantes": [
+            [
+              2,
+              1
+            ],
+            [
+              6,
+              3750
+            ],
+            [
+              11,
+              250
+            ],
+            [
+              30,
+              1000
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.extrajumps"
+            ],
+            [
+              5,
+              "getfield",
+              "gamecanvas.extrajumpspeed"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.extrajumpspeed"
+            ],
+            [
+              13,
+              "putfield",
+              "gamecanvas.extrajumpspeed"
+            ],
+            [
+              16,
+              "getfield",
+              "gamecanvas.extraypos"
+            ],
+            [
+              18,
+              "getfield",
+              "gamecanvas.extrajumpspeed"
+            ],
+            [
+              20,
+              "putfield",
+              "gamecanvas.extraypos"
+            ],
+            [
+              23,
+              "getfield",
+              "gamecanvas.extra"
+            ],
+            [
+              26,
+              "getfield",
+              "gamecanvas.extra"
+            ],
+            [
+              29,
+              "getfield",
+              "gamecanvas.extraypos"
+            ]
+          ]
+        },
+        {
+          "nome": "openGate",
+          "desc": "(II)V",
+          "tipo_ret": "void",
+          "n_instr": 75,
+          "apis": {},
+          "constantes": [
+            [
+              5,
+              3
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              20,
+              16
+            ],
+            [
+              29,
+              98
+            ],
+            [
+              34,
+              -1
+            ],
+            [
+              35,
+              -1
+            ],
+            [
+              36,
+              0
+            ],
+            [
+              39,
+              16
+            ],
+            [
+              46,
+              -1
+            ],
+            [
+              47,
+              0
+            ],
+            [
+              48,
+              -1
+            ],
+            [
+              51,
+              16
+            ],
+            [
+              57,
+              -1
+            ],
+            [
+              58,
+              0
+            ],
+            [
+              59,
+              -1
+            ],
+            [
+              62,
+              0
+            ],
+            [
+              65,
+              120
+            ],
+            [
+              70,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.soundopt"
+            ],
+            [
+              12,
+              "getfield",
+              "gamecanvas.MASK_WALKWAY"
+            ],
+            [
+              66,
+              "putfield",
+              "gamecanvas.gateblocks"
+            ],
+            [
+              69,
+              "getfield",
+              "gamecanvas.keys"
+            ],
+            [
+              73,
+              "putfield",
+              "gamecanvas.keys"
+            ]
+          ]
+        },
+        {
+          "nome": "titelscroll",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 48,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setClip": 1,
+            "javax/microedition/lcdui/Graphics.drawImage": 1
+          },
+          "constantes": [
+            [
+              4,
+              16000
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              22,
+              60
+            ],
+            [
+              23,
+              1000
+            ],
+            [
+              27,
+              40
+            ],
+            [
+              28,
+              1000
+            ],
+            [
+              32,
+              0
+            ],
+            [
+              33,
+              0
+            ],
+            [
+              34,
+              128
+            ],
+            [
+              35,
+              128
+            ],
+            [
+              45,
+              20
+            ]
+          ],
+          "chamadas": [
+            [
+              36,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              46,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.scrollX"
+            ],
+            [
+              3,
+              "getfield",
+              "gamecanvas.levelbreite"
+            ],
+            [
+              11,
+              "putfield",
+              "gamecanvas.titelscrolldir"
+            ],
+            [
+              13,
+              "getfield",
+              "gamecanvas.scrollX"
+            ],
+            [
+              17,
+              "putfield",
+              "gamecanvas.titelscrolldir"
+            ],
+            [
+              19,
+              "getfield",
+              "gamecanvas.titelscrolldir"
+            ],
+            [
+              31,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              38,
+              "getfield",
+              "gamecanvas.tileimagebuffer"
+            ],
+            [
+              40,
+              "getfield",
+              "gamecanvas.offimage"
+            ],
+            [
+              42,
+              "getfield",
+              "gamecanvas.softxpos"
+            ],
+            [
+              44,
+              "getfield",
+              "gamecanvas.softypos"
+            ]
+          ]
+        },
+        {
+          "nome": "PlaySound",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 32,
+          "apis": {
+            "com/nokia/mid/sound/Sound.<init>": 1,
+            "com/nokia/mid/sound/Sound.init": 1,
+            "com/nokia/mid/sound/Sound.play": 1
+          },
+          "constantes": [
+            [
+              19,
+              1
+            ],
+            [
+              25,
+              1
+            ],
+            [
+              29,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              20,
+              "com/nokia/mid/sound/Sound.<init>"
+            ],
+            [
+              26,
+              "com/nokia/mid/sound/Sound.init"
+            ],
+            [
+              30,
+              "com/nokia/mid/sound/Sound.play"
+            ]
+          ],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "gamecanvas.sound"
+            ],
+            [
+              6,
+              "getfield",
+              "gamecanvas.tunes"
+            ],
+            [
+              21,
+              "putfield",
+              "gamecanvas.sound"
+            ],
+            [
+              23,
+              "getfield",
+              "gamecanvas.sound"
+            ],
+            [
+              28,
+              "getfield",
+              "gamecanvas.sound"
+            ]
+          ]
+        },
+        {
+          "nome": "StopSound",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 4,
+          "apis": {
+            "com/nokia/mid/sound/Sound.stop": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              2,
+              "com/nokia/mid/sound/Sound.stop"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sound"
+            ]
+          ]
+        },
+        {
+          "nome": "convertHexToBinary",
+          "desc": "(Ljava/lang/String;)[B",
+          "tipo_ret": "signed char*",
+          "n_instr": 67,
+          "apis": {
+            "java/lang/String.length": 2,
+            "java/lang/Exception.<init>": 3,
+            "java/lang/String.substring": 1,
+            "java/lang/String.charAt": 1,
+            "java/lang/Integer.parseInt": 1,
+            "java/lang/String.valueOf": 2,
+            "java/lang/String.concat": 1
+          },
+          "constantes": [
+            [
+              2,
+              2
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              24,
+              2
+            ],
+            [
+              27,
+              2
+            ],
+            [
+              29,
+              2
+            ],
+            [
+              34,
+              0
+            ],
+            [
+              36,
+              45
+            ],
+            [
+              44,
+              16
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "java/lang/String.length"
+            ],
+            [
+              8,
+              "java/lang/Exception.<init>"
+            ],
+            [
+              11,
+              "java/lang/String.length"
+            ],
+            [
+              31,
+              "java/lang/String.substring"
+            ],
+            [
+              35,
+              "java/lang/String.charAt"
+            ],
+            [
+              41,
+              "java/lang/Exception.<init>"
+            ],
+            [
+              45,
+              "java/lang/Integer.parseInt"
+            ],
+            [
+              53,
+              "java/lang/String.valueOf"
+            ],
+            [
+              54,
+              "java/lang/String.valueOf"
+            ],
+            [
+              55,
+              "java/lang/String.concat"
+            ],
+            [
+              56,
+              "java/lang/Exception.<init>"
+            ]
+          ],
+          "fields": []
+        },
+        {
+          "nome": "ReborneEnemy",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 96,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              -99
+            ],
+            [
+              13,
+              8
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              -99
+            ],
+            [
+              25,
+              8
+            ],
+            [
+              28,
+              7
+            ],
+            [
+              29,
+              120
+            ],
+            [
+              37,
+              8
+            ],
+            [
+              39,
+              1
+            ],
+            [
+              42,
+              0
+            ],
+            [
+              43,
+              -99
+            ],
+            [
+              51,
+              8
+            ],
+            [
+              53,
+              1
+            ],
+            [
+              56,
+              7
+            ],
+            [
+              57,
+              120
+            ],
+            [
+              63,
+              7
+            ],
+            [
+              64,
+              200
+            ],
+            [
+              74,
+              8
+            ],
+            [
+              77,
+              2
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              8,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              10,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              20,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              22,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              32,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              34,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              46,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              48,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              60,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              69,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              71,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              82,
+              "getfield",
+              "gamecanvas.sprites"
+            ],
+            [
+              84,
+              "getfield",
+              "gamecanvas.sprites"
+            ]
+          ]
+        },
+        {
+          "nome": "PlayerDead",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 53,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              100
+            ],
+            [
+              4,
+              50
+            ],
+            [
+              7,
+              5
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              16,
+              2
+            ],
+            [
+              19,
+              1
+            ],
+            [
+              22,
+              -5000
+            ],
+            [
+              27,
+              1
+            ],
+            [
+              31,
+              100
+            ],
+            [
+              38,
+              2
+            ],
+            [
+              43,
+              2
+            ],
+            [
+              50,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "gamecanvas.playerpower"
+            ],
+            [
+              5,
+              "putfield",
+              "gamecanvas.playerlostlive"
+            ],
+            [
+              8,
+              "putfield",
+              "gamecanvas.playerhit"
+            ],
+            [
+              11,
+              "putfield",
+              "gamecanvas.playerhitdir"
+            ],
+            [
+              14,
+              "putfield",
+              "gamecanvas.hitrotate"
+            ],
+            [
+              17,
+              "putfield",
+              "gamecanvas.hitrotatedelay"
+            ],
+            [
+              20,
+              "putfield",
+              "gamecanvas.playerjumps"
+            ],
+            [
+              23,
+              "putfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              26,
+              "getfield",
+              "gamecanvas.lives"
+            ],
+            [
+              29,
+              "putfield",
+              "gamecanvas.lives"
+            ],
+            [
+              32,
+              "putfield",
+              "gamecanvas.playerflashing"
+            ],
+            [
+              34,
+              "getfield",
+              "gamecanvas.soundopt"
+            ],
+            [
+              42,
+              "getfield",
+              "gamecanvas.swordpower"
+            ],
+            [
+              45,
+              "putfield",
+              "gamecanvas.swordpower"
+            ],
+            [
+              47,
+              "getfield",
+              "gamecanvas.swordpower"
+            ],
+            [
+              51,
+              "putfield",
+              "gamecanvas.swordpower"
+            ]
+          ]
+        },
+        {
+          "nome": "resetdata",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 134,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              19,
+              -1
+            ],
+            [
+              22,
+              -1
+            ],
+            [
+              25,
+              0
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              31,
+              0
+            ],
+            [
+              34,
+              0
+            ],
+            [
+              37,
+              0
+            ],
+            [
+              40,
+              0
+            ],
+            [
+              43,
+              0
+            ],
+            [
+              46,
+              0
+            ],
+            [
+              49,
+              0
+            ],
+            [
+              52,
+              0
+            ],
+            [
+              55,
+              0
+            ],
+            [
+              58,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "gamecanvas.scrollX"
+            ],
+            [
+              5,
+              "putfield",
+              "gamecanvas.scrollY"
+            ],
+            [
+              8,
+              "putfield",
+              "gamecanvas.softxpos"
+            ],
+            [
+              11,
+              "putfield",
+              "gamecanvas.softypos"
+            ],
+            [
+              14,
+              "putfield",
+              "gamecanvas.jumpspeed"
+            ],
+            [
+              17,
+              "putfield",
+              "gamecanvas.playerjumps"
+            ],
+            [
+              20,
+              "putfield",
+              "gamecanvas.lastlevelnr"
+            ],
+            [
+              23,
+              "putfield",
+              "gamecanvas.lastenemynr"
+            ],
+            [
+              26,
+              "putfield",
+              "gamecanvas.keyuppressed"
+            ],
+            [
+              29,
+              "putfield",
+              "gamecanvas.playerfalling"
+            ],
+            [
+              32,
+              "putfield",
+              "gamecanvas.XposOffset"
+            ],
+            [
+              35,
+              "putfield",
+              "gamecanvas.aufleiter"
+            ],
+            [
+              38,
+              "putfield",
+              "gamecanvas.explowaiter"
+            ],
+            [
+              41,
+              "putfield",
+              "gamecanvas.extrajumps"
+            ],
+            [
+              44,
+              "putfield",
+              "gamecanvas.extrajumpspeed"
+            ],
+            [
+              47,
+              "putfield",
+              "gamecanvas.extraypos"
+            ],
+            [
+              50,
+              "putfield",
+              "gamecanvas.keys"
+            ],
+            [
+              53,
+              "putfield",
+              "gamecanvas.diamant"
+            ],
+            [
+              56,
+              "putfield",
+              "gamecanvas.playerhit"
+            ],
+            [
+              59,
+              "putfield",
+              "gamecanvas.playerhitdir"
+            ]
+          ]
+        },
+        {
+          "nome": "GetExtra",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 110,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              15
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              16,
+              25
+            ],
+            [
+              23,
+              16
+            ],
+            [
+              26,
+              50
+            ],
+            [
+              31,
+              50
+            ],
+            [
+              38,
+              17
+            ],
+            [
+              43,
+              75
+            ],
+            [
+              50,
+              18
+            ],
+            [
+              55,
+              1
+            ],
+            [
+              61,
+              1
+            ],
+            [
+              66,
+              10
+            ],
+            [
+              69,
+              0
+            ],
+            [
+              72,
+              30
+            ],
+            [
+              79,
+              3
+            ],
+            [
+              84,
+              1
+            ],
+            [
+              90,
+              250
+            ],
+            [
+              96,
+              100
+            ],
+            [
+              102,
+              -100
+            ],
+            [
+              103,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "gamecanvas.extra"
+            ],
+            [
+              8,
+              "getfield",
+              "gamecanvas.keys"
+            ],
+            [
+              12,
+              "putfield",
+              "gamecanvas.keys"
+            ],
+            [
+              15,
+              "getfield",
+              "gamecanvas.score"
+            ],
+            [
+              18,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              21,
+              "getfield",
+              "gamecanvas.extra"
+            ],
+            [
+              27,
+              "putfield",
+              "gamecanvas.energyfound"
+            ],
+            [
+              30,
+              "getfield",
+              "gamecanvas.score"
+            ],
+            [
+              33,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              36,
+              "getfield",
+              "gamecanvas.extra"
+            ],
+            [
+              42,
+              "getfield",
+              "gamecanvas.score"
+            ],
+            [
+              45,
+              "putfield",
+              "gamecanvas.score"
+            ],
+            [
+              48,
+              "getfield",
+              "gamecanvas.extra"
+            ],
+            [
+              54,
+              "getfield",
+              "gamecanvas.diamant"
+            ],
+            [
+              57,
+              "putfield",
+              "gamecanvas.diamant"
+            ],
+            [
+              60,
+              "getfield",
+              "gamecanvas.swordpower"
+            ],
+            [
+              63,
+              "putfield",
+              "gamecanvas.swordpower"
+            ],
+            [
+              65,
+              "getfield",
+              "gamecanvas.diamant"
+            ],
+            [
+              70,
+              "putfield",
+              "gamecanvas.diamant"
+            ],
+            [
+              73,
+              "putfield",
+              "gamecanvas.extralife"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "com/nokia/mid/ui/FullCanvas.<init>": 1,
+        "java/util/Random.<init>": 1,
+        "java/util/Timer.<init>": 1,
+        "java/util/Timer.schedule": 1,
+        "javax/microedition/lcdui/Canvas.getGameAction": 1,
+        "java/lang/System.currentTimeMillis": 1,
+        "javax/microedition/lcdui/Graphics.setColor": 18,
+        "javax/microedition/lcdui/Graphics.fillRect": 19,
+        "java/lang/System.gc": 7,
+        "javax/microedition/lcdui/Image.createImage": 32,
+        "javax/microedition/lcdui/Graphics.setClip": 24,
+        "javax/microedition/lcdui/Graphics.drawImage": 24,
+        "java/lang/String.charAt": 17,
+        "java/lang/StringBuffer.<init>": 12,
+        "java/lang/StringBuffer.append": 26,
+        "java/lang/String.valueOf": 80,
+        "javax/microedition/lcdui/Canvas.repaint": 1,
+        "javax/microedition/lcdui/Canvas.serviceRepaints": 1,
+        "java/lang/String.concat": 28,
+        "java/util/Random.nextInt": 7,
+        "javax/microedition/lcdui/Graphics.drawLine": 6,
+        "javax/microedition/lcdui/Graphics.drawRect": 1,
+        "javax/microedition/lcdui/Graphics.fillRoundRect": 1,
+        "javax/microedition/lcdui/Graphics.drawRoundRect": 1,
+        "javax/microedition/lcdui/Image.getGraphics": 5,
+        "com/nokia/mid/ui/DirectUtils.getDirectGraphics": 2,
+        "java/io/PrintStream.println": 1,
+        "javax/microedition/rms/RecordStore.openRecordStore": 1,
+        "javax/microedition/rms/RecordStore.getNumRecords": 1,
+        "java/io/ByteArrayOutputStream.<init>": 2,
+        "java/io/DataOutputStream.<init>": 2,
+        "java/io/DataOutputStream.writeUTF": 2,
+        "java/io/DataOutputStream.writeInt": 2,
+        "java/io/DataOutputStream.close": 2,
+        "java/io/ByteArrayOutputStream.toByteArray": 2,
+        "javax/microedition/rms/RecordStore.setRecord": 1,
+        "java/io/ByteArrayOutputStream.close": 2,
+        "javax/microedition/rms/RecordStore.getRecord": 1,
+        "java/io/ByteArrayInputStream.<init>": 1,
+        "java/io/DataInputStream.<init>": 1,
+        "java/io/DataInputStream.readUTF": 1,
+        "java/io/DataInputStream.readInt": 1,
+        "java/io/DataInputStream.close": 1,
+        "javax/microedition/rms/RecordStore.addRecord": 1,
+        "com/nokia/mid/ui/DirectGraphics.drawImage": 4,
+        "javax/microedition/lcdui/Image.getHeight": 2,
+        "javax/microedition/lcdui/Image.getWidth": 3,
+        "javax/microedition/lcdui/Graphics.getClipX": 1,
+        "javax/microedition/lcdui/Graphics.getClipY": 1,
+        "javax/microedition/lcdui/Graphics.getClipHeight": 1,
+        "javax/microedition/lcdui/Graphics.getClipWidth": 1,
+        "java/lang/String.length": 5,
+        "java/lang/Object.getClass": 1,
+        "java/lang/Class.getResourceAsStream": 1,
+        "java/io/InputStream.read": 5,
+        "java/io/InputStream.close": 1,
+        "com/nokia/mid/ui/DirectUtils.createImage": 2,
+        "com/nokia/mid/sound/Sound.<init>": 1,
+        "com/nokia/mid/sound/Sound.init": 1,
+        "com/nokia/mid/sound/Sound.play": 1,
+        "com/nokia/mid/sound/Sound.stop": 1,
+        "java/lang/Exception.<init>": 3,
+        "java/lang/String.substring": 1,
+        "java/lang/Integer.parseInt": 1
+      },
+      "padroes": [
+        "CANVAS",
+        "TEM_PAINT",
+        "TEM_INPUT",
+        "USA_TIMER",
+        "USA_IMAGE"
+      ]
+    },
+    {
+      "arquivo": "game/main.class",
+      "nome": "main",
+      "super": "MIDlet",
+      "campos": [
+        {
+          "nome": "display",
+          "desc": "Ljavax/microedition/lcdui/Display;",
+          "tipo_c": "Display*"
+        },
+        {
+          "nome": "screen",
+          "desc": "Lgame/gamecanvas;",
+          "tipo_c": "gamecanvas*"
+        },
+        {
+          "nome": "started",
+          "desc": "Z",
+          "tipo_c": "int"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 12,
+          "apis": {
+            "javax/microedition/midlet/MIDlet.<init>": 1
+          },
+          "constantes": [
+            [
+              3,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "javax/microedition/midlet/MIDlet.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "main.started"
+            ],
+            [
+              10,
+              "putfield",
+              "main.screen"
+            ]
+          ]
+        },
+        {
+          "nome": "startApp",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 13,
+          "apis": {
+            "javax/microedition/lcdui/Display.getDisplay": 1,
+            "javax/microedition/lcdui/Display.setCurrent": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              5,
+              "javax/microedition/lcdui/Display.getDisplay"
+            ],
+            [
+              11,
+              "javax/microedition/lcdui/Display.setCurrent"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "main.display"
+            ],
+            [
+              6,
+              "putfield",
+              "main.display"
+            ],
+            [
+              8,
+              "getfield",
+              "main.display"
+            ],
+            [
+              10,
+              "getfield",
+              "main.screen"
+            ]
+          ]
+        },
+        {
+          "nome": "pauseApp",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 1,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "destroyApp",
+          "desc": "(Z)V",
+          "tipo_ret": "void",
+          "n_instr": 13,
+          "apis": {
+            "javax/microedition/rms/RecordStore.closeRecordStore": 1,
+            "java/util/Timer.cancel": 1,
+            "javax/microedition/midlet/MIDlet.notifyDestroyed": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              3,
+              "javax/microedition/rms/RecordStore.closeRecordStore"
+            ],
+            [
+              9,
+              "java/util/Timer.cancel"
+            ],
+            [
+              11,
+              "javax/microedition/midlet/MIDlet.notifyDestroyed"
+            ]
+          ],
+          "fields": [
+            [
+              2,
+              "getstatic",
+              "gamecanvas.HighScore"
+            ],
+            [
+              7,
+              "getfield",
+              "main.screen"
+            ],
+            [
+              8,
+              "getfield",
+              "gamecanvas.animTimer"
+            ]
+          ]
+        },
+        {
+          "nome": "hideNotify",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 1,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "showNotify",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 6,
+          "apis": {
+            "javax/microedition/lcdui/Display.setCurrent": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              4,
+              "javax/microedition/lcdui/Display.setCurrent"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "main.display"
+            ],
+            [
+              3,
+              "getfield",
+              "main.screen"
+            ]
+          ]
+        },
+        {
+          "nome": "exitRequested",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 4,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": []
+        }
+      ],
+      "apis": {
+        "javax/microedition/midlet/MIDlet.<init>": 1,
+        "javax/microedition/lcdui/Display.getDisplay": 1,
+        "javax/microedition/lcdui/Display.setCurrent": 2,
+        "javax/microedition/rms/RecordStore.closeRecordStore": 1,
+        "java/util/Timer.cancel": 1,
+        "javax/microedition/midlet/MIDlet.notifyDestroyed": 1
+      },
+      "padroes": [
+        "MIDLET",
+        "TEM_STARTAPP",
+        "USA_TIMER"
+      ]
+    }
+  ],
+  "n_classes": 3
+}
