@@ -1,0 +1,11 @@
+// Classe: main
+// Metodo: showNotify
+// Descritor: ()V
+// Instrucoes: 6
+
+[   0] aload_0
+[   1] getfield main.display
+[   2] aload_0
+[   3] getfield main.screen
+[   4] invokevirtual javax/microedition/lcdui/Display.setCurrent
+[   5] return

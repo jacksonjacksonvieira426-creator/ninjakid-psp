@@ -1,0 +1,137 @@
+// Classe: gamecanvas
+// Metodo: FallPlayer
+// Descritor: ()V
+// Instrucoes: 132
+
+[   0] aload_0
+[   1] getfield gamecanvas.playerjumps
+[   2] ifne 252
+[   3] aload_0
+[   4] getfield gamecanvas.aufleiter
+[   5] ifne 245
+[   6] aload_0
+[   7] getfield gamecanvas.playerlostlive
+[   8] ifne 238
+[   9] aload_0
+[  10] getfield gamecanvas.playerONlift
+[  11] ifne 231
+[  12] aload_0
+[  13] iconst_1
+[  14] putfield gamecanvas.playerfalling
+[  15] iconst_0
+[  16] istore_1
+[  17] iload_1
+[  18] iconst_4
+[  19] if_icmpge 224
+[  20] aload_0
+[  21] aload_0
+[  22] getfield gamecanvas.playerXpos
+[  23] sipush 1000
+[  24] idiv
+[  25] bipush 10
+[  26] iadd
+[  27] aload_0
+[  28] getfield gamecanvas.playerYpos
+[  29] sipush 1000
+[  30] idiv
+[  31] bipush 23
+[  32] iadd
+[  33] invokevirtual game/gamecanvas.GetIcon
+[  34] aload_0
+[  35] getfield gamecanvas.MASK_WALKWAY
+[  36] if_icmpeq 101
+[  37] aload_0
+[  38] aload_0
+[  39] getfield gamecanvas.playerXpos
+[  40] sipush 1000
+[  41] idiv
+[  42] bipush 10
+[  43] iadd
+[  44] aload_0
+[  45] getfield gamecanvas.playerYpos
+[  46] sipush 1000
+[  47] idiv
+[  48] bipush 23
+[  49] iadd
+[  50] invokevirtual game/gamecanvas.GetIcon
+[  51] aload_0
+[  52] getfield gamecanvas.MASK_LADDER
+[  53] if_icmpeq 68
+[  54] aload_0
+[  55] aload_0
+[  56] getfield gamecanvas.playerYpos
+[  57] sipush 1000
+[  58] iadd
+[  59] putfield gamecanvas.playerYpos
+[  60] aload_0
+[  61] bipush 8
+[  62] sipush 1000
+[  63] invokevirtual game/gamecanvas.Scroll
+[  64] aload_0
+[  65] aload_0
+[  66] getfield gamecanvas.player
+[  67] bipush 7
+[  68] invokevirtual game/gamecanvas.setSpriteAnim
+[  69] aload_0
+[  70] getfield gamecanvas.playerdir
+[  71] iconst_1
+[  72] if_icmpne 17
+[  73] aload_0
+[  74] aload_0
+[  75] getfield gamecanvas.player
+[  76] sipush 8192
+[  77] invokevirtual game/gamecanvas.setSpriteManipulation
+[  78] goto 94
+[  79] aload_0
+[  80] aload_0
+[  81] getfield gamecanvas.player
+[  82] iconst_0
+[  83] invokevirtual game/gamecanvas.setSpriteManipulation
+[  84] goto 82
+[  85] iconst_4
+[  86] istore_1
+[  87] aload_0
+[  88] getfield gamecanvas.playerONlift
+[  89] ifne 68
+[  90] aload_0
+[  91] aload_0
+[  92] getfield gamecanvas.playerXpos
+[  93] sipush 1000
+[  94] idiv
+[  95] bipush 10
+[  96] iadd
+[  97] aload_0
+[  98] getfield gamecanvas.playerYpos
+[  99] sipush 1000
+[ 100] idiv
+[ 101] bipush 10
+[ 102] iadd
+[ 103] invokevirtual game/gamecanvas.GetIcon
+[ 104] aload_0
+[ 105] getfield gamecanvas.MASK_DEAD
+[ 106] if_icmpeq 35
+[ 107] aload_0
+[ 108] aload_0
+[ 109] getfield gamecanvas.playerXpos
+[ 110] putfield gamecanvas.lastplayerxpos
+[ 111] aload_0
+[ 112] aload_0
+[ 113] getfield gamecanvas.playerYpos
+[ 114] putfield gamecanvas.lastplayerypos
+[ 115] aload_0
+[ 116] aload_0
+[ 117] getfield gamecanvas.scrollX
+[ 118] putfield gamecanvas.lastscrollx
+[ 119] aload_0
+[ 120] aload_0
+[ 121] getfield gamecanvas.scrollY
+[ 122] putfield gamecanvas.lastscrolly
+[ 123] aload_0
+[ 124] iconst_0
+[ 125] putfield gamecanvas.playerfalling
+[ 126] iinc 1
+[ 127] goto -218
+[ 128] aload_0
+[ 129] iconst_0
+[ 130] putfield gamecanvas.playerfalling
+[ 131] return

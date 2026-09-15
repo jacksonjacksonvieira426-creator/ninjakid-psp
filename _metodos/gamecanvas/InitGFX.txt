@@ -1,0 +1,142 @@
+// Classe: gamecanvas
+// Metodo: InitGFX
+// Descritor: ()V
+// Instrucoes: 137
+
+[   0] aload_0
+[   1] invokevirtual game/gamecanvas.LoadGFX
+[   2] aload_0
+[   3] ldc_w 268
+[   4] invokevirtual game/gamecanvas.LoadFont
+[   5] aload_0
+[   6] getfield gamecanvas.tileimagebuffer
+[   7] ifnonnull 57
+[   8] aload_0
+[   9] aload_0
+[  10] getfield gamecanvas.screenX
+[  11] aload_0
+[  12] getfield gamecanvas.screenY
+[  13] invokestatic javax/microedition/lcdui/Image.createImage
+[  14] putfield gamecanvas.tileimage
+[  15] aload_0
+[  16] aload_0
+[  17] getfield gamecanvas.tileimage
+[  18] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  19] putfield gamecanvas.tileimagebuffer
+[  20] aload_0
+[  21] aload_0
+[  22] getfield gamecanvas.tileimagebuffer
+[  23] invokestatic com/nokia/mid/ui/DirectUtils.getDirectGraphics
+[  24] putfield gamecanvas.DGtileimagebuffer
+[  25] aload_0
+[  26] getfield gamecanvas.tileimagebuffer
+[  27] iconst_0
+[  28] iconst_0
+[  29] aload_0
+[  30] getfield gamecanvas.screenX
+[  31] aload_0
+[  32] getfield gamecanvas.screenY
+[  33] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[  34] aload_0
+[  35] getfield gamecanvas.offscreenbuffer
+[  36] ifnonnull 69
+[  37] aload_0
+[  38] aload_0
+[  39] getfield gamecanvas.screenX
+[  40] bipush 16
+[  41] iadd
+[  42] aload_0
+[  43] getfield gamecanvas.screenY
+[  44] bipush 16
+[  45] iadd
+[  46] invokestatic javax/microedition/lcdui/Image.createImage
+[  47] putfield gamecanvas.offimage
+[  48] aload_0
+[  49] aload_0
+[  50] getfield gamecanvas.offimage
+[  51] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  52] putfield gamecanvas.offscreenbuffer
+[  53] aload_0
+[  54] aload_0
+[  55] getfield gamecanvas.offscreenbuffer
+[  56] invokestatic com/nokia/mid/ui/DirectUtils.getDirectGraphics
+[  57] putfield gamecanvas.DGoffscreenbuffer
+[  58] aload_0
+[  59] getfield gamecanvas.offscreenbuffer
+[  60] iconst_0
+[  61] iconst_0
+[  62] aload_0
+[  63] getfield gamecanvas.screenX
+[  64] bipush 16
+[  65] iadd
+[  66] aload_0
+[  67] getfield gamecanvas.screenY
+[  68] bipush 16
+[  69] iadd
+[  70] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[  71] aload_0
+[  72] aload_0
+[  73] iconst_0
+[  74] iconst_0
+[  75] iconst_0
+[  76] bipush 20
+[  77] iconst_0
+[  78] iconst_1
+[  79] iconst_0
+[  80] iconst_0
+[  81] iconst_0
+[  82] invokevirtual game/gamecanvas.bornSprite
+[  83] putfield gamecanvas.iecom
+[  84] aload_0
+[  85] aload_0
+[  86] iconst_1
+[  87] iconst_0
+[  88] iconst_0
+[  89] bipush 20
+[  90] iconst_0
+[  91] iconst_1
+[  92] iconst_0
+[  93] iconst_0
+[  94] iconst_0
+[  95] invokevirtual game/gamecanvas.bornSprite
+[  96] putfield gamecanvas.logo
+[  97] aload_0
+[  98] aload_0
+[  99] bipush 14
+[ 100] iconst_0
+[ 101] iconst_0
+[ 102] bipush 20
+[ 103] iconst_0
+[ 104] iconst_0
+[ 105] iconst_0
+[ 106] iconst_0
+[ 107] iconst_0
+[ 108] invokevirtual game/gamecanvas.bornSprite
+[ 109] putfield gamecanvas.door1
+[ 110] aload_0
+[ 111] aload_0
+[ 112] bipush 14
+[ 113] iconst_0
+[ 114] iconst_0
+[ 115] bipush 20
+[ 116] iconst_0
+[ 117] iconst_0
+[ 118] iconst_0
+[ 119] iconst_0
+[ 120] iconst_0
+[ 121] invokevirtual game/gamecanvas.bornSprite
+[ 122] putfield gamecanvas.door2
+[ 123] aload_0
+[ 124] aload_0
+[ 125] bipush 15
+[ 126] iconst_0
+[ 127] iconst_0
+[ 128] iconst_3
+[ 129] iconst_0
+[ 130] iconst_0
+[ 131] iconst_0
+[ 132] iconst_0
+[ 133] iconst_0
+[ 134] invokevirtual game/gamecanvas.bornSprite
+[ 135] putfield gamecanvas.extra
+[ 136] return

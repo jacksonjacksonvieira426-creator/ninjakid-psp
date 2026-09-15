@@ -1,0 +1,769 @@
+// Classe: gamecanvas
+// Metodo: GetLevelInfo
+// Descritor: (I)V
+// Instrucoes: 764
+
+[   0] aload_0
+[   1] iconst_5
+[   2] putfield gamecanvas.i
+[   3] aload_0
+[   4] getfield gamecanvas.i
+[   5] aload_0
+[   6] getfield gamecanvas.anzahlsprites
+[   7] if_icmpge 24
+[   8] aload_0
+[   9] aload_0
+[  10] getfield gamecanvas.i
+[  11] invokevirtual game/gamecanvas.killSprite
+[  12] aload_0
+[  13] dup
+[  14] getfield gamecanvas.i
+[  15] iconst_1
+[  16] iadd
+[  17] putfield gamecanvas.i
+[  18] goto -29
+[  19] aload_0
+[  20] iconst_0
+[  21] putfield gamecanvas.keys
+[  22] iconst_0
+[  23] istore_2
+[  24] iconst_0
+[  25] istore_3
+[  26] aload_0
+[  27] getfield gamecanvas.levelinfo
+[  28] iload_1
+[  29] aaload
+[  30] iconst_0
+[  31] iaload
+[  32] aload_0
+[  33] getfield gamecanvas.lastlevelnr
+[  34] if_icmpeq 97
+[  35] aload_0
+[  36] aload_0
+[  37] getfield gamecanvas.levelinfo
+[  38] iload_1
+[  39] aaload
+[  40] iconst_0
+[  41] iaload
+[  42] putfield gamecanvas.lastlevelnr
+[  43] aload_0
+[  44] getfield gamecanvas.lastlevelnr
+[  45] bipush 100
+[  46] idiv
+[  47] istore_2
+[  48] aload_0
+[  49] getfield gamecanvas.lastlevelnr
+[  50] iload_2
+[  51] bipush 100
+[  52] imul
+[  53] isub
+[  54] istore_3
+[  55] aload_0
+[  56] new 192
+[  57] dup
+[  58] ldc_w 361
+[  59] invokespecial java/lang/StringBuffer.<init>
+[  60] iload_2
+[  61] invokevirtual java/lang/StringBuffer.append
+[  62] ldc_w 362
+[  63] invokevirtual java/lang/StringBuffer.append
+[  64] invokestatic java/lang/String.valueOf
+[  65] invokestatic java/lang/String.valueOf
+[  66] invokevirtual game/gamecanvas.LoadIcons
+[  67] aload_0
+[  68] new 192
+[  69] dup
+[  70] ldc_w 363
+[  71] invokespecial java/lang/StringBuffer.<init>
+[  72] iload_3
+[  73] invokevirtual java/lang/StringBuffer.append
+[  74] ldc_w 364
+[  75] invokevirtual java/lang/StringBuffer.append
+[  76] invokestatic java/lang/String.valueOf
+[  77] invokestatic java/lang/String.valueOf
+[  78] invokevirtual game/gamecanvas.LoadLevel
+[  79] aload_0
+[  80] invokevirtual game/gamecanvas.MakeSprites
+[  81] aload_0
+[  82] aload_0
+[  83] getfield gamecanvas.levelinfo
+[  84] iload_1
+[  85] aaload
+[  86] iconst_2
+[  87] iaload
+[  88] putfield gamecanvas.skycolor
+[  89] aload_0
+[  90] getfield gamecanvas.levelinfo
+[  91] iload_1
+[  92] aaload
+[  93] iconst_1
+[  94] iaload
+[  95] aload_0
+[  96] getfield gamecanvas.lastenemynr
+[  97] if_icmpeq 213
+[  98] aload_0
+[  99] aload_0
+[ 100] getfield gamecanvas.levelinfo
+[ 101] iload_1
+[ 102] aaload
+[ 103] iconst_1
+[ 104] iaload
+[ 105] putfield gamecanvas.lastenemynr
+[ 106] aload_0
+[ 107] getfield gamecanvas.levelinfo
+[ 108] iload_1
+[ 109] aaload
+[ 110] iconst_1
+[ 111] iaload
+[ 112] istore 4
+[ 113] aload_0
+[ 114] getfield gamecanvas.bobgfx
+[ 115] bipush 26
+[ 116] aconst_null
+[ 117] aastore
+[ 118] aload_0
+[ 119] getfield gamecanvas.bobgfx
+[ 120] bipush 27
+[ 121] aconst_null
+[ 122] aastore
+[ 123] aload_0
+[ 124] getfield gamecanvas.bobgfx
+[ 125] bipush 28
+[ 126] aconst_null
+[ 127] aastore
+[ 128] aload_0
+[ 129] getfield gamecanvas.bobgfx
+[ 130] bipush 29
+[ 131] aconst_null
+[ 132] aastore
+[ 133] invokestatic java/lang/System.gc
+[ 134] aload_0
+[ 135] getfield gamecanvas.bobgfx
+[ 136] bipush 26
+[ 137] new 192
+[ 138] dup
+[ 139] ldc_w 365
+[ 140] invokespecial java/lang/StringBuffer.<init>
+[ 141] iload 4
+[ 142] invokevirtual java/lang/StringBuffer.append
+[ 143] ldc_w 366
+[ 144] invokevirtual java/lang/StringBuffer.append
+[ 145] invokestatic java/lang/String.valueOf
+[ 146] invokestatic java/lang/String.valueOf
+[ 147] invokestatic javax/microedition/lcdui/Image.createImage
+[ 148] aastore
+[ 149] aload_0
+[ 150] getfield gamecanvas.bobgfx
+[ 151] bipush 27
+[ 152] new 192
+[ 153] dup
+[ 154] ldc_w 365
+[ 155] invokespecial java/lang/StringBuffer.<init>
+[ 156] iload 4
+[ 157] invokevirtual java/lang/StringBuffer.append
+[ 158] ldc_w 367
+[ 159] invokevirtual java/lang/StringBuffer.append
+[ 160] invokestatic java/lang/String.valueOf
+[ 161] invokestatic java/lang/String.valueOf
+[ 162] invokestatic javax/microedition/lcdui/Image.createImage
+[ 163] aastore
+[ 164] aload_0
+[ 165] getfield gamecanvas.bobgfx
+[ 166] bipush 28
+[ 167] new 192
+[ 168] dup
+[ 169] ldc_w 365
+[ 170] invokespecial java/lang/StringBuffer.<init>
+[ 171] iload 4
+[ 172] invokevirtual java/lang/StringBuffer.append
+[ 173] ldc_w 368
+[ 174] invokevirtual java/lang/StringBuffer.append
+[ 175] invokestatic java/lang/String.valueOf
+[ 176] invokestatic java/lang/String.valueOf
+[ 177] invokestatic javax/microedition/lcdui/Image.createImage
+[ 178] aastore
+[ 179] aload_0
+[ 180] getfield gamecanvas.bobgfx
+[ 181] bipush 29
+[ 182] new 192
+[ 183] dup
+[ 184] ldc_w 365
+[ 185] invokespecial java/lang/StringBuffer.<init>
+[ 186] iload 4
+[ 187] invokevirtual java/lang/StringBuffer.append
+[ 188] ldc_w 369
+[ 189] invokevirtual java/lang/StringBuffer.append
+[ 190] invokestatic java/lang/String.valueOf
+[ 191] invokestatic java/lang/String.valueOf
+[ 192] invokestatic javax/microedition/lcdui/Image.createImage
+[ 193] aastore
+[ 194] goto 5
+[ 195] astore 5
+[ 196] iconst_0
+[ 197] istore 4
+[ 198] iload 4
+[ 199] aload_0
+[ 200] getfield gamecanvas.levelhoehe
+[ 201] if_icmpge 893
+[ 202] iconst_0
+[ 203] istore 5
+[ 204] iload 5
+[ 205] aload_0
+[ 206] getfield gamecanvas.levelbreite
+[ 207] if_icmpge 875
+[ 208] aload_0
+[ 209] getfield gamecanvas.maskdata
+[ 210] iload 4
+[ 211] aload_0
+[ 212] getfield gamecanvas.levelbreite
+[ 213] imul
+[ 214] iload 5
+[ 215] iadd
+[ 216] baload
+[ 217] aload_0
+[ 218] getfield gamecanvas.MASK_PLAYERRELEASE
+[ 219] if_icmpne 147
+[ 220] aload_0
+[ 221] iload 5
+[ 222] sipush 16000
+[ 223] imul
+[ 224] putfield gamecanvas.playerXpos
+[ 225] aload_0
+[ 226] iload 4
+[ 227] sipush 16000
+[ 228] imul
+[ 229] putfield gamecanvas.playerYpos
+[ 230] aload_0
+[ 231] aload_0
+[ 232] getfield gamecanvas.playerYpos
+[ 233] sipush 8000
+[ 234] isub
+[ 235] putfield gamecanvas.playerYpos
+[ 236] aload_0
+[ 237] aload_0
+[ 238] getfield gamecanvas.door1
+[ 239] aload_0
+[ 240] getfield gamecanvas.playerXpos
+[ 241] sipush 1000
+[ 242] idiv
+[ 243] aload_0
+[ 244] getfield gamecanvas.playerYpos
+[ 245] sipush 1000
+[ 246] idiv
+[ 247] iconst_3
+[ 248] isub
+[ 249] invokevirtual game/gamecanvas.setSpritePos
+[ 250] aload_0
+[ 251] aload_0
+[ 252] getfield gamecanvas.door2
+[ 253] aload_0
+[ 254] getfield gamecanvas.playerXpos
+[ 255] sipush 1000
+[ 256] idiv
+[ 257] bipush 8
+[ 258] iadd
+[ 259] aload_0
+[ 260] getfield gamecanvas.playerYpos
+[ 261] sipush 1000
+[ 262] idiv
+[ 263] iconst_3
+[ 264] isub
+[ 265] invokevirtual game/gamecanvas.setSpritePos
+[ 266] aload_0
+[ 267] getfield gamecanvas.sprites
+[ 268] aload_0
+[ 269] getfield gamecanvas.door1
+[ 270] aaload
+[ 271] bipush 7
+[ 272] bipush 120
+[ 273] iastore
+[ 274] aload_0
+[ 275] getfield gamecanvas.sprites
+[ 276] aload_0
+[ 277] getfield gamecanvas.door2
+[ 278] aaload
+[ 279] bipush 7
+[ 280] bipush 120
+[ 281] iastore
+[ 282] aload_0
+[ 283] getfield gamecanvas.sprites
+[ 284] aload_0
+[ 285] getfield gamecanvas.door2
+[ 286] aaload
+[ 287] bipush 9
+[ 288] iconst_0
+[ 289] iastore
+[ 290] aload_0
+[ 291] aload_0
+[ 292] getfield gamecanvas.door1
+[ 293] invokevirtual game/gamecanvas.showSprite
+[ 294] aload_0
+[ 295] aload_0
+[ 296] getfield gamecanvas.door2
+[ 297] invokevirtual game/gamecanvas.showSprite
+[ 298] aload_0
+[ 299] getfield gamecanvas.maskdata
+[ 300] iload 4
+[ 301] aload_0
+[ 302] getfield gamecanvas.levelbreite
+[ 303] imul
+[ 304] iload 5
+[ 305] iadd
+[ 306] baload
+[ 307] bipush 100
+[ 308] if_icmpne 218
+[ 309] aload_0
+[ 310] getfield gamecanvas.level
+[ 311] aload_0
+[ 312] getfield gamecanvas.difficulty
+[ 313] imul
+[ 314] aload_0
+[ 315] getfield gamecanvas.level
+[ 316] bipush 10
+[ 317] iadd
+[ 318] imul
+[ 319] bipush 100
+[ 320] iadd
+[ 321] istore 6
+[ 322] aload_0
+[ 323] bipush 14
+[ 324] iload 5
+[ 325] bipush 16
+[ 326] imul
+[ 327] iload 4
+[ 328] bipush 16
+[ 329] imul
+[ 330] bipush 11
+[ 331] isub
+[ 332] bipush 20
+[ 333] iconst_0
+[ 334] iconst_0
+[ 335] bipush 120
+[ 336] iload 6
+[ 337] iload 6
+[ 338] invokevirtual game/gamecanvas.bornSprite
+[ 339] istore 7
+[ 340] aload_0
+[ 341] iload 7
+[ 342] invokevirtual game/gamecanvas.showSprite
+[ 343] aload_0
+[ 344] getfield gamecanvas.sprites
+[ 345] iload 7
+[ 346] aaload
+[ 347] iconst_0
+[ 348] bipush -99
+[ 349] iastore
+[ 350] aload_0
+[ 351] getfield gamecanvas.maskdata
+[ 352] iload 4
+[ 353] iconst_1
+[ 354] isub
+[ 355] aload_0
+[ 356] getfield gamecanvas.levelbreite
+[ 357] imul
+[ 358] iload 5
+[ 359] iadd
+[ 360] baload
+[ 361] istore 8
+[ 362] aload_0
+[ 363] getfield gamecanvas.maskdata
+[ 364] iload 4
+[ 365] iconst_1
+[ 366] isub
+[ 367] aload_0
+[ 368] getfield gamecanvas.levelbreite
+[ 369] imul
+[ 370] iload 5
+[ 371] iadd
+[ 372] bipush 80
+[ 373] bastore
+[ 374] sipush 200
+[ 375] aload_0
+[ 376] getfield gamecanvas.level
+[ 377] bipush 10
+[ 378] imul
+[ 379] aload_0
+[ 380] getfield gamecanvas.difficulty
+[ 381] imul
+[ 382] isub
+[ 383] istore 9
+[ 384] iload 9
+[ 385] ifge 6
+[ 386] iconst_0
+[ 387] istore 9
+[ 388] aload_0
+[ 389] aload_0
+[ 390] bipush 14
+[ 391] iload 5
+[ 392] bipush 16
+[ 393] imul
+[ 394] bipush 8
+[ 395] iadd
+[ 396] iload 4
+[ 397] bipush 16
+[ 398] imul
+[ 399] bipush 11
+[ 400] isub
+[ 401] bipush 20
+[ 402] iconst_0
+[ 403] iconst_0
+[ 404] bipush 120
+[ 405] iload 8
+[ 406] iload 9
+[ 407] invokevirtual game/gamecanvas.bornSprite
+[ 408] invokevirtual game/gamecanvas.showSprite
+[ 409] aload_0
+[ 410] getfield gamecanvas.sprites
+[ 411] iload 7
+[ 412] iconst_1
+[ 413] iadd
+[ 414] aaload
+[ 415] iconst_0
+[ 416] bipush -99
+[ 417] iastore
+[ 418] aload_0
+[ 419] aload_0
+[ 420] bipush 26
+[ 421] iload 5
+[ 422] bipush 16
+[ 423] imul
+[ 424] iload 4
+[ 425] bipush 16
+[ 426] imul
+[ 427] iconst_4
+[ 428] isub
+[ 429] bipush 17
+[ 430] iconst_0
+[ 431] iconst_0
+[ 432] sipush 200
+[ 433] iload 7
+[ 434] iconst_4
+[ 435] invokevirtual game/gamecanvas.bornSprite
+[ 436] invokevirtual game/gamecanvas.showSprite
+[ 437] aload_0
+[ 438] getfield gamecanvas.maskdata
+[ 439] iload 4
+[ 440] aload_0
+[ 441] getfield gamecanvas.levelbreite
+[ 442] imul
+[ 443] iload 5
+[ 444] iadd
+[ 445] baload
+[ 446] aload_0
+[ 447] getfield gamecanvas.MASK_FIRERELEASE
+[ 448] if_icmpne 34
+[ 449] aload_0
+[ 450] aload_0
+[ 451] bipush 19
+[ 452] iload 5
+[ 453] bipush 16
+[ 454] imul
+[ 455] iload 4
+[ 456] bipush 16
+[ 457] imul
+[ 458] bipush 16
+[ 459] iadd
+[ 460] bipush 33
+[ 461] iconst_0
+[ 462] iconst_0
+[ 463] bipush 10
+[ 464] iconst_0
+[ 465] iconst_0
+[ 466] invokevirtual game/gamecanvas.bornSprite
+[ 467] invokevirtual game/gamecanvas.showSprite
+[ 468] aload_0
+[ 469] getfield gamecanvas.maskdata
+[ 470] iload 4
+[ 471] aload_0
+[ 472] getfield gamecanvas.levelbreite
+[ 473] imul
+[ 474] iload 5
+[ 475] iadd
+[ 476] baload
+[ 477] bipush 102
+[ 478] if_icmpne 34
+[ 479] aload_0
+[ 480] aload_0
+[ 481] bipush 30
+[ 482] iload 5
+[ 483] bipush 16
+[ 484] imul
+[ 485] iload 4
+[ 486] bipush 16
+[ 487] imul
+[ 488] bipush 16
+[ 489] iadd
+[ 490] bipush 33
+[ 491] iconst_0
+[ 492] iconst_0
+[ 493] bipush 10
+[ 494] iconst_0
+[ 495] iconst_0
+[ 496] invokevirtual game/gamecanvas.bornSprite
+[ 497] invokevirtual game/gamecanvas.showSprite
+[ 498] aload_0
+[ 499] getfield gamecanvas.maskdata
+[ 500] iload 4
+[ 501] aload_0
+[ 502] getfield gamecanvas.levelbreite
+[ 503] imul
+[ 504] iload 5
+[ 505] iadd
+[ 506] baload
+[ 507] aload_0
+[ 508] getfield gamecanvas.MASK_PLASMARELEASE
+[ 509] if_icmpne 36
+[ 510] aload_0
+[ 511] aload_0
+[ 512] bipush 24
+[ 513] iload 5
+[ 514] bipush 16
+[ 515] imul
+[ 516] bipush 8
+[ 517] iadd
+[ 518] iload 4
+[ 519] bipush 16
+[ 520] imul
+[ 521] bipush 8
+[ 522] iadd
+[ 523] iconst_3
+[ 524] iconst_0
+[ 525] iconst_0
+[ 526] bipush 20
+[ 527] iconst_0
+[ 528] iconst_0
+[ 529] invokevirtual game/gamecanvas.bornSprite
+[ 530] invokevirtual game/gamecanvas.showSprite
+[ 531] aload_0
+[ 532] getfield gamecanvas.maskdata
+[ 533] iload 4
+[ 534] aload_0
+[ 535] getfield gamecanvas.levelbreite
+[ 536] imul
+[ 537] iload 5
+[ 538] iadd
+[ 539] baload
+[ 540] bipush 99
+[ 541] if_icmpne 36
+[ 542] aload_0
+[ 543] aload_0
+[ 544] bipush 23
+[ 545] iload 5
+[ 546] bipush 16
+[ 547] imul
+[ 548] bipush 8
+[ 549] iadd
+[ 550] iload 4
+[ 551] bipush 16
+[ 552] imul
+[ 553] bipush 8
+[ 554] iadd
+[ 555] iconst_3
+[ 556] iconst_0
+[ 557] iconst_0
+[ 558] bipush 20
+[ 559] iconst_0
+[ 560] iconst_0
+[ 561] invokevirtual game/gamecanvas.bornSprite
+[ 562] invokevirtual game/gamecanvas.showSprite
+[ 563] aload_0
+[ 564] getfield gamecanvas.maskdata
+[ 565] iload 4
+[ 566] aload_0
+[ 567] getfield gamecanvas.levelbreite
+[ 568] imul
+[ 569] iload 5
+[ 570] iadd
+[ 571] baload
+[ 572] bipush 97
+[ 573] if_icmpne 37
+[ 574] aload_0
+[ 575] aload_0
+[ 576] bipush 22
+[ 577] iload 5
+[ 578] bipush 16
+[ 579] imul
+[ 580] bipush 8
+[ 581] iadd
+[ 582] iload 4
+[ 583] bipush 16
+[ 584] imul
+[ 585] bipush 16
+[ 586] iadd
+[ 587] bipush 33
+[ 588] iconst_0
+[ 589] iconst_0
+[ 590] bipush 30
+[ 591] iconst_0
+[ 592] iconst_0
+[ 593] invokevirtual game/gamecanvas.bornSprite
+[ 594] invokevirtual game/gamecanvas.showSprite
+[ 595] iconst_0
+[ 596] istore 6
+[ 597] iconst_0
+[ 598] istore 7
+[ 599] aload_0
+[ 600] getfield gamecanvas.maskdata
+[ 601] iload 4
+[ 602] aload_0
+[ 603] getfield gamecanvas.levelbreite
+[ 604] imul
+[ 605] iload 5
+[ 606] iadd
+[ 607] baload
+[ 608] bipush 103
+[ 609] if_icmpne 86
+[ 610] iconst_0
+[ 611] istore 6
+[ 612] aload_0
+[ 613] getfield gamecanvas.maskdata
+[ 614] iload 4
+[ 615] iload 6
+[ 616] iadd
+[ 617] aload_0
+[ 618] getfield gamecanvas.levelbreite
+[ 619] imul
+[ 620] iload 5
+[ 621] iadd
+[ 622] baload
+[ 623] bipush 104
+[ 624] if_icmpeq 9
+[ 625] iinc 6
+[ 626] goto -26
+[ 627] aload_0
+[ 628] bipush 30
+[ 629] iload 5
+[ 630] bipush 16
+[ 631] imul
+[ 632] bipush 8
+[ 633] iadd
+[ 634] iload 4
+[ 635] bipush 16
+[ 636] imul
+[ 637] bipush 8
+[ 638] iadd
+[ 639] iconst_3
+[ 640] iconst_0
+[ 641] iconst_0
+[ 642] sipush 500
+[ 643] iload 6
+[ 644] bipush 16
+[ 645] imul
+[ 646] iconst_0
+[ 647] invokevirtual game/gamecanvas.bornSprite
+[ 648] istore 7
+[ 649] aload_0
+[ 650] iload 7
+[ 651] invokevirtual game/gamecanvas.showSprite
+[ 652] aload_0
+[ 653] iload 7
+[ 654] sipush 16384
+[ 655] invokevirtual game/gamecanvas.setSpriteManipulation
+[ 656] aload_0
+[ 657] getfield gamecanvas.maskdata
+[ 658] iload 4
+[ 659] aload_0
+[ 660] getfield gamecanvas.levelbreite
+[ 661] imul
+[ 662] iload 5
+[ 663] iadd
+[ 664] baload
+[ 665] bipush 105
+[ 666] if_icmpne 73
+[ 667] iconst_0
+[ 668] istore 6
+[ 669] aload_0
+[ 670] getfield gamecanvas.maskdata
+[ 671] iload 4
+[ 672] iload 6
+[ 673] isub
+[ 674] aload_0
+[ 675] getfield gamecanvas.levelbreite
+[ 676] imul
+[ 677] iload 5
+[ 678] iadd
+[ 679] baload
+[ 680] bipush 106
+[ 681] if_icmpeq 9
+[ 682] iinc 6
+[ 683] goto -26
+[ 684] aload_0
+[ 685] aload_0
+[ 686] bipush 30
+[ 687] iload 5
+[ 688] bipush 16
+[ 689] imul
+[ 690] bipush 8
+[ 691] iadd
+[ 692] iload 4
+[ 693] bipush 16
+[ 694] imul
+[ 695] bipush 8
+[ 696] iadd
+[ 697] iconst_3
+[ 698] iconst_0
+[ 699] iconst_0
+[ 700] sipush 600
+[ 701] iload 6
+[ 702] bipush 16
+[ 703] imul
+[ 704] iconst_0
+[ 705] invokevirtual game/gamecanvas.bornSprite
+[ 706] invokevirtual game/gamecanvas.showSprite
+[ 707] iinc 5
+[ 708] goto -878
+[ 709] iinc 4
+[ 710] goto -896
+[ 711] aload_0
+[ 712] aload_0
+[ 713] bipush 6
+[ 714] iconst_0
+[ 715] iconst_0
+[ 716] bipush 20
+[ 717] iconst_0
+[ 718] iconst_0
+[ 719] iconst_0
+[ 720] iconst_0
+[ 721] iconst_0
+[ 722] invokevirtual game/gamecanvas.bornSprite
+[ 723] putfield gamecanvas.player
+[ 724] aload_0
+[ 725] aload_0
+[ 726] iconst_3
+[ 727] iconst_0
+[ 728] iconst_0
+[ 729] iconst_3
+[ 730] iconst_0
+[ 731] iconst_0
+[ 732] iconst_0
+[ 733] iconst_0
+[ 734] iconst_0
+[ 735] invokevirtual game/gamecanvas.bornSprite
+[ 736] putfield gamecanvas.explo
+[ 737] aload_0
+[ 738] aload_0
+[ 739] getfield gamecanvas.playerXpos
+[ 740] aload_0
+[ 741] getfield gamecanvas.screenX
+[ 742] iconst_2
+[ 743] idiv
+[ 744] sipush 1000
+[ 745] imul
+[ 746] isub
+[ 747] putfield gamecanvas.scrollX
+[ 748] aload_0
+[ 749] aload_0
+[ 750] getfield gamecanvas.playerYpos
+[ 751] aload_0
+[ 752] getfield gamecanvas.screenY
+[ 753] iconst_2
+[ 754] idiv
+[ 755] sipush 1000
+[ 756] imul
+[ 757] isub
+[ 758] putfield gamecanvas.scrollY
+[ 759] aload_0
+[ 760] iconst_0
+[ 761] iconst_0
+[ 762] invokevirtual game/gamecanvas.Scroll
+[ 763] return

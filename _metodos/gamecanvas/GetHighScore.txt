@@ -1,0 +1,45 @@
+// Classe: gamecanvas
+// Metodo: GetHighScore
+// Descritor: ()V
+// Instrucoes: 40
+
+[   0] iconst_1
+[   1] istore_1
+[   2] iload_1
+[   3] bipush 7
+[   4] if_icmpge 65
+[   5] getstatic gamecanvas.HighScore
+[   6] iload_1
+[   7] invokevirtual javax/microedition/rms/RecordStore.getRecord
+[   8] astore_2
+[   9] new 328
+[  10] dup
+[  11] new 329
+[  12] dup
+[  13] aload_2
+[  14] invokespecial java/io/ByteArrayInputStream.<init>
+[  15] invokespecial java/io/DataInputStream.<init>
+[  16] astore_3
+[  17] aload_0
+[  18] getfield gamecanvas.highscoreplayers
+[  19] iload_1
+[  20] iconst_1
+[  21] isub
+[  22] aload_3
+[  23] invokevirtual java/io/DataInputStream.readUTF
+[  24] aastore
+[  25] aload_0
+[  26] getfield gamecanvas.highscorepoints
+[  27] iload_1
+[  28] iconst_1
+[  29] isub
+[  30] aload_3
+[  31] invokevirtual java/io/DataInputStream.readInt
+[  32] iastore
+[  33] aload_3
+[  34] invokevirtual java/io/DataInputStream.close
+[  35] goto 4
+[  36] astore_2
+[  37] iinc 1
+[  38] goto -65
+[  39] return

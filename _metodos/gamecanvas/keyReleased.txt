@@ -1,0 +1,12 @@
+// Classe: gamecanvas
+// Metodo: keyReleased
+// Descritor: (I)V
+// Instrucoes: 7
+
+[   0] aload_0
+[   1] iconst_0
+[   2] putfield gamecanvas.game_keypressed
+[   3] aload_0
+[   4] iconst_0
+[   5] putfield gamecanvas.keypressed
+[   6] return

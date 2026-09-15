@@ -1,0 +1,1565 @@
+// Classe: gamecanvas
+// Metodo: paint
+// Descritor: (Ljavax/microedition/lcdui/Graphics;)V
+// Instrucoes: 1560
+
+[   0] aload_0
+[   1] aload_0
+[   2] getfield gamecanvas.DGtileimagebuffer
+[   3] invokevirtual game/gamecanvas.drawSprites
+[   4] aload_0
+[   5] getfield gamecanvas.textmode
+[   6] lookupswitch
+[   7] goto 2150
+[   8] aload_0
+[   9] aload_0
+[  10] getfield gamecanvas.tileimagebuffer
+[  11] ldc 201
+[  12] aload_0
+[  13] getfield gamecanvas.screenX
+[  14] iconst_2
+[  15] idiv
+[  16] bipush 100
+[  17] iconst_3
+[  18] invokevirtual game/gamecanvas.DrawText
+[  19] aload_0
+[  20] getfield gamecanvas.waiter
+[  21] iconst_5
+[  22] if_icmple 30
+[  23] aload_0
+[  24] dup
+[  25] getfield gamecanvas.waiter
+[  26] iconst_1
+[  27] isub
+[  28] putfield gamecanvas.waiter
+[  29] aload_0
+[  30] aload_0
+[  31] getfield gamecanvas.tileimagebuffer
+[  32] ldc 203
+[  33] iconst_3
+[  34] bipush 117
+[  35] iconst_0
+[  36] invokevirtual game/gamecanvas.DrawText
+[  37] goto 29
+[  38] aload_0
+[  39] getfield gamecanvas.waiter
+[  40] ifle 16
+[  41] aload_0
+[  42] dup
+[  43] getfield gamecanvas.waiter
+[  44] iconst_1
+[  45] isub
+[  46] putfield gamecanvas.waiter
+[  47] goto 9
+[  48] aload_0
+[  49] bipush 10
+[  50] putfield gamecanvas.waiter
+[  51] aload_0
+[  52] aload_0
+[  53] getfield gamecanvas.tileimagebuffer
+[  54] ldc 204
+[  55] bipush 69
+[  56] bipush 117
+[  57] iconst_0
+[  58] invokevirtual game/gamecanvas.DrawText
+[  59] aload_0
+[  60] getfield gamecanvas.titelwaiter
+[  61] ifle 163
+[  62] aload_0
+[  63] getfield gamecanvas.titelwaiter
+[  64] bipush 100
+[  65] if_icmpge 154
+[  66] aload_0
+[  67] getfield gamecanvas.faderypos
+[  68] ifne 147
+[  69] aload_0
+[  70] dup
+[  71] getfield gamecanvas.titelwaiter
+[  72] iconst_1
+[  73] isub
+[  74] putfield gamecanvas.titelwaiter
+[  75] aload_0
+[  76] aload_0
+[  77] getfield gamecanvas.tileimagebuffer
+[  78] ldc 205
+[  79] aload_0
+[  80] getfield gamecanvas.screenX
+[  81] iconst_2
+[  82] idiv
+[  83] bipush 10
+[  84] iconst_3
+[  85] invokevirtual game/gamecanvas.DrawText
+[  86] iconst_0
+[  87] istore_2
+[  88] iload_2
+[  89] bipush 6
+[  90] if_icmpge 120
+[  91] aload_0
+[  92] aload_0
+[  93] getfield gamecanvas.tileimagebuffer
+[  94] new 192
+[  95] dup
+[  96] ldc 206
+[  97] invokespecial java/lang/StringBuffer.<init>
+[  98] iload_2
+[  99] iconst_1
+[ 100] iadd
+[ 101] invokevirtual java/lang/StringBuffer.append
+[ 102] ldc 206
+[ 103] invokevirtual java/lang/StringBuffer.append
+[ 104] aload_0
+[ 105] getfield gamecanvas.highscoreplayers
+[ 106] iload_2
+[ 107] aaload
+[ 108] invokevirtual java/lang/StringBuffer.append
+[ 109] invokestatic java/lang/String.valueOf
+[ 110] invokestatic java/lang/String.valueOf
+[ 111] iconst_0
+[ 112] bipush 30
+[ 113] iload_2
+[ 114] bipush 10
+[ 115] imul
+[ 116] iadd
+[ 117] iconst_0
+[ 118] invokevirtual game/gamecanvas.DrawText
+[ 119] aload_0
+[ 120] aload_0
+[ 121] getfield gamecanvas.tileimagebuffer
+[ 122] ldc 191
+[ 123] aload_0
+[ 124] getfield gamecanvas.highscorepoints
+[ 125] iload_2
+[ 126] iaload
+[ 127] invokestatic java/lang/String.valueOf
+[ 128] invokestatic java/lang/String.valueOf
+[ 129] invokevirtual java/lang/String.concat
+[ 130] bipush 115
+[ 131] bipush 30
+[ 132] iload_2
+[ 133] bipush 10
+[ 134] imul
+[ 135] iadd
+[ 136] iconst_1
+[ 137] invokevirtual game/gamecanvas.DrawText
+[ 138] aload_0
+[ 139] getfield gamecanvas.titelwaiter
+[ 140] ifne 10
+[ 141] aload_0
+[ 142] sipush 300
+[ 143] putfield gamecanvas.titelwaiter
+[ 144] iinc 2
+[ 145] goto -110
+[ 146] aload_0
+[ 147] dup
+[ 148] getfield gamecanvas.titelwaiter
+[ 149] iconst_1
+[ 150] isub
+[ 151] putfield gamecanvas.titelwaiter
+[ 152] aload_0
+[ 153] getfield gamecanvas.titelwaiter
+[ 154] bipush 110
+[ 155] if_icmpge 14
+[ 156] aload_0
+[ 157] aload_0
+[ 158] getfield gamecanvas.logo
+[ 159] invokevirtual game/gamecanvas.hideSprite
+[ 160] goto 1858
+[ 161] aload_0
+[ 162] getfield gamecanvas.titelwaiter
+[ 163] sipush 290
+[ 164] if_icmpge 1848
+[ 165] aload_0
+[ 166] aload_0
+[ 167] getfield gamecanvas.logo
+[ 168] invokevirtual game/gamecanvas.showSprite
+[ 169] goto 1837
+[ 170] aload_0
+[ 171] getfield gamecanvas.tileimagebuffer
+[ 172] sipush 160
+[ 173] iconst_0
+[ 174] iconst_0
+[ 175] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 176] aload_0
+[ 177] getfield gamecanvas.tileimagebuffer
+[ 178] iconst_0
+[ 179] iconst_0
+[ 180] aload_0
+[ 181] getfield gamecanvas.screenX
+[ 182] aload_0
+[ 183] getfield gamecanvas.screenY
+[ 184] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 185] aload_0
+[ 186] getfield gamecanvas.level
+[ 187] bipush 9
+[ 188] if_icmpeq 21
+[ 189] aload_0
+[ 190] aload_0
+[ 191] getfield gamecanvas.tileimagebuffer
+[ 192] ldc 211
+[ 193] bipush 64
+[ 194] bipush 40
+[ 195] iconst_3
+[ 196] invokevirtual game/gamecanvas.DrawText
+[ 197] goto 18
+[ 198] aload_0
+[ 199] aload_0
+[ 200] getfield gamecanvas.tileimagebuffer
+[ 201] ldc 212
+[ 202] bipush 64
+[ 203] bipush 40
+[ 204] iconst_3
+[ 205] invokevirtual game/gamecanvas.DrawText
+[ 206] aload_0
+[ 207] getfield gamecanvas.score
+[ 208] ifle 49
+[ 209] aload_0
+[ 210] aload_0
+[ 211] getfield gamecanvas.tileimagebuffer
+[ 212] ldc 213
+[ 213] bipush 64
+[ 214] bipush 60
+[ 215] iconst_3
+[ 216] invokevirtual game/gamecanvas.DrawText
+[ 217] aload_0
+[ 218] aload_0
+[ 219] getfield gamecanvas.tileimagebuffer
+[ 220] ldc 191
+[ 221] aload_0
+[ 222] getfield gamecanvas.score
+[ 223] invokestatic java/lang/String.valueOf
+[ 224] invokestatic java/lang/String.valueOf
+[ 225] invokevirtual java/lang/String.concat
+[ 226] bipush 64
+[ 227] bipush 70
+[ 228] iconst_3
+[ 229] invokevirtual game/gamecanvas.DrawText
+[ 230] goto 3
+[ 231] aload_0
+[ 232] getfield gamecanvas.highscorepoints
+[ 233] iconst_5
+[ 234] iaload
+[ 235] aload_0
+[ 236] getfield gamecanvas.score
+[ 237] if_icmpge 21
+[ 238] aload_0
+[ 239] aload_0
+[ 240] getfield gamecanvas.tileimagebuffer
+[ 241] ldc 214
+[ 242] bipush 64
+[ 243] bipush 80
+[ 244] iconst_3
+[ 245] invokevirtual game/gamecanvas.DrawText
+[ 246] goto 3
+[ 247] aload_0
+[ 248] aload_0
+[ 249] getfield gamecanvas.tileimagebuffer
+[ 250] ldc 215
+[ 251] bipush 64
+[ 252] bipush 100
+[ 253] iconst_3
+[ 254] invokevirtual game/gamecanvas.DrawText
+[ 255] goto 1664
+[ 256] aload_0
+[ 257] getfield gamecanvas.tileimagebuffer
+[ 258] aload_0
+[ 259] getfield gamecanvas.random
+[ 260] invokevirtual java/util/Random.nextInt
+[ 261] iconst_1
+[ 262] iushr
+[ 263] sipush 255
+[ 264] irem
+[ 265] aload_0
+[ 266] getfield gamecanvas.random
+[ 267] invokevirtual java/util/Random.nextInt
+[ 268] iconst_1
+[ 269] iushr
+[ 270] sipush 255
+[ 271] irem
+[ 272] aload_0
+[ 273] getfield gamecanvas.random
+[ 274] invokevirtual java/util/Random.nextInt
+[ 275] iconst_1
+[ 276] iushr
+[ 277] sipush 255
+[ 278] irem
+[ 279] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 280] aload_0
+[ 281] getfield gamecanvas.tileimagebuffer
+[ 282] iconst_0
+[ 283] iconst_0
+[ 284] aload_0
+[ 285] getfield gamecanvas.screenX
+[ 286] aload_0
+[ 287] getfield gamecanvas.screenY
+[ 288] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 289] aload_0
+[ 290] aload_0
+[ 291] getfield gamecanvas.tileimagebuffer
+[ 292] ldc 212
+[ 293] bipush 64
+[ 294] bipush 15
+[ 295] iconst_3
+[ 296] invokevirtual game/gamecanvas.DrawText
+[ 297] aload_0
+[ 298] aload_0
+[ 299] getfield gamecanvas.tileimagebuffer
+[ 300] ldc 217
+[ 301] bipush 64
+[ 302] bipush 30
+[ 303] iconst_3
+[ 304] invokevirtual game/gamecanvas.DrawText
+[ 305] aload_0
+[ 306] aload_0
+[ 307] getfield gamecanvas.tileimagebuffer
+[ 308] ldc 218
+[ 309] bipush 64
+[ 310] bipush 40
+[ 311] iconst_3
+[ 312] invokevirtual game/gamecanvas.DrawText
+[ 313] aload_0
+[ 314] aload_0
+[ 315] getfield gamecanvas.tileimagebuffer
+[ 316] ldc 219
+[ 317] bipush 64
+[ 318] bipush 50
+[ 319] iconst_3
+[ 320] invokevirtual game/gamecanvas.DrawText
+[ 321] aload_0
+[ 322] aload_0
+[ 323] getfield gamecanvas.tileimagebuffer
+[ 324] ldc 220
+[ 325] bipush 64
+[ 326] bipush 60
+[ 327] iconst_3
+[ 328] invokevirtual game/gamecanvas.DrawText
+[ 329] aload_0
+[ 330] aload_0
+[ 331] getfield gamecanvas.tileimagebuffer
+[ 332] ldc 221
+[ 333] bipush 64
+[ 334] bipush 70
+[ 335] iconst_3
+[ 336] invokevirtual game/gamecanvas.DrawText
+[ 337] aload_0
+[ 338] aload_0
+[ 339] getfield gamecanvas.tileimagebuffer
+[ 340] ldc 222
+[ 341] bipush 64
+[ 342] bipush 80
+[ 343] iconst_3
+[ 344] invokevirtual game/gamecanvas.DrawText
+[ 345] aload_0
+[ 346] aload_0
+[ 347] getfield gamecanvas.tileimagebuffer
+[ 348] ldc 223
+[ 349] bipush 64
+[ 350] bipush 90
+[ 351] iconst_3
+[ 352] invokevirtual game/gamecanvas.DrawText
+[ 353] aload_0
+[ 354] aload_0
+[ 355] getfield gamecanvas.tileimagebuffer
+[ 356] ldc 224
+[ 357] bipush 64
+[ 358] bipush 100
+[ 359] iconst_3
+[ 360] invokevirtual game/gamecanvas.DrawText
+[ 361] aload_0
+[ 362] aload_0
+[ 363] getfield gamecanvas.tileimagebuffer
+[ 364] ldc 225
+[ 365] bipush 64
+[ 366] bipush 110
+[ 367] iconst_3
+[ 368] invokevirtual game/gamecanvas.DrawText
+[ 369] goto 1448
+[ 370] aload_0
+[ 371] aload_0
+[ 372] getfield gamecanvas.tileimagebuffer
+[ 373] ldc 191
+[ 374] aload_0
+[ 375] getfield gamecanvas.score
+[ 376] invokestatic java/lang/String.valueOf
+[ 377] invokestatic java/lang/String.valueOf
+[ 378] invokevirtual java/lang/String.concat
+[ 379] iconst_3
+[ 380] iconst_3
+[ 381] iconst_0
+[ 382] invokevirtual game/gamecanvas.DrawText
+[ 383] aload_0
+[ 384] aload_0
+[ 385] getfield gamecanvas.tileimagebuffer
+[ 386] ldc 226
+[ 387] aload_0
+[ 388] getfield gamecanvas.lives
+[ 389] invokestatic java/lang/String.valueOf
+[ 390] invokestatic java/lang/String.valueOf
+[ 391] invokevirtual java/lang/String.concat
+[ 392] bipush 105
+[ 393] iconst_3
+[ 394] iconst_0
+[ 395] invokevirtual game/gamecanvas.DrawText
+[ 396] aload_0
+[ 397] getfield gamecanvas.gateblocks
+[ 398] ifle 70
+[ 399] aload_0
+[ 400] getfield gamecanvas.gateblocks
+[ 401] bipush 100
+[ 402] if_icmpge 61
+[ 403] aload_0
+[ 404] getfield gamecanvas.levelok
+[ 405] ifne 54
+[ 406] aload_0
+[ 407] dup
+[ 408] getfield gamecanvas.gateblocks
+[ 409] iconst_1
+[ 410] isub
+[ 411] putfield gamecanvas.gateblocks
+[ 412] aload_0
+[ 413] aload_0
+[ 414] getfield gamecanvas.tileimagebuffer
+[ 415] ldc 227
+[ 416] aload_0
+[ 417] getfield gamecanvas.screenX
+[ 418] iconst_2
+[ 419] idiv
+[ 420] bipush 30
+[ 421] iconst_3
+[ 422] invokevirtual game/gamecanvas.DrawText
+[ 423] aload_0
+[ 424] aload_0
+[ 425] getfield gamecanvas.tileimagebuffer
+[ 426] ldc 228
+[ 427] aload_0
+[ 428] getfield gamecanvas.screenX
+[ 429] iconst_2
+[ 430] idiv
+[ 431] bipush 40
+[ 432] iconst_3
+[ 433] invokevirtual game/gamecanvas.DrawText
+[ 434] goto 3
+[ 435] aload_0
+[ 436] getfield gamecanvas.gateblocks
+[ 437] bipush 100
+[ 438] if_icmple 35
+[ 439] aload_0
+[ 440] dup
+[ 441] getfield gamecanvas.gateblocks
+[ 442] iconst_1
+[ 443] isub
+[ 444] putfield gamecanvas.gateblocks
+[ 445] aload_0
+[ 446] aload_0
+[ 447] getfield gamecanvas.tileimagebuffer
+[ 448] ldc 229
+[ 449] aload_0
+[ 450] getfield gamecanvas.screenX
+[ 451] iconst_2
+[ 452] idiv
+[ 453] bipush 30
+[ 454] iconst_3
+[ 455] invokevirtual game/gamecanvas.DrawText
+[ 456] goto 3
+[ 457] aload_0
+[ 458] getfield gamecanvas.keys
+[ 459] ifle 53
+[ 460] aload_0
+[ 461] getfield gamecanvas.tileimagebuffer
+[ 462] aload_0
+[ 463] getfield gamecanvas.bobgfx
+[ 464] bipush 15
+[ 465] aaload
+[ 466] iconst_2
+[ 467] bipush 113
+[ 468] bipush 20
+[ 469] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 470] aload_0
+[ 471] aload_0
+[ 472] getfield gamecanvas.tileimagebuffer
+[ 473] ldc 191
+[ 474] aload_0
+[ 475] getfield gamecanvas.keys
+[ 476] invokestatic java/lang/String.valueOf
+[ 477] invokestatic java/lang/String.valueOf
+[ 478] invokevirtual java/lang/String.concat
+[ 479] bipush 15
+[ 480] bipush 116
+[ 481] iconst_0
+[ 482] invokevirtual game/gamecanvas.DrawText
+[ 483] goto 3
+[ 484] aload_0
+[ 485] getfield gamecanvas.diamant
+[ 486] ifne 42
+[ 487] aload_0
+[ 488] getfield gamecanvas.extralife
+[ 489] ifle 35
+[ 490] aload_0
+[ 491] dup
+[ 492] getfield gamecanvas.extralife
+[ 493] iconst_1
+[ 494] isub
+[ 495] putfield gamecanvas.extralife
+[ 496] aload_0
+[ 497] aload_0
+[ 498] getfield gamecanvas.tileimagebuffer
+[ 499] ldc 230
+[ 500] aload_0
+[ 501] getfield gamecanvas.screenX
+[ 502] iconst_2
+[ 503] idiv
+[ 504] bipush 30
+[ 505] iconst_3
+[ 506] invokevirtual game/gamecanvas.DrawText
+[ 507] goto 3
+[ 508] aload_0
+[ 509] getfield gamecanvas.diamant
+[ 510] ifle 54
+[ 511] aload_0
+[ 512] getfield gamecanvas.tileimagebuffer
+[ 513] aload_0
+[ 514] getfield gamecanvas.bobgfx
+[ 515] bipush 18
+[ 516] aaload
+[ 517] bipush 30
+[ 518] bipush 111
+[ 519] bipush 20
+[ 520] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 521] aload_0
+[ 522] aload_0
+[ 523] getfield gamecanvas.tileimagebuffer
+[ 524] ldc 191
+[ 525] aload_0
+[ 526] getfield gamecanvas.diamant
+[ 527] invokestatic java/lang/String.valueOf
+[ 528] invokestatic java/lang/String.valueOf
+[ 529] invokevirtual java/lang/String.concat
+[ 530] bipush 50
+[ 531] bipush 116
+[ 532] iconst_0
+[ 533] invokevirtual game/gamecanvas.DrawText
+[ 534] goto 3
+[ 535] aload_0
+[ 536] getfield gamecanvas.energyfound
+[ 537] ifle 157
+[ 538] aload_0
+[ 539] getfield gamecanvas.energyfound
+[ 540] bipush 40
+[ 541] if_icmple 25
+[ 542] aload_0
+[ 543] aload_0
+[ 544] getfield gamecanvas.tileimagebuffer
+[ 545] ldc 231
+[ 546] aload_0
+[ 547] getfield gamecanvas.screenX
+[ 548] iconst_2
+[ 549] idiv
+[ 550] bipush 30
+[ 551] iconst_3
+[ 552] invokevirtual game/gamecanvas.DrawText
+[ 553] goto 3
+[ 554] aload_0
+[ 555] dup
+[ 556] getfield gamecanvas.energyfound
+[ 557] iconst_1
+[ 558] isub
+[ 559] putfield gamecanvas.energyfound
+[ 560] aload_0
+[ 561] aload_0
+[ 562] getfield gamecanvas.playerpower
+[ 563] iconst_2
+[ 564] iadd
+[ 565] putfield gamecanvas.playerpower
+[ 566] aload_0
+[ 567] getfield gamecanvas.playerpower
+[ 568] bipush 100
+[ 569] if_icmplt 12
+[ 570] aload_0
+[ 571] bipush 100
+[ 572] putfield gamecanvas.playerpower
+[ 573] goto 3
+[ 574] aload_0
+[ 575] getfield gamecanvas.tileimagebuffer
+[ 576] iconst_0
+[ 577] iconst_0
+[ 578] iconst_0
+[ 579] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 580] aload_0
+[ 581] getfield gamecanvas.tileimagebuffer
+[ 582] bipush 73
+[ 583] bipush 14
+[ 584] bipush 52
+[ 585] iconst_4
+[ 586] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 587] aload_0
+[ 588] getfield gamecanvas.tileimagebuffer
+[ 589] iconst_0
+[ 590] sipush 143
+[ 591] sipush 231
+[ 592] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 593] aload_0
+[ 594] getfield gamecanvas.tileimagebuffer
+[ 595] bipush 124
+[ 596] aload_0
+[ 597] getfield gamecanvas.playerpower
+[ 598] iconst_2
+[ 599] idiv
+[ 600] isub
+[ 601] bipush 15
+[ 602] bipush 123
+[ 603] bipush 15
+[ 604] invokevirtual javax/microedition/lcdui/Graphics.drawLine
+[ 605] aload_0
+[ 606] getfield gamecanvas.tileimagebuffer
+[ 607] bipush 124
+[ 608] aload_0
+[ 609] getfield gamecanvas.playerpower
+[ 610] iconst_2
+[ 611] idiv
+[ 612] isub
+[ 613] bipush 16
+[ 614] bipush 123
+[ 615] bipush 16
+[ 616] invokevirtual javax/microedition/lcdui/Graphics.drawLine
+[ 617] goto 3
+[ 618] aload_0
+[ 619] getfield gamecanvas.levelok
+[ 620] ifge 951
+[ 621] aload_0
+[ 622] dup
+[ 623] getfield gamecanvas.levelok
+[ 624] iconst_1
+[ 625] iadd
+[ 626] putfield gamecanvas.levelok
+[ 627] aload_0
+[ 628] getfield gamecanvas.level
+[ 629] iconst_3
+[ 630] if_icmpge 66
+[ 631] aload_0
+[ 632] aload_0
+[ 633] getfield gamecanvas.tileimagebuffer
+[ 634] ldc 233
+[ 635] aload_0
+[ 636] getfield gamecanvas.screenX
+[ 637] iconst_2
+[ 638] idiv
+[ 639] bipush 50
+[ 640] iconst_3
+[ 641] invokevirtual game/gamecanvas.DrawText
+[ 642] aload_0
+[ 643] aload_0
+[ 644] getfield gamecanvas.tileimagebuffer
+[ 645] new 192
+[ 646] dup
+[ 647] ldc 234
+[ 648] invokespecial java/lang/StringBuffer.<init>
+[ 649] aload_0
+[ 650] getfield gamecanvas.level
+[ 651] iconst_1
+[ 652] iadd
+[ 653] invokevirtual java/lang/StringBuffer.append
+[ 654] invokestatic java/lang/String.valueOf
+[ 655] invokestatic java/lang/String.valueOf
+[ 656] aload_0
+[ 657] getfield gamecanvas.screenX
+[ 658] iconst_2
+[ 659] idiv
+[ 660] bipush 60
+[ 661] iconst_3
+[ 662] invokevirtual game/gamecanvas.DrawText
+[ 663] goto 3
+[ 664] aload_0
+[ 665] getfield gamecanvas.level
+[ 666] iconst_3
+[ 667] if_icmplt 75
+[ 668] aload_0
+[ 669] getfield gamecanvas.level
+[ 670] bipush 6
+[ 671] if_icmpge 66
+[ 672] aload_0
+[ 673] aload_0
+[ 674] getfield gamecanvas.tileimagebuffer
+[ 675] ldc 235
+[ 676] aload_0
+[ 677] getfield gamecanvas.screenX
+[ 678] iconst_2
+[ 679] idiv
+[ 680] bipush 50
+[ 681] iconst_3
+[ 682] invokevirtual game/gamecanvas.DrawText
+[ 683] aload_0
+[ 684] aload_0
+[ 685] getfield gamecanvas.tileimagebuffer
+[ 686] new 192
+[ 687] dup
+[ 688] ldc 234
+[ 689] invokespecial java/lang/StringBuffer.<init>
+[ 690] aload_0
+[ 691] getfield gamecanvas.level
+[ 692] iconst_1
+[ 693] iadd
+[ 694] invokevirtual java/lang/StringBuffer.append
+[ 695] invokestatic java/lang/String.valueOf
+[ 696] invokestatic java/lang/String.valueOf
+[ 697] aload_0
+[ 698] getfield gamecanvas.screenX
+[ 699] iconst_2
+[ 700] idiv
+[ 701] bipush 60
+[ 702] iconst_3
+[ 703] invokevirtual game/gamecanvas.DrawText
+[ 704] goto 3
+[ 705] aload_0
+[ 706] getfield gamecanvas.level
+[ 707] bipush 6
+[ 708] if_icmplt 781
+[ 709] aload_0
+[ 710] getfield gamecanvas.level
+[ 711] bipush 10
+[ 712] if_icmpge 772
+[ 713] aload_0
+[ 714] aload_0
+[ 715] getfield gamecanvas.tileimagebuffer
+[ 716] ldc 236
+[ 717] aload_0
+[ 718] getfield gamecanvas.screenX
+[ 719] iconst_2
+[ 720] idiv
+[ 721] bipush 50
+[ 722] iconst_3
+[ 723] invokevirtual game/gamecanvas.DrawText
+[ 724] aload_0
+[ 725] aload_0
+[ 726] getfield gamecanvas.tileimagebuffer
+[ 727] new 192
+[ 728] dup
+[ 729] ldc 234
+[ 730] invokespecial java/lang/StringBuffer.<init>
+[ 731] aload_0
+[ 732] getfield gamecanvas.level
+[ 733] iconst_1
+[ 734] iadd
+[ 735] invokevirtual java/lang/StringBuffer.append
+[ 736] invokestatic java/lang/String.valueOf
+[ 737] invokestatic java/lang/String.valueOf
+[ 738] aload_0
+[ 739] getfield gamecanvas.screenX
+[ 740] iconst_2
+[ 741] idiv
+[ 742] bipush 60
+[ 743] iconst_3
+[ 744] invokevirtual game/gamecanvas.DrawText
+[ 745] goto 709
+[ 746] aload_0
+[ 747] getfield gamecanvas.tileimagebuffer
+[ 748] aload_0
+[ 749] getfield gamecanvas.random
+[ 750] invokevirtual java/util/Random.nextInt
+[ 751] iconst_1
+[ 752] iushr
+[ 753] sipush 255
+[ 754] irem
+[ 755] aload_0
+[ 756] getfield gamecanvas.random
+[ 757] invokevirtual java/util/Random.nextInt
+[ 758] iconst_1
+[ 759] iushr
+[ 760] sipush 255
+[ 761] irem
+[ 762] aload_0
+[ 763] getfield gamecanvas.random
+[ 764] invokevirtual java/util/Random.nextInt
+[ 765] iconst_1
+[ 766] iushr
+[ 767] sipush 255
+[ 768] irem
+[ 769] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 770] aload_0
+[ 771] getfield gamecanvas.tileimagebuffer
+[ 772] iconst_3
+[ 773] bipush 19
+[ 774] aload_0
+[ 775] getfield gamecanvas.optioncur
+[ 776] bipush 10
+[ 777] imul
+[ 778] iadd
+[ 779] bipush 122
+[ 780] bipush 10
+[ 781] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 782] aload_0
+[ 783] aload_0
+[ 784] getfield gamecanvas.tileimagebuffer
+[ 785] ldc 237
+[ 786] bipush 64
+[ 787] bipush 10
+[ 788] iconst_3
+[ 789] invokevirtual game/gamecanvas.DrawText
+[ 790] aload_0
+[ 791] aload_0
+[ 792] getfield gamecanvas.tileimagebuffer
+[ 793] ldc 238
+[ 794] aload_0
+[ 795] getfield gamecanvas.soundopt
+[ 796] invokestatic java/lang/String.valueOf
+[ 797] invokestatic java/lang/String.valueOf
+[ 798] invokevirtual java/lang/String.concat
+[ 799] bipush 64
+[ 800] bipush 30
+[ 801] iconst_3
+[ 802] invokevirtual game/gamecanvas.DrawText
+[ 803] aload_0
+[ 804] aload_0
+[ 805] getfield gamecanvas.tileimagebuffer
+[ 806] ldc 239
+[ 807] aload_0
+[ 808] getfield gamecanvas.musicopt
+[ 809] invokestatic java/lang/String.valueOf
+[ 810] invokestatic java/lang/String.valueOf
+[ 811] invokevirtual java/lang/String.concat
+[ 812] bipush 64
+[ 813] bipush 40
+[ 814] iconst_3
+[ 815] invokevirtual game/gamecanvas.DrawText
+[ 816] aload_0
+[ 817] aload_0
+[ 818] getfield gamecanvas.tileimagebuffer
+[ 819] ldc 234
+[ 820] aload_0
+[ 821] getfield gamecanvas.levelopt
+[ 822] invokestatic java/lang/String.valueOf
+[ 823] invokestatic java/lang/String.valueOf
+[ 824] invokevirtual java/lang/String.concat
+[ 825] bipush 64
+[ 826] bipush 50
+[ 827] iconst_3
+[ 828] invokevirtual game/gamecanvas.DrawText
+[ 829] aload_0
+[ 830] aload_0
+[ 831] getfield gamecanvas.tileimagebuffer
+[ 832] ldc 240
+[ 833] bipush 64
+[ 834] bipush 60
+[ 835] iconst_3
+[ 836] invokevirtual game/gamecanvas.DrawText
+[ 837] aload_0
+[ 838] aload_0
+[ 839] getfield gamecanvas.tileimagebuffer
+[ 840] ldc 241
+[ 841] bipush 64
+[ 842] bipush 70
+[ 843] iconst_3
+[ 844] invokevirtual game/gamecanvas.DrawText
+[ 845] aload_0
+[ 846] aload_0
+[ 847] getfield gamecanvas.tileimagebuffer
+[ 848] ldc 242
+[ 849] bipush 64
+[ 850] bipush 80
+[ 851] iconst_3
+[ 852] invokevirtual game/gamecanvas.DrawText
+[ 853] goto 494
+[ 854] aload_0
+[ 855] aload_0
+[ 856] getfield gamecanvas.tileimagebuffer
+[ 857] ldc 240
+[ 858] bipush 64
+[ 859] bipush 10
+[ 860] iconst_3
+[ 861] invokevirtual game/gamecanvas.DrawText
+[ 862] aload_0
+[ 863] aload_0
+[ 864] getfield gamecanvas.tileimagebuffer
+[ 865] ldc 243
+[ 866] bipush 64
+[ 867] bipush 30
+[ 868] iconst_3
+[ 869] invokevirtual game/gamecanvas.DrawText
+[ 870] aload_0
+[ 871] aload_0
+[ 872] getfield gamecanvas.tileimagebuffer
+[ 873] ldc 244
+[ 874] bipush 64
+[ 875] bipush 40
+[ 876] iconst_3
+[ 877] invokevirtual game/gamecanvas.DrawText
+[ 878] aload_0
+[ 879] aload_0
+[ 880] getfield gamecanvas.tileimagebuffer
+[ 881] ldc 245
+[ 882] bipush 64
+[ 883] bipush 50
+[ 884] iconst_3
+[ 885] invokevirtual game/gamecanvas.DrawText
+[ 886] aload_0
+[ 887] aload_0
+[ 888] getfield gamecanvas.tileimagebuffer
+[ 889] ldc 246
+[ 890] bipush 64
+[ 891] bipush 60
+[ 892] iconst_3
+[ 893] invokevirtual game/gamecanvas.DrawText
+[ 894] aload_0
+[ 895] aload_0
+[ 896] getfield gamecanvas.tileimagebuffer
+[ 897] ldc 201
+[ 898] bipush 64
+[ 899] bipush 85
+[ 900] iconst_3
+[ 901] invokevirtual game/gamecanvas.DrawText
+[ 902] aload_0
+[ 903] aload_0
+[ 904] getfield gamecanvas.tileimagebuffer
+[ 905] ldc 215
+[ 906] bipush 64
+[ 907] bipush 100
+[ 908] iconst_3
+[ 909] invokevirtual game/gamecanvas.DrawText
+[ 910] goto 386
+[ 911] aload_0
+[ 912] getfield gamecanvas.tileimagebuffer
+[ 913] sipush 160
+[ 914] iconst_0
+[ 915] iconst_0
+[ 916] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 917] aload_0
+[ 918] getfield gamecanvas.tileimagebuffer
+[ 919] iconst_0
+[ 920] iconst_0
+[ 921] aload_0
+[ 922] getfield gamecanvas.screenX
+[ 923] aload_0
+[ 924] getfield gamecanvas.screenY
+[ 925] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 926] aload_0
+[ 927] aload_0
+[ 928] getfield gamecanvas.tileimagebuffer
+[ 929] ldc 247
+[ 930] bipush 64
+[ 931] bipush 10
+[ 932] iconst_3
+[ 933] invokevirtual game/gamecanvas.DrawText
+[ 934] aload_0
+[ 935] aload_0
+[ 936] getfield gamecanvas.tileimagebuffer
+[ 937] ldc 248
+[ 938] bipush 64
+[ 939] bipush 30
+[ 940] iconst_3
+[ 941] invokevirtual game/gamecanvas.DrawText
+[ 942] aload_0
+[ 943] aload_0
+[ 944] getfield gamecanvas.tileimagebuffer
+[ 945] ldc 191
+[ 946] aload_0
+[ 947] getfield gamecanvas.score
+[ 948] invokestatic java/lang/String.valueOf
+[ 949] invokestatic java/lang/String.valueOf
+[ 950] invokevirtual java/lang/String.concat
+[ 951] bipush 64
+[ 952] bipush 40
+[ 953] iconst_3
+[ 954] invokevirtual game/gamecanvas.DrawText
+[ 955] aload_0
+[ 956] aload_0
+[ 957] getfield gamecanvas.tileimagebuffer
+[ 958] ldc 249
+[ 959] bipush 64
+[ 960] bipush 60
+[ 961] iconst_3
+[ 962] invokevirtual game/gamecanvas.DrawText
+[ 963] aload_0
+[ 964] aload_0
+[ 965] getfield gamecanvas.tileimagebuffer
+[ 966] ldc 250
+[ 967] iconst_3
+[ 968] bipush 119
+[ 969] iconst_0
+[ 970] invokevirtual game/gamecanvas.DrawText
+[ 971] aload_0
+[ 972] getfield gamecanvas.tileimagebuffer
+[ 973] sipush 255
+[ 974] sipush 255
+[ 975] sipush 255
+[ 976] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 977] aload_0
+[ 978] getfield gamecanvas.tileimagebuffer
+[ 979] bipush 39
+[ 980] aload_0
+[ 981] getfield gamecanvas.arrow_x
+[ 982] bipush 8
+[ 983] imul
+[ 984] iadd
+[ 985] bipush 79
+[ 986] bipush 9
+[ 987] bipush 9
+[ 988] invokevirtual javax/microedition/lcdui/Graphics.drawRect
+[ 989] aload_0
+[ 990] aload_0
+[ 991] getfield gamecanvas.tileimagebuffer
+[ 992] ldc 191
+[ 993] aload_0
+[ 994] getfield gamecanvas.playerName
+[ 995] iconst_0
+[ 996] invokevirtual java/lang/String.charAt
+[ 997] invokestatic java/lang/String.valueOf
+[ 998] invokestatic java/lang/String.valueOf
+[ 999] invokevirtual java/lang/String.concat
+[1000] bipush 40
+[1001] bipush 80
+[1002] iconst_0
+[1003] invokevirtual game/gamecanvas.DrawText
+[1004] aload_0
+[1005] aload_0
+[1006] getfield gamecanvas.tileimagebuffer
+[1007] ldc 191
+[1008] aload_0
+[1009] getfield gamecanvas.playerName
+[1010] iconst_1
+[1011] invokevirtual java/lang/String.charAt
+[1012] invokestatic java/lang/String.valueOf
+[1013] invokestatic java/lang/String.valueOf
+[1014] invokevirtual java/lang/String.concat
+[1015] bipush 48
+[1016] bipush 80
+[1017] iconst_0
+[1018] invokevirtual game/gamecanvas.DrawText
+[1019] aload_0
+[1020] aload_0
+[1021] getfield gamecanvas.tileimagebuffer
+[1022] ldc 191
+[1023] aload_0
+[1024] getfield gamecanvas.playerName
+[1025] iconst_2
+[1026] invokevirtual java/lang/String.charAt
+[1027] invokestatic java/lang/String.valueOf
+[1028] invokestatic java/lang/String.valueOf
+[1029] invokevirtual java/lang/String.concat
+[1030] bipush 56
+[1031] bipush 80
+[1032] iconst_0
+[1033] invokevirtual game/gamecanvas.DrawText
+[1034] aload_0
+[1035] aload_0
+[1036] getfield gamecanvas.tileimagebuffer
+[1037] ldc 191
+[1038] aload_0
+[1039] getfield gamecanvas.playerName
+[1040] iconst_3
+[1041] invokevirtual java/lang/String.charAt
+[1042] invokestatic java/lang/String.valueOf
+[1043] invokestatic java/lang/String.valueOf
+[1044] invokevirtual java/lang/String.concat
+[1045] bipush 64
+[1046] bipush 80
+[1047] iconst_0
+[1048] invokevirtual game/gamecanvas.DrawText
+[1049] aload_0
+[1050] aload_0
+[1051] getfield gamecanvas.tileimagebuffer
+[1052] ldc 191
+[1053] aload_0
+[1054] getfield gamecanvas.playerName
+[1055] iconst_4
+[1056] invokevirtual java/lang/String.charAt
+[1057] invokestatic java/lang/String.valueOf
+[1058] invokestatic java/lang/String.valueOf
+[1059] invokevirtual java/lang/String.concat
+[1060] bipush 72
+[1061] bipush 80
+[1062] iconst_0
+[1063] invokevirtual game/gamecanvas.DrawText
+[1064] aload_0
+[1065] aload_0
+[1066] getfield gamecanvas.tileimagebuffer
+[1067] ldc 191
+[1068] aload_0
+[1069] getfield gamecanvas.playerName
+[1070] iconst_5
+[1071] invokevirtual java/lang/String.charAt
+[1072] invokestatic java/lang/String.valueOf
+[1073] invokestatic java/lang/String.valueOf
+[1074] invokevirtual java/lang/String.concat
+[1075] bipush 80
+[1076] bipush 80
+[1077] iconst_0
+[1078] invokevirtual game/gamecanvas.DrawText
+[1079] aload_0
+[1080] aload_0
+[1081] getfield gamecanvas.tileimagebuffer
+[1082] ldc 191
+[1083] aload_0
+[1084] getfield gamecanvas.playerName
+[1085] bipush 6
+[1086] invokevirtual java/lang/String.charAt
+[1087] invokestatic java/lang/String.valueOf
+[1088] invokestatic java/lang/String.valueOf
+[1089] invokevirtual java/lang/String.concat
+[1090] bipush 88
+[1091] bipush 80
+[1092] iconst_0
+[1093] invokevirtual game/gamecanvas.DrawText
+[1094] goto 3
+[1095] aload_0
+[1096] getfield gamecanvas.faderdir
+[1097] iconst_1
+[1098] if_icmpne 86
+[1099] aload_0
+[1100] getfield gamecanvas.faderypos
+[1101] bipush 68
+[1102] if_icmpge 21
+[1103] aload_0
+[1104] aload_0
+[1105] getfield gamecanvas.faderypos
+[1106] iconst_4
+[1107] iadd
+[1108] putfield gamecanvas.faderypos
+[1109] aload_0
+[1110] iconst_1
+[1111] putfield gamecanvas.fading
+[1112] goto 8
+[1113] aload_0
+[1114] iconst_0
+[1115] putfield gamecanvas.fading
+[1116] aload_0
+[1117] getfield gamecanvas.tileimagebuffer
+[1118] iconst_0
+[1119] iconst_0
+[1120] iconst_0
+[1121] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[1122] aload_0
+[1123] getfield gamecanvas.tileimagebuffer
+[1124] iconst_0
+[1125] iconst_0
+[1126] sipush 128
+[1127] aload_0
+[1128] getfield gamecanvas.faderypos
+[1129] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[1130] aload_0
+[1131] getfield gamecanvas.tileimagebuffer
+[1132] iconst_0
+[1133] sipush 128
+[1134] aload_0
+[1135] getfield gamecanvas.faderypos
+[1136] isub
+[1137] sipush 128
+[1138] sipush 128
+[1139] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[1140] goto 3
+[1141] aload_0
+[1142] getfield gamecanvas.faderdir
+[1143] iconst_2
+[1144] if_icmpne 84
+[1145] aload_0
+[1146] getfield gamecanvas.faderypos
+[1147] ifle 21
+[1148] aload_0
+[1149] aload_0
+[1150] getfield gamecanvas.faderypos
+[1151] iconst_4
+[1152] isub
+[1153] putfield gamecanvas.faderypos
+[1154] aload_0
+[1155] iconst_1
+[1156] putfield gamecanvas.fading
+[1157] goto 8
+[1158] aload_0
+[1159] iconst_0
+[1160] putfield gamecanvas.fading
+[1161] aload_0
+[1162] getfield gamecanvas.tileimagebuffer
+[1163] iconst_0
+[1164] iconst_0
+[1165] iconst_0
+[1166] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[1167] aload_0
+[1168] getfield gamecanvas.tileimagebuffer
+[1169] iconst_0
+[1170] iconst_0
+[1171] sipush 128
+[1172] aload_0
+[1173] getfield gamecanvas.faderypos
+[1174] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[1175] aload_0
+[1176] getfield gamecanvas.tileimagebuffer
+[1177] iconst_0
+[1178] sipush 128
+[1179] aload_0
+[1180] getfield gamecanvas.faderypos
+[1181] isub
+[1182] sipush 128
+[1183] sipush 128
+[1184] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[1185] goto 3
+[1186] aload_0
+[1187] getfield gamecanvas.levelok
+[1188] ifle 201
+[1189] aload_0
+[1190] getfield gamecanvas.levelok
+[1191] bipush 90
+[1192] if_icmpne 46
+[1193] aload_0
+[1194] getfield gamecanvas.musicopt
+[1195] ldc 11
+[1196] if_acmpne 20
+[1197] aload_0
+[1198] getfield gamecanvas.level
+[1199] bipush 8
+[1200] if_icmpge 11
+[1201] aload_0
+[1202] iconst_4
+[1203] invokevirtual game/gamecanvas.PlaySound
+[1204] goto 20
+[1205] aload_0
+[1206] getfield gamecanvas.musicopt
+[1207] ldc 11
+[1208] if_acmpne 11
+[1209] aload_0
+[1210] iconst_1
+[1211] invokevirtual game/gamecanvas.PlaySound
+[1212] goto 3
+[1213] aload_0
+[1214] dup
+[1215] getfield gamecanvas.levelok
+[1216] iconst_1
+[1217] isub
+[1218] putfield gamecanvas.levelok
+[1219] aload_0
+[1220] getfield gamecanvas.faderypos
+[1221] bipush 68
+[1222] if_icmpge 57
+[1223] aload_0
+[1224] aload_0
+[1225] getfield gamecanvas.tileimagebuffer
+[1226] ldc 253
+[1227] aload_0
+[1228] getfield gamecanvas.screenX
+[1229] iconst_2
+[1230] idiv
+[1231] bipush 50
+[1232] iconst_3
+[1233] invokevirtual game/gamecanvas.DrawText
+[1234] aload_0
+[1235] aload_0
+[1236] getfield gamecanvas.tileimagebuffer
+[1237] ldc 254
+[1238] aload_0
+[1239] getfield gamecanvas.score
+[1240] invokestatic java/lang/String.valueOf
+[1241] invokestatic java/lang/String.valueOf
+[1242] invokevirtual java/lang/String.concat
+[1243] aload_0
+[1244] getfield gamecanvas.screenX
+[1245] iconst_2
+[1246] idiv
+[1247] bipush 60
+[1248] iconst_3
+[1249] invokevirtual game/gamecanvas.DrawText
+[1250] goto 3
+[1251] aload_0
+[1252] getfield gamecanvas.faderypos
+[1253] bipush 68
+[1254] if_icmpne 67
+[1255] aload_0
+[1256] getfield gamecanvas.level
+[1257] bipush 8
+[1258] if_icmpge 27
+[1259] aload_0
+[1260] bipush 11
+[1261] putfield gamecanvas.mode
+[1262] aload_0
+[1263] iconst_0
+[1264] putfield gamecanvas.textmode
+[1265] aload_0
+[1266] dup
+[1267] getfield gamecanvas.level
+[1268] iconst_1
+[1269] iadd
+[1270] putfield gamecanvas.level
+[1271] goto 34
+[1272] aload_0
+[1273] bipush 14
+[1274] putfield gamecanvas.mode
+[1275] aload_0
+[1276] bipush 14
+[1277] putfield gamecanvas.textmode
+[1278] aload_0
+[1279] bipush 9
+[1280] putfield gamecanvas.level
+[1281] aload_0
+[1282] iconst_2
+[1283] putfield gamecanvas.faderdir
+[1284] aload_0
+[1285] iconst_0
+[1286] putfield gamecanvas.levelok
+[1287] goto 3
+[1288] aload_1
+[1289] iconst_0
+[1290] iconst_0
+[1291] aload_0
+[1292] getfield gamecanvas.screenX
+[1293] aload_0
+[1294] getfield gamecanvas.screenY
+[1295] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[1296] aload_1
+[1297] aload_0
+[1298] getfield gamecanvas.tileimage
+[1299] iconst_0
+[1300] iconst_0
+[1301] bipush 20
+[1302] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[1303] aload_0
+[1304] getfield gamecanvas.keypressed
+[1305] bipush -7
+[1306] if_icmpne 32
+[1307] aload_0
+[1308] getfield gamecanvas.mode
+[1309] bipush 20
+[1310] if_icmpne 23
+[1311] aload_0
+[1312] getfield gamecanvas.pause
+[1313] ifeq 16
+[1314] aload_0
+[1315] iconst_0
+[1316] putfield gamecanvas.pause
+[1317] aload_0
+[1318] iconst_0
+[1319] putfield gamecanvas.keypressed
+[1320] goto 3
+[1321] aload_0
+[1322] getfield gamecanvas.keypressed
+[1323] bipush -7
+[1324] if_icmpne 25
+[1325] aload_0
+[1326] getfield gamecanvas.mode
+[1327] bipush 20
+[1328] if_icmpne 16
+[1329] aload_0
+[1330] iconst_1
+[1331] putfield gamecanvas.pause
+[1332] aload_0
+[1333] iconst_0
+[1334] putfield gamecanvas.keypressed
+[1335] goto 3
+[1336] aload_0
+[1337] getfield gamecanvas.pause
+[1338] iconst_1
+[1339] if_icmpne 36
+[1340] aload_0
+[1341] aload_1
+[1342] ldc_w 256
+[1343] aload_0
+[1344] getfield gamecanvas.screenX
+[1345] iconst_2
+[1346] idiv
+[1347] bipush 50
+[1348] iconst_3
+[1349] invokevirtual game/gamecanvas.DrawText
+[1350] aload_0
+[1351] aload_1
+[1352] ldc_w 257
+[1353] bipush 77
+[1354] bipush 117
+[1355] iconst_0
+[1356] invokevirtual game/gamecanvas.DrawText
+[1357] goto 3
+[1358] aload_0
+[1359] getfield gamecanvas.keypressed
+[1360] bipush 42
+[1361] if_icmpne 380
+[1362] aload_0
+[1363] getfield gamecanvas.mode
+[1364] bipush 20
+[1365] if_icmpne 371
+[1366] aload_0
+[1367] getfield gamecanvas.pause
+[1368] ifne 364
+[1369] aload_1
+[1370] sipush 170
+[1371] iconst_0
+[1372] iconst_0
+[1373] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[1374] aload_1
+[1375] bipush 10
+[1376] bipush 10
+[1377] aload_0
+[1378] getfield gamecanvas.screenX
+[1379] bipush 20
+[1380] isub
+[1381] aload_0
+[1382] getfield gamecanvas.screenY
+[1383] bipush 20
+[1384] isub
+[1385] bipush 10
+[1386] bipush 10
+[1387] invokevirtual javax/microedition/lcdui/Graphics.fillRoundRect
+[1388] aload_1
+[1389] sipush 255
+[1390] sipush 216
+[1391] iconst_0
+[1392] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[1393] aload_1
+[1394] bipush 12
+[1395] bipush 12
+[1396] aload_0
+[1397] getfield gamecanvas.screenX
+[1398] bipush 25
+[1399] isub
+[1400] aload_0
+[1401] getfield gamecanvas.screenY
+[1402] bipush 25
+[1403] isub
+[1404] iconst_5
+[1405] iconst_5
+[1406] invokevirtual javax/microedition/lcdui/Graphics.drawRoundRect
+[1407] aload_0
+[1408] aload_1
+[1409] ldc_w 260
+[1410] aload_0
+[1411] getfield gamecanvas.screenX
+[1412] iconst_2
+[1413] idiv
+[1414] bipush 20
+[1415] iconst_3
+[1416] invokevirtual game/gamecanvas.DrawText
+[1417] aload_0
+[1418] aload_1
+[1419] ldc_w 261
+[1420] bipush 25
+[1421] bipush 40
+[1422] iconst_0
+[1423] invokevirtual game/gamecanvas.DrawText
+[1424] aload_0
+[1425] aload_1
+[1426] ldc 191
+[1427] aload_0
+[1428] getfield gamecanvas.keys
+[1429] invokestatic java/lang/String.valueOf
+[1430] invokestatic java/lang/String.valueOf
+[1431] invokevirtual java/lang/String.concat
+[1432] aload_0
+[1433] getfield gamecanvas.screenX
+[1434] bipush 32
+[1435] isub
+[1436] bipush 40
+[1437] iconst_1
+[1438] invokevirtual game/gamecanvas.DrawText
+[1439] aload_0
+[1440] aload_1
+[1441] ldc_w 262
+[1442] bipush 25
+[1443] bipush 50
+[1444] iconst_0
+[1445] invokevirtual game/gamecanvas.DrawText
+[1446] aload_0
+[1447] aload_1
+[1448] ldc 191
+[1449] aload_0
+[1450] getfield gamecanvas.lives
+[1451] invokestatic java/lang/String.valueOf
+[1452] invokestatic java/lang/String.valueOf
+[1453] invokevirtual java/lang/String.concat
+[1454] aload_0
+[1455] getfield gamecanvas.screenX
+[1456] bipush 32
+[1457] isub
+[1458] bipush 50
+[1459] iconst_1
+[1460] invokevirtual game/gamecanvas.DrawText
+[1461] aload_0
+[1462] aload_1
+[1463] ldc_w 263
+[1464] bipush 25
+[1465] bipush 60
+[1466] iconst_0
+[1467] invokevirtual game/gamecanvas.DrawText
+[1468] aload_0
+[1469] aload_1
+[1470] ldc 191
+[1471] aload_0
+[1472] getfield gamecanvas.diamant
+[1473] invokestatic java/lang/String.valueOf
+[1474] invokestatic java/lang/String.valueOf
+[1475] invokevirtual java/lang/String.concat
+[1476] aload_0
+[1477] getfield gamecanvas.screenX
+[1478] bipush 32
+[1479] isub
+[1480] bipush 60
+[1481] iconst_1
+[1482] invokevirtual game/gamecanvas.DrawText
+[1483] aload_0
+[1484] aload_1
+[1485] ldc_w 264
+[1486] bipush 25
+[1487] bipush 70
+[1488] iconst_0
+[1489] invokevirtual game/gamecanvas.DrawText
+[1490] aload_0
+[1491] aload_1
+[1492] ldc 191
+[1493] aload_0
+[1494] getfield gamecanvas.playerpower
+[1495] invokestatic java/lang/String.valueOf
+[1496] invokestatic java/lang/String.valueOf
+[1497] invokevirtual java/lang/String.concat
+[1498] aload_0
+[1499] getfield gamecanvas.screenX
+[1500] bipush 32
+[1501] isub
+[1502] bipush 70
+[1503] iconst_1
+[1504] invokevirtual game/gamecanvas.DrawText
+[1505] aload_0
+[1506] aload_1
+[1507] ldc_w 265
+[1508] bipush 25
+[1509] bipush 80
+[1510] iconst_0
+[1511] invokevirtual game/gamecanvas.DrawText
+[1512] aload_0
+[1513] aload_1
+[1514] ldc 191
+[1515] aload_0
+[1516] getfield gamecanvas.swordpower
+[1517] iconst_1
+[1518] iadd
+[1519] iconst_5
+[1520] imul
+[1521] invokestatic java/lang/String.valueOf
+[1522] invokestatic java/lang/String.valueOf
+[1523] invokevirtual java/lang/String.concat
+[1524] aload_0
+[1525] getfield gamecanvas.screenX
+[1526] bipush 32
+[1527] isub
+[1528] bipush 80
+[1529] iconst_1
+[1530] invokevirtual game/gamecanvas.DrawText
+[1531] aload_0
+[1532] aload_1
+[1533] ldc_w 266
+[1534] bipush 25
+[1535] bipush 90
+[1536] iconst_0
+[1537] invokevirtual game/gamecanvas.DrawText
+[1538] aload_0
+[1539] aload_1
+[1540] new 192
+[1541] dup
+[1542] ldc 191
+[1543] invokespecial java/lang/StringBuffer.<init>
+[1544] aload_0
+[1545] getfield gamecanvas.level
+[1546] iconst_1
+[1547] iadd
+[1548] invokevirtual java/lang/StringBuffer.append
+[1549] invokestatic java/lang/String.valueOf
+[1550] invokestatic java/lang/String.valueOf
+[1551] aload_0
+[1552] getfield gamecanvas.screenX
+[1553] bipush 32
+[1554] isub
+[1555] bipush 90
+[1556] iconst_1
+[1557] invokevirtual game/gamecanvas.DrawText
+[1558] goto 3
+[1559] return

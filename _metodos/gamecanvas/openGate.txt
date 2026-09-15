@@ -1,0 +1,80 @@
+// Classe: gamecanvas
+// Metodo: openGate
+// Descritor: (II)V
+// Instrucoes: 75
+
+[   0] aload_0
+[   1] getfield gamecanvas.soundopt
+[   2] ldc 11
+[   3] if_acmpne 8
+[   4] aload_0
+[   5] iconst_3
+[   6] invokevirtual game/gamecanvas.PlaySound
+[   7] aload_0
+[   8] iload_1
+[   9] iload_2
+[  10] invokevirtual game/gamecanvas.GetIcon
+[  11] aload_0
+[  12] getfield gamecanvas.MASK_WALKWAY
+[  13] if_icmpeq 11
+[  14] iload_2
+[  15] bipush 16
+[  16] iadd
+[  17] istore_2
+[  18] goto -18
+[  19] iload_2
+[  20] bipush 16
+[  21] isub
+[  22] istore_2
+[  23] iload_2
+[  24] istore_3
+[  25] aload_0
+[  26] iload_1
+[  27] iload_2
+[  28] invokevirtual game/gamecanvas.GetIcon
+[  29] bipush 98
+[  30] if_icmpne 20
+[  31] aload_0
+[  32] iload_1
+[  33] iload_2
+[  34] iconst_m1
+[  35] iconst_m1
+[  36] iconst_0
+[  37] invokevirtual game/gamecanvas.SetIcon
+[  38] iload_2
+[  39] bipush 16
+[  40] isub
+[  41] istore_2
+[  42] goto -25
+[  43] aload_0
+[  44] iload_1
+[  45] iload_3
+[  46] iconst_m1
+[  47] iconst_0
+[  48] iconst_m1
+[  49] invokevirtual game/gamecanvas.SetIcon
+[  50] iload_3
+[  51] bipush 16
+[  52] isub
+[  53] istore_3
+[  54] aload_0
+[  55] iload_1
+[  56] iload_3
+[  57] iconst_m1
+[  58] iconst_0
+[  59] iconst_m1
+[  60] invokevirtual game/gamecanvas.SetIcon
+[  61] aload_0
+[  62] iconst_0
+[  63] invokevirtual game/gamecanvas.DrawIcons
+[  64] aload_0
+[  65] bipush 120
+[  66] putfield gamecanvas.gateblocks
+[  67] aload_0
+[  68] dup
+[  69] getfield gamecanvas.keys
+[  70] iconst_1
+[  71] isub
+[  72] i2b
+[  73] putfield gamecanvas.keys
+[  74] return

@@ -1,0 +1,20 @@
+// Classe: gamecanvas
+// Metodo: setSpritePos
+// Descritor: (III)V
+// Instrucoes: 15
+
+[   0] aload_0
+[   1] getfield gamecanvas.sprites
+[   2] iload_1
+[   3] aaload
+[   4] iconst_2
+[   5] iload_2
+[   6] iastore
+[   7] aload_0
+[   8] getfield gamecanvas.sprites
+[   9] iload_1
+[  10] aaload
+[  11] iconst_3
+[  12] iload_3
+[  13] iastore
+[  14] return

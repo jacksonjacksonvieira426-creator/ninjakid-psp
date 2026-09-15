@@ -1,0 +1,13 @@
+// Classe: gamecanvas$AnimationTask
+// Metodo: <init>
+// Descritor: (Lgame/gamecanvas;Lgame/main;)V
+// Instrucoes: 8
+
+[   0] aload_0
+[   1] invokespecial java/util/TimerTask.<init>
+[   2] aload_0
+[   3] aload_1
+[   4] putfield gamecanvas$AnimationTask.this$0
+[   5] aload_2
+[   6] astore_3
+[   7] return

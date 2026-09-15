@@ -1,0 +1,14 @@
+// Classe: gamecanvas
+// Metodo: keyPressed
+// Descritor: (I)V
+// Instrucoes: 9
+
+[   0] aload_0
+[   1] aload_0
+[   2] iload_1
+[   3] invokevirtual javax/microedition/lcdui/Canvas.getGameAction
+[   4] putfield gamecanvas.game_keypressed
+[   5] aload_0
+[   6] iload_1
+[   7] putfield gamecanvas.keypressed
+[   8] return

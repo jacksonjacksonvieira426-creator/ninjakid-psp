@@ -1,0 +1,187 @@
+// Classe: gamecanvas
+// Metodo: drawSprites
+// Descritor: (Lcom/nokia/mid/ui/DirectGraphics;)V
+// Instrucoes: 182
+
+[   0] iconst_0
+[   1] istore_2
+[   2] iconst_0
+[   3] istore_3
+[   4] aload_0
+[   5] getfield gamecanvas.tileimagebuffer
+[   6] iconst_1
+[   7] iconst_1
+[   8] aload_0
+[   9] getfield gamecanvas.screenX
+[  10] iconst_2
+[  11] isub
+[  12] aload_0
+[  13] getfield gamecanvas.screenY
+[  14] iconst_2
+[  15] isub
+[  16] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[  17] aload_0
+[  18] iconst_0
+[  19] putfield gamecanvas.i
+[  20] aload_0
+[  21] getfield gamecanvas.i
+[  22] aload_0
+[  23] getfield gamecanvas.anzahlsprites
+[  24] if_icmpge 255
+[  25] aload_0
+[  26] getfield gamecanvas.sprites
+[  27] aload_0
+[  28] getfield gamecanvas.i
+[  29] aaload
+[  30] iconst_0
+[  31] iaload
+[  32] iconst_1
+[  33] if_icmpne 227
+[  34] aload_0
+[  35] getfield gamecanvas.sprites
+[  36] aload_0
+[  37] getfield gamecanvas.i
+[  38] aaload
+[  39] bipush 6
+[  40] iaload
+[  41] ifne 146
+[  42] aload_0
+[  43] getfield gamecanvas.sprites
+[  44] aload_0
+[  45] getfield gamecanvas.i
+[  46] aaload
+[  47] iconst_2
+[  48] iaload
+[  49] aload_0
+[  50] getfield gamecanvas.levelxpos
+[  51] bipush 16
+[  52] imul
+[  53] isub
+[  54] aload_0
+[  55] getfield gamecanvas.softxpos
+[  56] iadd
+[  57] istore_2
+[  58] aload_0
+[  59] getfield gamecanvas.sprites
+[  60] aload_0
+[  61] getfield gamecanvas.i
+[  62] aaload
+[  63] iconst_3
+[  64] iaload
+[  65] aload_0
+[  66] getfield gamecanvas.levelypos
+[  67] bipush 16
+[  68] imul
+[  69] isub
+[  70] aload_0
+[  71] getfield gamecanvas.softypos
+[  72] iadd
+[  73] istore_3
+[  74] iload_2
+[  75] bipush -32
+[  76] if_icmplt 156
+[  77] iload_2
+[  78] aload_0
+[  79] aload_0
+[  80] getfield gamecanvas.i
+[  81] invokevirtual game/gamecanvas.getSpriteWidth
+[  82] iadd
+[  83] sipush 160
+[  84] if_icmpgt 140
+[  85] iload_3
+[  86] bipush -32
+[  87] if_icmplt 134
+[  88] iload_3
+[  89] aload_0
+[  90] aload_0
+[  91] getfield gamecanvas.i
+[  92] invokevirtual game/gamecanvas.getSpriteHeight
+[  93] iadd
+[  94] sipush 160
+[  95] if_icmpgt 118
+[  96] aload_1
+[  97] aload_0
+[  98] getfield gamecanvas.bobgfx
+[  99] aload_0
+[ 100] getfield gamecanvas.sprites
+[ 101] aload_0
+[ 102] getfield gamecanvas.i
+[ 103] aaload
+[ 104] iconst_1
+[ 105] iaload
+[ 106] aaload
+[ 107] iload_2
+[ 108] iload_3
+[ 109] aload_0
+[ 110] getfield gamecanvas.sprites
+[ 111] aload_0
+[ 112] getfield gamecanvas.i
+[ 113] aaload
+[ 114] iconst_4
+[ 115] iaload
+[ 116] aload_0
+[ 117] getfield gamecanvas.sprites
+[ 118] aload_0
+[ 119] getfield gamecanvas.i
+[ 120] aaload
+[ 121] iconst_5
+[ 122] iaload
+[ 123] invokeinterface com/nokia/mid/ui/DirectGraphics.drawImage
+[ 124] goto 69
+[ 125] aload_1
+[ 126] aload_0
+[ 127] getfield gamecanvas.bobgfx
+[ 128] aload_0
+[ 129] getfield gamecanvas.sprites
+[ 130] aload_0
+[ 131] getfield gamecanvas.i
+[ 132] aaload
+[ 133] iconst_1
+[ 134] iaload
+[ 135] aaload
+[ 136] aload_0
+[ 137] getfield gamecanvas.sprites
+[ 138] aload_0
+[ 139] getfield gamecanvas.i
+[ 140] aaload
+[ 141] iconst_2
+[ 142] iaload
+[ 143] aload_0
+[ 144] getfield gamecanvas.sprites
+[ 145] aload_0
+[ 146] getfield gamecanvas.i
+[ 147] aaload
+[ 148] iconst_3
+[ 149] iaload
+[ 150] aload_0
+[ 151] getfield gamecanvas.sprites
+[ 152] aload_0
+[ 153] getfield gamecanvas.i
+[ 154] aaload
+[ 155] iconst_4
+[ 156] iaload
+[ 157] aload_0
+[ 158] getfield gamecanvas.sprites
+[ 159] aload_0
+[ 160] getfield gamecanvas.i
+[ 161] aaload
+[ 162] iconst_5
+[ 163] iaload
+[ 164] invokeinterface com/nokia/mid/ui/DirectGraphics.drawImage
+[ 165] aload_0
+[ 166] dup
+[ 167] getfield gamecanvas.i
+[ 168] iconst_1
+[ 169] iadd
+[ 170] putfield gamecanvas.i
+[ 171] goto -260
+[ 172] aload_0
+[ 173] getfield gamecanvas.tileimagebuffer
+[ 174] iconst_0
+[ 175] iconst_0
+[ 176] aload_0
+[ 177] getfield gamecanvas.screenX
+[ 178] aload_0
+[ 179] getfield gamecanvas.screenY
+[ 180] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 181] return

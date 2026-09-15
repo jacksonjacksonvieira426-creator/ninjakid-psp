@@ -1,0 +1,35 @@
+// Classe: gamecanvas
+// Metodo: InitSpriteMaster
+// Descritor: ()V
+// Instrucoes: 30
+
+[   0] aload_0
+[   1] aload_0
+[   2] getfield gamecanvas.anzahlsprites
+[   3] bipush 10
+[   4] multianewarray 100
+[   5] putfield gamecanvas.sprites
+[   6] aload_0
+[   7] iconst_0
+[   8] putfield gamecanvas.i
+[   9] aload_0
+[  10] getfield gamecanvas.i
+[  11] aload_0
+[  12] getfield gamecanvas.anzahlsprites
+[  13] if_icmpge 28
+[  14] aload_0
+[  15] getfield gamecanvas.sprites
+[  16] aload_0
+[  17] getfield gamecanvas.i
+[  18] aaload
+[  19] iconst_0
+[  20] iconst_m1
+[  21] iastore
+[  22] aload_0
+[  23] dup
+[  24] getfield gamecanvas.i
+[  25] iconst_1
+[  26] iadd
+[  27] putfield gamecanvas.i
+[  28] goto -33
+[  29] return

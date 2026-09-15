@@ -1,0 +1,101 @@
+// Classe: gamecanvas
+// Metodo: ReborneEnemy
+// Descritor: (I)V
+// Instrucoes: 96
+
+[   0] aload_0
+[   1] getfield gamecanvas.sprites
+[   2] iload_1
+[   3] aaload
+[   4] iconst_0
+[   5] bipush -99
+[   6] iastore
+[   7] aload_0
+[   8] getfield gamecanvas.sprites
+[   9] aload_0
+[  10] getfield gamecanvas.sprites
+[  11] iload_1
+[  12] aaload
+[  13] bipush 8
+[  14] iaload
+[  15] aaload
+[  16] iconst_0
+[  17] bipush -99
+[  18] iastore
+[  19] aload_0
+[  20] getfield gamecanvas.sprites
+[  21] aload_0
+[  22] getfield gamecanvas.sprites
+[  23] iload_1
+[  24] aaload
+[  25] bipush 8
+[  26] iaload
+[  27] aaload
+[  28] bipush 7
+[  29] bipush 120
+[  30] iastore
+[  31] aload_0
+[  32] getfield gamecanvas.sprites
+[  33] aload_0
+[  34] getfield gamecanvas.sprites
+[  35] iload_1
+[  36] aaload
+[  37] bipush 8
+[  38] iaload
+[  39] iconst_1
+[  40] iadd
+[  41] aaload
+[  42] iconst_0
+[  43] bipush -99
+[  44] iastore
+[  45] aload_0
+[  46] getfield gamecanvas.sprites
+[  47] aload_0
+[  48] getfield gamecanvas.sprites
+[  49] iload_1
+[  50] aaload
+[  51] bipush 8
+[  52] iaload
+[  53] iconst_1
+[  54] iadd
+[  55] aaload
+[  56] bipush 7
+[  57] bipush 120
+[  58] iastore
+[  59] aload_0
+[  60] getfield gamecanvas.sprites
+[  61] iload_1
+[  62] aaload
+[  63] bipush 7
+[  64] sipush 200
+[  65] iastore
+[  66] aload_0
+[  67] iload_1
+[  68] aload_0
+[  69] getfield gamecanvas.sprites
+[  70] aload_0
+[  71] getfield gamecanvas.sprites
+[  72] iload_1
+[  73] aaload
+[  74] bipush 8
+[  75] iaload
+[  76] aaload
+[  77] iconst_2
+[  78] iaload
+[  79] bipush 8
+[  80] iadd
+[  81] aload_0
+[  82] getfield gamecanvas.sprites
+[  83] aload_0
+[  84] getfield gamecanvas.sprites
+[  85] iload_1
+[  86] aaload
+[  87] bipush 8
+[  88] iaload
+[  89] aaload
+[  90] iconst_3
+[  91] iaload
+[  92] bipush 7
+[  93] iadd
+[  94] invokevirtual game/gamecanvas.setSpritePos
+[  95] return

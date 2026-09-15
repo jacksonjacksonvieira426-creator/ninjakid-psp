@@ -1,0 +1,13 @@
+// Classe: gamecanvas
+// Metodo: hideSprite
+// Descritor: (I)V
+// Instrucoes: 8
+
+[   0] aload_0
+[   1] getfield gamecanvas.sprites
+[   2] iload_1
+[   3] aaload
+[   4] iconst_0
+[   5] iconst_0
+[   6] iastore
+[   7] return

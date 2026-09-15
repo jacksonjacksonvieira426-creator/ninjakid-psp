@@ -1,0 +1,6 @@
+// Classe: main
+// Metodo: hideNotify
+// Descritor: ()V
+// Instrucoes: 1
+
+[   0] return

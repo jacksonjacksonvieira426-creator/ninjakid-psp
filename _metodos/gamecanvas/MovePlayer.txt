@@ -1,0 +1,300 @@
+// Classe: gamecanvas
+// Metodo: MovePlayer
+// Descritor: (I)V
+// Instrucoes: 295
+
+[   0] iload_1
+[   1] aload_0
+[   2] getfield gamecanvas.lastmm
+[   3] if_icmpeq 8
+[   4] aload_0
+[   5] iconst_0
+[   6] putfield gamecanvas.playeranimdelay
+[   7] iload_1
+[   8] lookupswitch
+[   9] aload_0
+[  10] getfield gamecanvas.playerjumps
+[  11] iconst_1
+[  12] if_icmpeq 597
+[  13] aload_0
+[  14] iconst_1
+[  15] putfield gamecanvas.playerjumps
+[  16] aload_0
+[  17] sipush -5000
+[  18] putfield gamecanvas.jumpspeed
+[  19] aload_0
+[  20] iconst_0
+[  21] putfield gamecanvas.playerONlift
+[  22] goto 577
+[  23] aload_0
+[  24] aload_0
+[  25] getfield gamecanvas.playerYpos
+[  26] sipush 3000
+[  27] isub
+[  28] putfield gamecanvas.playerYpos
+[  29] aload_0
+[  30] iconst_2
+[  31] sipush 3000
+[  32] invokevirtual game/gamecanvas.Scroll
+[  33] aload_0
+[  34] getfield gamecanvas.playeranimdelay
+[  35] ifle 16
+[  36] aload_0
+[  37] dup
+[  38] getfield gamecanvas.playeranimdelay
+[  39] iconst_1
+[  40] isub
+[  41] putfield gamecanvas.playeranimdelay
+[  42] goto 537
+[  43] aload_0
+[  44] iconst_5
+[  45] putfield gamecanvas.playeranimdelay
+[  46] aload_0
+[  47] aload_0
+[  48] getfield gamecanvas.player
+[  49] bipush 12
+[  50] invokevirtual game/gamecanvas.setSpriteAnim
+[  51] aload_0
+[  52] aload_0
+[  53] getfield gamecanvas.player
+[  54] invokevirtual game/gamecanvas.getSpriteManipulation
+[  55] ifne 17
+[  56] aload_0
+[  57] aload_0
+[  58] getfield gamecanvas.player
+[  59] sipush 8192
+[  60] invokevirtual game/gamecanvas.setSpriteManipulation
+[  61] goto 497
+[  62] aload_0
+[  63] aload_0
+[  64] getfield gamecanvas.player
+[  65] iconst_0
+[  66] invokevirtual game/gamecanvas.setSpriteManipulation
+[  67] goto 485
+[  68] aload_0
+[  69] aload_0
+[  70] getfield gamecanvas.playerYpos
+[  71] sipush 3000
+[  72] iadd
+[  73] putfield gamecanvas.playerYpos
+[  74] aload_0
+[  75] bipush 8
+[  76] sipush 3000
+[  77] invokevirtual game/gamecanvas.Scroll
+[  78] aload_0
+[  79] getfield gamecanvas.playeranimdelay
+[  80] ifle 16
+[  81] aload_0
+[  82] dup
+[  83] getfield gamecanvas.playeranimdelay
+[  84] iconst_1
+[  85] isub
+[  86] putfield gamecanvas.playeranimdelay
+[  87] goto 444
+[  88] aload_0
+[  89] iconst_5
+[  90] putfield gamecanvas.playeranimdelay
+[  91] aload_0
+[  92] aload_0
+[  93] getfield gamecanvas.player
+[  94] bipush 12
+[  95] invokevirtual game/gamecanvas.setSpriteAnim
+[  96] aload_0
+[  97] aload_0
+[  98] getfield gamecanvas.player
+[  99] invokevirtual game/gamecanvas.getSpriteManipulation
+[ 100] ifne 17
+[ 101] aload_0
+[ 102] aload_0
+[ 103] getfield gamecanvas.player
+[ 104] sipush 8192
+[ 105] invokevirtual game/gamecanvas.setSpriteManipulation
+[ 106] goto 404
+[ 107] aload_0
+[ 108] aload_0
+[ 109] getfield gamecanvas.player
+[ 110] iconst_0
+[ 111] invokevirtual game/gamecanvas.setSpriteManipulation
+[ 112] goto 392
+[ 113] aload_0
+[ 114] aload_0
+[ 115] getfield gamecanvas.player
+[ 116] bipush 13
+[ 117] invokevirtual game/gamecanvas.setSpriteAnim
+[ 118] goto 379
+[ 119] aload_0
+[ 120] iconst_1
+[ 121] putfield gamecanvas.playerdir
+[ 122] aload_0
+[ 123] iconst_4
+[ 124] sipush 3000
+[ 125] invokevirtual game/gamecanvas.Scroll
+[ 126] aload_0
+[ 127] aload_0
+[ 128] getfield gamecanvas.playerXpos
+[ 129] sipush 3000
+[ 130] isub
+[ 131] putfield gamecanvas.playerXpos
+[ 132] aload_0
+[ 133] getfield gamecanvas.playeranimdelay
+[ 134] ifle 16
+[ 135] aload_0
+[ 136] dup
+[ 137] getfield gamecanvas.playeranimdelay
+[ 138] iconst_1
+[ 139] isub
+[ 140] putfield gamecanvas.playeranimdelay
+[ 141] goto 334
+[ 142] aload_0
+[ 143] iconst_3
+[ 144] putfield gamecanvas.playeranimdelay
+[ 145] aload_0
+[ 146] aload_0
+[ 147] getfield gamecanvas.player
+[ 148] sipush 8192
+[ 149] invokevirtual game/gamecanvas.setSpriteManipulation
+[ 150] aload_0
+[ 151] aload_0
+[ 152] getfield gamecanvas.player
+[ 153] invokevirtual game/gamecanvas.getSpriteAnim
+[ 154] bipush 11
+[ 155] if_icmpne 16
+[ 156] aload_0
+[ 157] aload_0
+[ 158] getfield gamecanvas.player
+[ 159] bipush 10
+[ 160] invokevirtual game/gamecanvas.setSpriteAnim
+[ 161] goto 292
+[ 162] aload_0
+[ 163] aload_0
+[ 164] getfield gamecanvas.player
+[ 165] bipush 11
+[ 166] invokevirtual game/gamecanvas.setSpriteAnim
+[ 167] goto 279
+[ 168] aload_0
+[ 169] iconst_0
+[ 170] putfield gamecanvas.playerdir
+[ 171] aload_0
+[ 172] bipush 6
+[ 173] sipush 3000
+[ 174] invokevirtual game/gamecanvas.Scroll
+[ 175] aload_0
+[ 176] aload_0
+[ 177] getfield gamecanvas.playerXpos
+[ 178] sipush 3000
+[ 179] iadd
+[ 180] putfield gamecanvas.playerXpos
+[ 181] aload_0
+[ 182] getfield gamecanvas.playeranimdelay
+[ 183] ifle 16
+[ 184] aload_0
+[ 185] dup
+[ 186] getfield gamecanvas.playeranimdelay
+[ 187] iconst_1
+[ 188] isub
+[ 189] putfield gamecanvas.playeranimdelay
+[ 190] goto 233
+[ 191] aload_0
+[ 192] iconst_3
+[ 193] putfield gamecanvas.playeranimdelay
+[ 194] aload_0
+[ 195] aload_0
+[ 196] getfield gamecanvas.player
+[ 197] iconst_0
+[ 198] invokevirtual game/gamecanvas.setSpriteManipulation
+[ 199] aload_0
+[ 200] aload_0
+[ 201] getfield gamecanvas.player
+[ 202] invokevirtual game/gamecanvas.getSpriteAnim
+[ 203] bipush 11
+[ 204] if_icmpne 16
+[ 205] aload_0
+[ 206] aload_0
+[ 207] getfield gamecanvas.player
+[ 208] bipush 10
+[ 209] invokevirtual game/gamecanvas.setSpriteAnim
+[ 210] goto 193
+[ 211] aload_0
+[ 212] aload_0
+[ 213] getfield gamecanvas.player
+[ 214] bipush 11
+[ 215] invokevirtual game/gamecanvas.setSpriteAnim
+[ 216] goto 180
+[ 217] aload_0
+[ 218] iconst_1
+[ 219] putfield gamecanvas.playerdir
+[ 220] goto 172
+[ 221] aload_0
+[ 222] iconst_0
+[ 223] putfield gamecanvas.playerdir
+[ 224] goto 164
+[ 225] aload_0
+[ 226] getfield gamecanvas.playerdir
+[ 227] ifne 12
+[ 228] aload_0
+[ 229] aload_0
+[ 230] getfield gamecanvas.player
+[ 231] iconst_0
+[ 232] invokevirtual game/gamecanvas.setSpriteManipulation
+[ 233] aload_0
+[ 234] getfield gamecanvas.playerdir
+[ 235] iconst_1
+[ 236] if_icmpne 14
+[ 237] aload_0
+[ 238] aload_0
+[ 239] getfield gamecanvas.player
+[ 240] sipush 8192
+[ 241] invokevirtual game/gamecanvas.setSpriteManipulation
+[ 242] aload_0
+[ 243] getfield gamecanvas.playeranimdelay
+[ 244] ifle 16
+[ 245] aload_0
+[ 246] dup
+[ 247] getfield gamecanvas.playeranimdelay
+[ 248] iconst_1
+[ 249] isub
+[ 250] putfield gamecanvas.playeranimdelay
+[ 251] goto 109
+[ 252] aload_0
+[ 253] aload_0
+[ 254] getfield gamecanvas.player
+[ 255] invokevirtual game/gamecanvas.getSpriteAnim
+[ 256] tableswitch 98
+[ 257] aload_0
+[ 258] aload_0
+[ 259] getfield gamecanvas.player
+[ 260] bipush 8
+[ 261] invokevirtual game/gamecanvas.setSpriteAnim
+[ 262] aload_0
+[ 263] iconst_2
+[ 264] putfield gamecanvas.playeranimdelay
+[ 265] aload_0
+[ 266] iconst_1
+[ 267] putfield gamecanvas.firereleased
+[ 268] goto 46
+[ 269] aload_0
+[ 270] aload_0
+[ 271] getfield gamecanvas.player
+[ 272] bipush 9
+[ 273] invokevirtual game/gamecanvas.setSpriteAnim
+[ 274] aload_0
+[ 275] bipush 8
+[ 276] putfield gamecanvas.playeranimdelay
+[ 277] aload_0
+[ 278] invokevirtual game/gamecanvas.checkHit
+[ 279] aload_0
+[ 280] iconst_1
+[ 281] putfield gamecanvas.firereleased
+[ 282] goto 18
+[ 283] aload_0
+[ 284] aload_0
+[ 285] getfield gamecanvas.player
+[ 286] bipush 6
+[ 287] invokevirtual game/gamecanvas.setSpriteAnim
+[ 288] aload_0
+[ 289] iconst_2
+[ 290] putfield gamecanvas.firereleased
+[ 291] aload_0
+[ 292] iload_1
+[ 293] putfield gamecanvas.lastmm
+[ 294] return

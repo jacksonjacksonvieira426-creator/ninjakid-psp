@@ -1,0 +1,9 @@
+// Classe: gamecanvas
+// Metodo: StopSound
+// Descritor: ()V
+// Instrucoes: 4
+
+[   0] aload_0
+[   1] getfield gamecanvas.sound
+[   2] invokevirtual com/nokia/mid/sound/Sound.stop
+[   3] return

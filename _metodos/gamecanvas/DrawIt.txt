@@ -1,0 +1,222 @@
+// Classe: gamecanvas
+// Metodo: DrawIt
+// Descritor: (IIII)V
+// Instrucoes: 217
+
+[   0] aload_0
+[   1] getfield gamecanvas.levelxpos
+[   2] istore 5
+[   3] aload_0
+[   4] getfield gamecanvas.levelypos
+[   5] istore 6
+[   6] iconst_0
+[   7] istore 7
+[   8] iconst_0
+[   9] istore 8
+[  10] iconst_0
+[  11] istore 9
+[  12] iconst_0
+[  13] istore 10
+[  14] iload_3
+[  15] istore 11
+[  16] iload 11
+[  17] iload 4
+[  18] if_icmpge 345
+[  19] iload_1
+[  20] istore 12
+[  21] iload 12
+[  22] iload_2
+[  23] if_icmpge 330
+[  24] aload_0
+[  25] getfield gamecanvas.offscreenbuffer
+[  26] iload 12
+[  27] bipush 16
+[  28] imul
+[  29] iload 11
+[  30] bipush 16
+[  31] imul
+[  32] bipush 16
+[  33] bipush 16
+[  34] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[  35] aload_0
+[  36] getfield gamecanvas.leveldata
+[  37] iload 11
+[  38] iload 6
+[  39] iadd
+[  40] aload_0
+[  41] getfield gamecanvas.levelbreite
+[  42] imul
+[  43] iload 12
+[  44] iadd
+[  45] iload 5
+[  46] iadd
+[  47] baload
+[  48] istore 7
+[  49] aload_0
+[  50] getfield gamecanvas.leveldata2
+[  51] iload 11
+[  52] iload 6
+[  53] iadd
+[  54] aload_0
+[  55] getfield gamecanvas.levelbreite
+[  56] imul
+[  57] iload 12
+[  58] iadd
+[  59] iload 5
+[  60] iadd
+[  61] baload
+[  62] istore 8
+[  63] iload 7
+[  64] ifeq 125
+[  65] iload 7
+[  66] ifge 75
+[  67] iload 7
+[  68] sipush 256
+[  69] iadd
+[  70] sipush 128
+[  71] isub
+[  72] istore 7
+[  73] aload_0
+[  74] getfield gamecanvas.anzahl_icons
+[  75] iload 7
+[  76] iload 10
+[  77] aload_0
+[  78] getfield gamecanvas.anzahl_icons
+[  79] imul
+[  80] isub
+[  81] isub
+[  82] iconst_0
+[  83] isub
+[  84] istore 9
+[  85] aload_0
+[  86] getfield gamecanvas.DGoffscreenbuffer
+[  87] aload_0
+[  88] getfield gamecanvas.loadicon
+[  89] iload 12
+[  90] bipush 16
+[  91] imul
+[  92] iload 9
+[  93] bipush 16
+[  94] imul
+[  95] isub
+[  96] iload 11
+[  97] bipush 16
+[  98] imul
+[  99] iconst_0
+[ 100] isub
+[ 101] bipush 20
+[ 102] aload_0
+[ 103] pop
+[ 104] sipush 8192
+[ 105] invokeinterface com/nokia/mid/ui/DirectGraphics.drawImage
+[ 106] goto 48
+[ 107] iload 7
+[ 108] iload 10
+[ 109] aload_0
+[ 110] getfield gamecanvas.anzahl_icons
+[ 111] imul
+[ 112] isub
+[ 113] iconst_1
+[ 114] isub
+[ 115] istore 9
+[ 116] aload_0
+[ 117] getfield gamecanvas.offscreenbuffer
+[ 118] aload_0
+[ 119] getfield gamecanvas.loadicon
+[ 120] iload 12
+[ 121] bipush 16
+[ 122] imul
+[ 123] iload 9
+[ 124] bipush 16
+[ 125] imul
+[ 126] isub
+[ 127] iload 11
+[ 128] bipush 16
+[ 129] imul
+[ 130] iconst_0
+[ 131] isub
+[ 132] bipush 20
+[ 133] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 134] iload 8
+[ 135] ifeq 125
+[ 136] iload 8
+[ 137] ifge 75
+[ 138] iload 8
+[ 139] sipush 256
+[ 140] iadd
+[ 141] sipush 128
+[ 142] isub
+[ 143] istore 8
+[ 144] aload_0
+[ 145] getfield gamecanvas.anzahl_icons
+[ 146] iload 8
+[ 147] iload 10
+[ 148] aload_0
+[ 149] getfield gamecanvas.anzahl_icons
+[ 150] imul
+[ 151] isub
+[ 152] isub
+[ 153] iconst_0
+[ 154] isub
+[ 155] istore 9
+[ 156] aload_0
+[ 157] getfield gamecanvas.DGoffscreenbuffer
+[ 158] aload_0
+[ 159] getfield gamecanvas.loadicon
+[ 160] iload 12
+[ 161] bipush 16
+[ 162] imul
+[ 163] iload 9
+[ 164] bipush 16
+[ 165] imul
+[ 166] isub
+[ 167] iload 11
+[ 168] bipush 16
+[ 169] imul
+[ 170] iconst_0
+[ 171] isub
+[ 172] bipush 20
+[ 173] aload_0
+[ 174] pop
+[ 175] sipush 8192
+[ 176] invokeinterface com/nokia/mid/ui/DirectGraphics.drawImage
+[ 177] goto 48
+[ 178] iload 8
+[ 179] iload 10
+[ 180] aload_0
+[ 181] getfield gamecanvas.anzahl_icons
+[ 182] imul
+[ 183] isub
+[ 184] iconst_1
+[ 185] isub
+[ 186] istore 9
+[ 187] aload_0
+[ 188] getfield gamecanvas.offscreenbuffer
+[ 189] aload_0
+[ 190] getfield gamecanvas.loadicon
+[ 191] iload 12
+[ 192] bipush 16
+[ 193] imul
+[ 194] iload 9
+[ 195] bipush 16
+[ 196] imul
+[ 197] isub
+[ 198] iload 11
+[ 199] bipush 16
+[ 200] imul
+[ 201] iconst_0
+[ 202] isub
+[ 203] bipush 20
+[ 204] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 205] iinc 12
+[ 206] goto -330
+[ 207] iinc 11
+[ 208] goto -346
+[ 209] aload_0
+[ 210] getfield gamecanvas.offscreenbuffer
+[ 211] iconst_0
+[ 212] iconst_0
+[ 213] sipush 144
+[ 214] sipush 144
+[ 215] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 216] return

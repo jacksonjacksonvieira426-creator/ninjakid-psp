@@ -1,0 +1,58 @@
+// Classe: gamecanvas
+// Metodo: PlayerDead
+// Descritor: ()V
+// Instrucoes: 53
+
+[   0] aload_0
+[   1] bipush 100
+[   2] putfield gamecanvas.playerpower
+[   3] aload_0
+[   4] bipush 50
+[   5] putfield gamecanvas.playerlostlive
+[   6] aload_0
+[   7] iconst_5
+[   8] putfield gamecanvas.playerhit
+[   9] aload_0
+[  10] iconst_3
+[  11] putfield gamecanvas.playerhitdir
+[  12] aload_0
+[  13] iconst_0
+[  14] putfield gamecanvas.hitrotate
+[  15] aload_0
+[  16] iconst_2
+[  17] putfield gamecanvas.hitrotatedelay
+[  18] aload_0
+[  19] iconst_1
+[  20] putfield gamecanvas.playerjumps
+[  21] aload_0
+[  22] sipush -5000
+[  23] putfield gamecanvas.jumpspeed
+[  24] aload_0
+[  25] dup
+[  26] getfield gamecanvas.lives
+[  27] iconst_1
+[  28] isub
+[  29] putfield gamecanvas.lives
+[  30] aload_0
+[  31] bipush 100
+[  32] putfield gamecanvas.playerflashing
+[  33] aload_0
+[  34] getfield gamecanvas.soundopt
+[  35] ldc 11
+[  36] if_acmpne 8
+[  37] aload_0
+[  38] iconst_2
+[  39] invokevirtual game/gamecanvas.PlaySound
+[  40] aload_0
+[  41] aload_0
+[  42] getfield gamecanvas.swordpower
+[  43] iconst_2
+[  44] isub
+[  45] putfield gamecanvas.swordpower
+[  46] aload_0
+[  47] getfield gamecanvas.swordpower
+[  48] ifgt 8
+[  49] aload_0
+[  50] iconst_0
+[  51] putfield gamecanvas.swordpower
+[  52] return

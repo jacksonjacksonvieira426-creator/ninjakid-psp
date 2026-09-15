@@ -1,0 +1,39 @@
+// Classe: gamecanvas
+// Metodo: AddHighScore
+// Descritor: ()V
+// Instrucoes: 34
+
+[   0] new 316
+[   1] dup
+[   2] invokespecial java/io/ByteArrayOutputStream.<init>
+[   3] astore_1
+[   4] new 318
+[   5] dup
+[   6] aload_1
+[   7] invokespecial java/io/DataOutputStream.<init>
+[   8] astore_2
+[   9] aload_2
+[  10] aload_0
+[  11] getfield gamecanvas.playerName
+[  12] invokevirtual java/io/DataOutputStream.writeUTF
+[  13] aload_2
+[  14] aload_0
+[  15] getfield gamecanvas.score
+[  16] invokevirtual java/io/DataOutputStream.writeInt
+[  17] aload_2
+[  18] invokevirtual java/io/DataOutputStream.close
+[  19] aload_1
+[  20] invokevirtual java/io/ByteArrayOutputStream.toByteArray
+[  21] astore_3
+[  22] getstatic gamecanvas.HighScore
+[  23] aload_3
+[  24] iconst_0
+[  25] aload_3
+[  26] arraylength
+[  27] invokevirtual javax/microedition/rms/RecordStore.addRecord
+[  28] istore 4
+[  29] aload_1
+[  30] invokevirtual java/io/ByteArrayOutputStream.close
+[  31] goto 4
+[  32] astore_1
+[  33] return

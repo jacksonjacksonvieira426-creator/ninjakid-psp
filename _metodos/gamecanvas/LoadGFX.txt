@@ -1,0 +1,151 @@
+// Classe: gamecanvas
+// Metodo: LoadGFX
+// Descritor: ()V
+// Instrucoes: 146
+
+[   0] aload_0
+[   1] bipush 31
+[   2] anewarray 277
+[   3] putfield gamecanvas.bobgfx
+[   4] aload_0
+[   5] getfield gamecanvas.bobgfx
+[   6] iconst_0
+[   7] ldc_w 278
+[   8] invokestatic javax/microedition/lcdui/Image.createImage
+[   9] aastore
+[  10] aload_0
+[  11] getfield gamecanvas.bobgfx
+[  12] iconst_3
+[  13] ldc_w 279
+[  14] invokestatic javax/microedition/lcdui/Image.createImage
+[  15] aastore
+[  16] aload_0
+[  17] getfield gamecanvas.bobgfx
+[  18] iconst_4
+[  19] ldc_w 280
+[  20] invokestatic javax/microedition/lcdui/Image.createImage
+[  21] aastore
+[  22] aload_0
+[  23] getfield gamecanvas.bobgfx
+[  24] iconst_5
+[  25] ldc_w 281
+[  26] invokestatic javax/microedition/lcdui/Image.createImage
+[  27] aastore
+[  28] aload_0
+[  29] getfield gamecanvas.bobgfx
+[  30] bipush 6
+[  31] ldc_w 282
+[  32] invokestatic javax/microedition/lcdui/Image.createImage
+[  33] aastore
+[  34] aload_0
+[  35] getfield gamecanvas.bobgfx
+[  36] bipush 7
+[  37] ldc_w 283
+[  38] invokestatic javax/microedition/lcdui/Image.createImage
+[  39] aastore
+[  40] aload_0
+[  41] getfield gamecanvas.bobgfx
+[  42] bipush 8
+[  43] ldc_w 284
+[  44] invokestatic javax/microedition/lcdui/Image.createImage
+[  45] aastore
+[  46] aload_0
+[  47] getfield gamecanvas.bobgfx
+[  48] bipush 9
+[  49] ldc_w 285
+[  50] invokestatic javax/microedition/lcdui/Image.createImage
+[  51] aastore
+[  52] aload_0
+[  53] getfield gamecanvas.bobgfx
+[  54] bipush 10
+[  55] ldc_w 286
+[  56] invokestatic javax/microedition/lcdui/Image.createImage
+[  57] aastore
+[  58] aload_0
+[  59] getfield gamecanvas.bobgfx
+[  60] bipush 11
+[  61] ldc_w 287
+[  62] invokestatic javax/microedition/lcdui/Image.createImage
+[  63] aastore
+[  64] aload_0
+[  65] getfield gamecanvas.bobgfx
+[  66] bipush 12
+[  67] ldc_w 288
+[  68] invokestatic javax/microedition/lcdui/Image.createImage
+[  69] aastore
+[  70] aload_0
+[  71] getfield gamecanvas.bobgfx
+[  72] bipush 13
+[  73] ldc_w 289
+[  74] invokestatic javax/microedition/lcdui/Image.createImage
+[  75] aastore
+[  76] aload_0
+[  77] getfield gamecanvas.bobgfx
+[  78] bipush 15
+[  79] ldc_w 290
+[  80] invokestatic javax/microedition/lcdui/Image.createImage
+[  81] aastore
+[  82] aload_0
+[  83] getfield gamecanvas.bobgfx
+[  84] bipush 16
+[  85] ldc_w 291
+[  86] invokestatic javax/microedition/lcdui/Image.createImage
+[  87] aastore
+[  88] aload_0
+[  89] getfield gamecanvas.bobgfx
+[  90] bipush 17
+[  91] ldc_w 292
+[  92] invokestatic javax/microedition/lcdui/Image.createImage
+[  93] aastore
+[  94] aload_0
+[  95] getfield gamecanvas.bobgfx
+[  96] bipush 18
+[  97] ldc_w 293
+[  98] invokestatic javax/microedition/lcdui/Image.createImage
+[  99] aastore
+[ 100] aload_0
+[ 101] getfield gamecanvas.bobgfx
+[ 102] bipush 19
+[ 103] ldc_w 294
+[ 104] invokestatic javax/microedition/lcdui/Image.createImage
+[ 105] aastore
+[ 106] aload_0
+[ 107] getfield gamecanvas.bobgfx
+[ 108] bipush 20
+[ 109] ldc_w 295
+[ 110] invokestatic javax/microedition/lcdui/Image.createImage
+[ 111] aastore
+[ 112] aload_0
+[ 113] getfield gamecanvas.bobgfx
+[ 114] bipush 21
+[ 115] ldc_w 296
+[ 116] invokestatic javax/microedition/lcdui/Image.createImage
+[ 117] aastore
+[ 118] aload_0
+[ 119] getfield gamecanvas.bobgfx
+[ 120] bipush 22
+[ 121] ldc_w 297
+[ 122] invokestatic javax/microedition/lcdui/Image.createImage
+[ 123] aastore
+[ 124] aload_0
+[ 125] getfield gamecanvas.bobgfx
+[ 126] bipush 24
+[ 127] ldc_w 298
+[ 128] invokestatic javax/microedition/lcdui/Image.createImage
+[ 129] aastore
+[ 130] aload_0
+[ 131] getfield gamecanvas.bobgfx
+[ 132] bipush 25
+[ 133] ldc_w 299
+[ 134] invokestatic javax/microedition/lcdui/Image.createImage
+[ 135] aastore
+[ 136] goto 23
+[ 137] astore_1
+[ 138] getstatic System.err
+[ 139] ldc_w 302
+[ 140] aload_1
+[ 141] invokestatic java/lang/String.valueOf
+[ 142] invokestatic java/lang/String.valueOf
+[ 143] invokevirtual java/lang/String.concat
+[ 144] invokevirtual java/io/PrintStream.println
+[ 145] return

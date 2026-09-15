@@ -1,0 +1,288 @@
+{
+  "jogo": "",
+  "classes": {
+    "gamecanvas": [
+      {
+        "nome": "AddHighScore",
+        "instrucoes": 34
+      },
+      {
+        "nome": "DoAll",
+        "instrucoes": 1790
+      },
+      {
+        "nome": "DrawIcons",
+        "instrucoes": 220
+      },
+      {
+        "nome": "DrawIt",
+        "instrucoes": 217
+      },
+      {
+        "nome": "DrawText",
+        "instrucoes": 382
+      },
+      {
+        "nome": "ExtraJump",
+        "instrucoes": 34
+      },
+      {
+        "nome": "FallPlayer",
+        "instrucoes": 132
+      },
+      {
+        "nome": "GetExtra",
+        "instrucoes": 110
+      },
+      {
+        "nome": "GetHighScore",
+        "instrucoes": 40
+      },
+      {
+        "nome": "GetIcon",
+        "instrucoes": 29
+      },
+      {
+        "nome": "GetLevelInfo",
+        "instrucoes": 764
+      },
+      {
+        "nome": "InitGFX",
+        "instrucoes": 137
+      },
+      {
+        "nome": "InitScores",
+        "instrucoes": 75
+      },
+      {
+        "nome": "InitSpriteMaster",
+        "instrucoes": 30
+      },
+      {
+        "nome": "InsertScore",
+        "instrucoes": 105
+      },
+      {
+        "nome": "JumpPlayer",
+        "instrucoes": 144
+      },
+      {
+        "nome": "LoadFont",
+        "instrucoes": 11
+      },
+      {
+        "nome": "LoadGFX",
+        "instrucoes": 146
+      },
+      {
+        "nome": "LoadIcons",
+        "instrucoes": 22
+      },
+      {
+        "nome": "LoadLevel",
+        "instrucoes": 102
+      },
+      {
+        "nome": "MakeSprites",
+        "instrucoes": 146
+      },
+      {
+        "nome": "MoveEnemies",
+        "instrucoes": 2673
+      },
+      {
+        "nome": "MovePlayer",
+        "instrucoes": 295
+      },
+      {
+        "nome": "PlaySound",
+        "instrucoes": 32
+      },
+      {
+        "nome": "PlayerDead",
+        "instrucoes": 53
+      },
+      {
+        "nome": "ReborneEnemy",
+        "instrucoes": 96
+      },
+      {
+        "nome": "Scroll",
+        "instrucoes": 268
+      },
+      {
+        "nome": "SetIcon",
+        "instrucoes": 54
+      },
+      {
+        "nome": "StopSound",
+        "instrucoes": 4
+      },
+      {
+        "nome": "bornSprite",
+        "instrucoes": 124
+      },
+      {
+        "nome": "checkHit",
+        "instrucoes": 117
+      },
+      {
+        "nome": "checkkollision",
+        "instrucoes": 63
+      },
+      {
+        "nome": "constructor",
+        "instrucoes": 543
+      },
+      {
+        "nome": "convertHexToBinary",
+        "instrucoes": 67
+      },
+      {
+        "nome": "drawSprites",
+        "instrucoes": 182
+      },
+      {
+        "nome": "getGFXHeight",
+        "instrucoes": 6
+      },
+      {
+        "nome": "getGFXWidth",
+        "instrucoes": 6
+      },
+      {
+        "nome": "getHide",
+        "instrucoes": 7
+      },
+      {
+        "nome": "getSpriteAnim",
+        "instrucoes": 7
+      },
+      {
+        "nome": "getSpriteHeight",
+        "instrucoes": 8
+      },
+      {
+        "nome": "getSpriteManipulation",
+        "instrucoes": 7
+      },
+      {
+        "nome": "getSpriteWidth",
+        "instrucoes": 8
+      },
+      {
+        "nome": "getSpriteXpos",
+        "instrucoes": 7
+      },
+      {
+        "nome": "getSpriteYpos",
+        "instrucoes": 7
+      },
+      {
+        "nome": "hideSprite",
+        "instrucoes": 8
+      },
+      {
+        "nome": "keyPressed",
+        "instrucoes": 9
+      },
+      {
+        "nome": "keyReleased",
+        "instrucoes": 7
+      },
+      {
+        "nome": "killSprite",
+        "instrucoes": 71
+      },
+      {
+        "nome": "openGate",
+        "instrucoes": 75
+      },
+      {
+        "nome": "paint",
+        "instrucoes": 1560
+      },
+      {
+        "nome": "resetdata",
+        "instrucoes": 134
+      },
+      {
+        "nome": "setSpriteAnim",
+        "instrucoes": 8
+      },
+      {
+        "nome": "setSpriteManipulation",
+        "instrucoes": 8
+      },
+      {
+        "nome": "setSpritePos",
+        "instrucoes": 15
+      },
+      {
+        "nome": "showSprite",
+        "instrucoes": 8
+      },
+      {
+        "nome": "titelscroll",
+        "instrucoes": 48
+      }
+    ],
+    "gamecanvas$AnimationTask": [
+      {
+        "nome": "constructor",
+        "instrucoes": 8
+      },
+      {
+        "nome": "run",
+        "instrucoes": 15
+      }
+    ],
+    "main": [
+      {
+        "nome": "constructor",
+        "instrucoes": 12
+      },
+      {
+        "nome": "destroyApp",
+        "instrucoes": 13
+      },
+      {
+        "nome": "exitRequested",
+        "instrucoes": 4
+      },
+      {
+        "nome": "hideNotify",
+        "instrucoes": 1
+      },
+      {
+        "nome": "pauseApp",
+        "instrucoes": 1
+      },
+      {
+        "nome": "showNotify",
+        "instrucoes": 6
+      },
+      {
+        "nome": "startApp",
+        "instrucoes": 13
+      }
+    ]
+  },
+  "metodos_criticos": [
+    {
+      "classe": "gamecanvas",
+      "metodo": "keyPressed",
+      "instrucoes": 9
+    },
+    {
+      "classe": "gamecanvas$AnimationTask",
+      "metodo": "run",
+      "instrucoes": 15
+    },
+    {
+      "classe": "gamecanvas",
+      "metodo": "paint",
+      "instrucoes": 1560
+    }
+  ]
+}

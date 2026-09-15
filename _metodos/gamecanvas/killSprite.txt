@@ -1,0 +1,76 @@
+// Classe: gamecanvas
+// Metodo: killSprite
+// Descritor: (I)V
+// Instrucoes: 71
+
+[   0] aload_0
+[   1] getfield gamecanvas.sprites
+[   2] iload_1
+[   3] aaload
+[   4] iconst_0
+[   5] iconst_m1
+[   6] iastore
+[   7] aload_0
+[   8] getfield gamecanvas.sprites
+[   9] iload_1
+[  10] aaload
+[  11] iconst_1
+[  12] iconst_0
+[  13] iastore
+[  14] aload_0
+[  15] getfield gamecanvas.sprites
+[  16] iload_1
+[  17] aaload
+[  18] iconst_2
+[  19] iconst_0
+[  20] iastore
+[  21] aload_0
+[  22] getfield gamecanvas.sprites
+[  23] iload_1
+[  24] aaload
+[  25] iconst_3
+[  26] iconst_0
+[  27] iastore
+[  28] aload_0
+[  29] getfield gamecanvas.sprites
+[  30] iload_1
+[  31] aaload
+[  32] iconst_4
+[  33] iconst_0
+[  34] iastore
+[  35] aload_0
+[  36] getfield gamecanvas.sprites
+[  37] iload_1
+[  38] aaload
+[  39] iconst_5
+[  40] iconst_0
+[  41] iastore
+[  42] aload_0
+[  43] getfield gamecanvas.sprites
+[  44] iload_1
+[  45] aaload
+[  46] bipush 6
+[  47] iconst_0
+[  48] iastore
+[  49] aload_0
+[  50] getfield gamecanvas.sprites
+[  51] iload_1
+[  52] aaload
+[  53] bipush 7
+[  54] iconst_0
+[  55] iastore
+[  56] aload_0
+[  57] getfield gamecanvas.sprites
+[  58] iload_1
+[  59] aaload
+[  60] bipush 8
+[  61] iconst_0
+[  62] iastore
+[  63] aload_0
+[  64] getfield gamecanvas.sprites
+[  65] iload_1
+[  66] aaload
+[  67] bipush 9
+[  68] iconst_0
+[  69] iastore
+[  70] return

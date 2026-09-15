@@ -1,0 +1,107 @@
+// Classe: gamecanvas
+// Metodo: LoadLevel
+// Descritor: (Ljava/lang/String;)V
+// Instrucoes: 102
+
+[   0] aload_0
+[   1] aconst_null
+[   2] putfield gamecanvas.leveldata
+[   3] aload_0
+[   4] aconst_null
+[   5] putfield gamecanvas.leveldata2
+[   6] aload_0
+[   7] aconst_null
+[   8] putfield gamecanvas.maskdata
+[   9] invokestatic java/lang/System.gc
+[  10] iconst_1
+[  11] newarray 8
+[  12] astore_2
+[  13] iconst_1
+[  14] newarray 8
+[  15] astore_3
+[  16] iconst_1
+[  17] newarray 8
+[  18] astore 4
+[  19] iconst_0
+[  20] istore 5
+[  21] aload_0
+[  22] invokevirtual java/lang/Object.getClass
+[  23] ldc_w 342
+[  24] aload_1
+[  25] invokestatic java/lang/String.valueOf
+[  26] invokestatic java/lang/String.valueOf
+[  27] invokevirtual java/lang/String.concat
+[  28] invokevirtual java/lang/Class.getResourceAsStream
+[  29] astore 6
+[  30] aload 6
+[  31] aload_2
+[  32] iconst_0
+[  33] iconst_1
+[  34] invokevirtual java/io/InputStream.read
+[  35] pop
+[  36] aload 6
+[  37] aload_3
+[  38] iconst_0
+[  39] iconst_1
+[  40] invokevirtual java/io/InputStream.read
+[  41] pop
+[  42] aload_2
+[  43] iconst_0
+[  44] baload
+[  45] aload_3
+[  46] iconst_0
+[  47] baload
+[  48] imul
+[  49] istore 5
+[  50] aload_0
+[  51] iload 5
+[  52] newarray 8
+[  53] putfield gamecanvas.leveldata
+[  54] aload_0
+[  55] iload 5
+[  56] newarray 8
+[  57] putfield gamecanvas.leveldata2
+[  58] aload_0
+[  59] iload 5
+[  60] newarray 8
+[  61] putfield gamecanvas.maskdata
+[  62] aload 6
+[  63] aload_0
+[  64] getfield gamecanvas.leveldata
+[  65] iconst_0
+[  66] iload 5
+[  67] invokevirtual java/io/InputStream.read
+[  68] pop
+[  69] aload 6
+[  70] aload_0
+[  71] getfield gamecanvas.leveldata2
+[  72] iconst_0
+[  73] iload 5
+[  74] invokevirtual java/io/InputStream.read
+[  75] pop
+[  76] aload 6
+[  77] aload_0
+[  78] getfield gamecanvas.maskdata
+[  79] iconst_0
+[  80] iload 5
+[  81] invokevirtual java/io/InputStream.read
+[  82] pop
+[  83] aload 6
+[  84] invokevirtual java/io/InputStream.close
+[  85] goto 5
+[  86] astore 6
+[  87] aload_0
+[  88] aload_2
+[  89] iconst_0
+[  90] baload
+[  91] putfield gamecanvas.levelbreite
+[  92] aload_0
+[  93] aload_3
+[  94] iconst_0
+[  95] baload
+[  96] putfield gamecanvas.levelhoehe
+[  97] aconst_null
+[  98] astore_2
+[  99] aconst_null
+[ 100] astore_3
+[ 101] return

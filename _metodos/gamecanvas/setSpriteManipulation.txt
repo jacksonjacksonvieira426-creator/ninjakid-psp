@@ -1,0 +1,13 @@
+// Classe: gamecanvas
+// Metodo: setSpriteManipulation
+// Descritor: (II)V
+// Instrucoes: 8
+
+[   0] aload_0
+[   1] getfield gamecanvas.sprites
+[   2] iload_1
+[   3] aaload
+[   4] iconst_5
+[   5] iload_2
+[   6] iastore
+[   7] return

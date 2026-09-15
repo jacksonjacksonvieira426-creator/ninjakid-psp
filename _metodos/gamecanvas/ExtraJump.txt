@@ -1,0 +1,39 @@
+// Classe: gamecanvas
+// Metodo: ExtraJump
+// Descritor: ()V
+// Instrucoes: 34
+
+[   0] aload_0
+[   1] getfield gamecanvas.extrajumps
+[   2] iconst_1
+[   3] if_icmpne 62
+[   4] aload_0
+[   5] getfield gamecanvas.extrajumpspeed
+[   6] sipush 3750
+[   7] if_icmpge 52
+[   8] aload_0
+[   9] aload_0
+[  10] getfield gamecanvas.extrajumpspeed
+[  11] sipush 250
+[  12] iadd
+[  13] putfield gamecanvas.extrajumpspeed
+[  14] aload_0
+[  15] aload_0
+[  16] getfield gamecanvas.extraypos
+[  17] aload_0
+[  18] getfield gamecanvas.extrajumpspeed
+[  19] iadd
+[  20] putfield gamecanvas.extraypos
+[  21] aload_0
+[  22] aload_0
+[  23] getfield gamecanvas.extra
+[  24] aload_0
+[  25] aload_0
+[  26] getfield gamecanvas.extra
+[  27] invokevirtual game/gamecanvas.getSpriteXpos
+[  28] aload_0
+[  29] getfield gamecanvas.extraypos
+[  30] sipush 1000
+[  31] idiv
+[  32] invokevirtual game/gamecanvas.setSpritePos
+[  33] return

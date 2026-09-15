@@ -1,0 +1,13 @@
+// Classe: gamecanvas
+// Metodo: getSpriteHeight
+// Descritor: (I)I
+// Instrucoes: 8
+
+[   0] aload_0
+[   1] getfield gamecanvas.bobgfx
+[   2] aload_0
+[   3] iload_1
+[   4] invokevirtual game/gamecanvas.getSpriteAnim
+[   5] aaload
+[   6] invokevirtual javax/microedition/lcdui/Image.getHeight
+[   7] ireturn

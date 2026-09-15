@@ -1,0 +1,80 @@
+// Classe: gamecanvas
+// Metodo: InitScores
+// Descritor: ()V
+// Instrucoes: 75
+
+[   0] ldc_w 304
+[   1] iconst_1
+[   2] invokestatic javax/microedition/rms/RecordStore.openRecordStore
+[   3] putstatic gamecanvas.HighScore
+[   4] getstatic gamecanvas.HighScore
+[   5] invokevirtual javax/microedition/rms/RecordStore.getNumRecords
+[   6] ifne 129
+[   7] aload_0
+[   8] ldc_w 308
+[   9] putfield gamecanvas.playerName
+[  10] aload_0
+[  11] sipush 5000
+[  12] putfield gamecanvas.score
+[  13] aload_0
+[  14] invokevirtual game/gamecanvas.AddHighScore
+[  15] aload_0
+[  16] ldc_w 310
+[  17] putfield gamecanvas.playerName
+[  18] aload_0
+[  19] sipush 4000
+[  20] putfield gamecanvas.score
+[  21] aload_0
+[  22] invokevirtual game/gamecanvas.AddHighScore
+[  23] aload_0
+[  24] ldc_w 311
+[  25] putfield gamecanvas.playerName
+[  26] aload_0
+[  27] sipush 3000
+[  28] putfield gamecanvas.score
+[  29] aload_0
+[  30] invokevirtual game/gamecanvas.AddHighScore
+[  31] aload_0
+[  32] ldc_w 312
+[  33] putfield gamecanvas.playerName
+[  34] aload_0
+[  35] sipush 2000
+[  36] putfield gamecanvas.score
+[  37] aload_0
+[  38] invokevirtual game/gamecanvas.AddHighScore
+[  39] aload_0
+[  40] ldc_w 313
+[  41] putfield gamecanvas.playerName
+[  42] aload_0
+[  43] sipush 1000
+[  44] putfield gamecanvas.score
+[  45] aload_0
+[  46] invokevirtual game/gamecanvas.AddHighScore
+[  47] aload_0
+[  48] ldc_w 314
+[  49] putfield gamecanvas.playerName
+[  50] aload_0
+[  51] sipush 500
+[  52] putfield gamecanvas.score
+[  53] aload_0
+[  54] invokevirtual game/gamecanvas.AddHighScore
+[  55] aload_0
+[  56] iconst_0
+[  57] putfield gamecanvas.score
+[  58] aload_0
+[  59] ldc 8
+[  60] putfield gamecanvas.playerName
+[  61] aload_0
+[  62] invokevirtual game/gamecanvas.GetHighScore
+[  63] goto 11
+[  64] aload_0
+[  65] invokevirtual game/gamecanvas.GetHighScore
+[  66] goto 4
+[  67] astore_1
+[  68] aload_0
+[  69] iconst_0
+[  70] putfield gamecanvas.score
+[  71] aload_0
+[  72] ldc_w 315
+[  73] putfield gamecanvas.playerName
+[  74] return

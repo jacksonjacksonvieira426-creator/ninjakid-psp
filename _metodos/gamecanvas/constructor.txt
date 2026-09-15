@@ -1,0 +1,548 @@
+// Classe: gamecanvas
+// Metodo: <init>
+// Descritor: (Lgame/main;)V
+// Instrucoes: 543
+
+[   0] aload_0
+[   1] invokespecial com/nokia/mid/ui/FullCanvas.<init>
+[   2] aload_0
+[   3] sipush 128
+[   4] putfield gamecanvas.screenX
+[   5] aload_0
+[   6] sipush 128
+[   7] putfield gamecanvas.screenY
+[   8] aload_0
+[   9] iconst_0
+[  10] putfield gamecanvas.mode
+[  11] aload_0
+[  12] iconst_0
+[  13] putfield gamecanvas.textmode
+[  14] aload_0
+[  15] iconst_0
+[  16] putfield gamecanvas.waiter
+[  17] aload_0
+[  18] bipush 25
+[  19] putfield gamecanvas.animperiod
+[  20] aload_0
+[  21] ldc 8
+[  22] putfield gamecanvas.playerName
+[  23] aload_0
+[  24] iconst_0
+[  25] putfield gamecanvas.score
+[  26] aload_0
+[  27] ldc 11
+[  28] putfield gamecanvas.soundopt
+[  29] aload_0
+[  30] ldc 11
+[  31] putfield gamecanvas.musicopt
+[  32] aload_0
+[  33] ldc 14
+[  34] putfield gamecanvas.levelopt
+[  35] aload_0
+[  36] iconst_1
+[  37] putfield gamecanvas.difficulty
+[  38] aload_0
+[  39] iconst_1
+[  40] putfield gamecanvas.optioncur
+[  41] aload_0
+[  42] iconst_0
+[  43] putfield gamecanvas.hy
+[  44] aload_0
+[  45] iconst_0
+[  46] putfield gamecanvas.arrow_x
+[  47] aload_0
+[  48] iconst_3
+[  49] putfield gamecanvas.lives
+[  50] aload_0
+[  51] bipush 60
+[  52] putfield gamecanvas.anzahlsprites
+[  53] aload_0
+[  54] iconst_0
+[  55] putfield gamecanvas.spritecount
+[  56] aload_0
+[  57] iconst_0
+[  58] putfield gamecanvas.anzahl_icons
+[  59] aload_0
+[  60] bipush 8
+[  61] putfield gamecanvas.fontwidth
+[  62] aload_0
+[  63] bipush 8
+[  64] putfield gamecanvas.fontheight
+[  65] aload_0
+[  66] iconst_0
+[  67] putfield gamecanvas.playerXpos
+[  68] aload_0
+[  69] iconst_0
+[  70] putfield gamecanvas.playerYpos
+[  71] aload_0
+[  72] iconst_0
+[  73] putfield gamecanvas.player
+[  74] aload_0
+[  75] iconst_0
+[  76] putfield gamecanvas.playerdir
+[  77] aload_0
+[  78] iconst_m1
+[  79] putfield gamecanvas.lastmm
+[  80] aload_0
+[  81] iconst_0
+[  82] putfield gamecanvas.playeranimdelay
+[  83] aload_0
+[  84] iconst_0
+[  85] putfield gamecanvas.levelbreite
+[  86] aload_0
+[  87] iconst_0
+[  88] putfield gamecanvas.levelhoehe
+[  89] aload_0
+[  90] iconst_0
+[  91] putfield gamecanvas.levelxpos
+[  92] aload_0
+[  93] iconst_0
+[  94] putfield gamecanvas.levelypos
+[  95] aload_0
+[  96] iconst_m1
+[  97] putfield gamecanvas.lastlevelxpos
+[  98] aload_0
+[  99] iconst_m1
+[ 100] putfield gamecanvas.lastlevelypos
+[ 101] aload_0
+[ 102] iconst_0
+[ 103] putfield gamecanvas.level
+[ 104] aload_0
+[ 105] bipush 84
+[ 106] putfield gamecanvas.MASK_PLAYER_RELEASE
+[ 107] aload_0
+[ 108] bipush 82
+[ 109] putfield gamecanvas.MASK_WALKWAY
+[ 110] aload_0
+[ 111] bipush 81
+[ 112] putfield gamecanvas.MASK_WALL
+[ 113] aload_0
+[ 114] bipush 83
+[ 115] putfield gamecanvas.MASK_LADDER
+[ 116] aload_0
+[ 117] bipush 84
+[ 118] putfield gamecanvas.MASK_PLAYERRELEASE
+[ 119] aload_0
+[ 120] bipush 85
+[ 121] putfield gamecanvas.MASK_VASE_START
+[ 122] aload_0
+[ 123] bipush 88
+[ 124] putfield gamecanvas.MASK_VASE_END
+[ 125] aload_0
+[ 126] bipush 89
+[ 127] putfield gamecanvas.MASK_FIRERELEASE
+[ 128] aload_0
+[ 129] bipush 90
+[ 130] putfield gamecanvas.MASK_FIREDIRCHANGE
+[ 131] aload_0
+[ 132] bipush 91
+[ 133] putfield gamecanvas.MASK_PLASMARELEASE
+[ 134] aload_0
+[ 135] bipush 98
+[ 136] putfield gamecanvas.MASK_GATE
+[ 137] aload_0
+[ 138] bipush 96
+[ 139] putfield gamecanvas.MASK_DEAD
+[ 140] aload_0
+[ 141] ldc 51
+[ 142] putfield gamecanvas.skycolor
+[ 143] aload_0
+[ 144] iconst_0
+[ 145] putfield gamecanvas.faderdir
+[ 146] aload_0
+[ 147] iconst_0
+[ 148] putfield gamecanvas.faderypos
+[ 149] aload_0
+[ 150] iconst_0
+[ 151] putfield gamecanvas.fading
+[ 152] aload_0
+[ 153] iconst_0
+[ 154] putfield gamecanvas.gateblocks
+[ 155] aload_0
+[ 156] iconst_0
+[ 157] putfield gamecanvas.titelscrolldir
+[ 158] aload_0
+[ 159] iconst_0
+[ 160] putfield gamecanvas.titelwaiter
+[ 161] aload_0
+[ 162] iconst_0
+[ 163] putfield gamecanvas.scrollX
+[ 164] aload_0
+[ 165] iconst_0
+[ 166] putfield gamecanvas.scrollY
+[ 167] aload_0
+[ 168] iconst_0
+[ 169] putfield gamecanvas.softxpos
+[ 170] aload_0
+[ 171] iconst_0
+[ 172] putfield gamecanvas.softypos
+[ 173] aload_0
+[ 174] iconst_0
+[ 175] putfield gamecanvas.jumpspeed
+[ 176] aload_0
+[ 177] iconst_0
+[ 178] putfield gamecanvas.playerjumps
+[ 179] aload_0
+[ 180] iconst_m1
+[ 181] putfield gamecanvas.lastlevelnr
+[ 182] aload_0
+[ 183] iconst_m1
+[ 184] putfield gamecanvas.lastenemynr
+[ 185] aload_0
+[ 186] iconst_0
+[ 187] putfield gamecanvas.keyuppressed
+[ 188] aload_0
+[ 189] iconst_0
+[ 190] putfield gamecanvas.playerfalling
+[ 191] aload_0
+[ 192] iconst_0
+[ 193] putfield gamecanvas.XposOffset
+[ 194] aload_0
+[ 195] iconst_0
+[ 196] putfield gamecanvas.aufleiter
+[ 197] aload_0
+[ 198] iconst_0
+[ 199] putfield gamecanvas.explowaiter
+[ 200] aload_0
+[ 201] iconst_0
+[ 202] putfield gamecanvas.extrajumps
+[ 203] aload_0
+[ 204] iconst_0
+[ 205] putfield gamecanvas.extrajumpspeed
+[ 206] aload_0
+[ 207] iconst_0
+[ 208] putfield gamecanvas.extraypos
+[ 209] aload_0
+[ 210] iconst_0
+[ 211] putfield gamecanvas.keys
+[ 212] aload_0
+[ 213] iconst_0
+[ 214] putfield gamecanvas.diamant
+[ 215] aload_0
+[ 216] iconst_0
+[ 217] putfield gamecanvas.playerhit
+[ 218] aload_0
+[ 219] iconst_0
+[ 220] putfield gamecanvas.playerhitdir
+[ 221] aload_0
+[ 222] bipush 100
+[ 223] putfield gamecanvas.playerpower
+[ 224] aload_0
+[ 225] iconst_0
+[ 226] putfield gamecanvas.playerflashing
+[ 227] aload_0
+[ 228] iconst_0
+[ 229] putfield gamecanvas.playerlostlive
+[ 230] aload_0
+[ 231] iconst_0
+[ 232] putfield gamecanvas.hitrotate
+[ 233] aload_0
+[ 234] iconst_0
+[ 235] putfield gamecanvas.hitrotatedelay
+[ 236] aload_0
+[ 237] iconst_0
+[ 238] putfield gamecanvas.lastplayerxpos
+[ 239] aload_0
+[ 240] iconst_0
+[ 241] putfield gamecanvas.lastplayerypos
+[ 242] aload_0
+[ 243] iconst_0
+[ 244] putfield gamecanvas.lastscrollx
+[ 245] aload_0
+[ 246] iconst_0
+[ 247] putfield gamecanvas.lastscrolly
+[ 248] aload_0
+[ 249] iconst_0
+[ 250] putfield gamecanvas.exploonly
+[ 251] aload_0
+[ 252] iconst_0
+[ 253] putfield gamecanvas.firereleased
+[ 254] aload_0
+[ 255] iconst_0
+[ 256] putfield gamecanvas.playerONlift
+[ 257] aload_0
+[ 258] iconst_0
+[ 259] putfield gamecanvas.extralife
+[ 260] aload_0
+[ 261] iconst_0
+[ 262] putfield gamecanvas.swordpower
+[ 263] aload_0
+[ 264] iconst_0
+[ 265] putfield gamecanvas.energyfound
+[ 266] aload_0
+[ 267] iconst_0
+[ 268] putfield gamecanvas.levelok
+[ 269] aload_0
+[ 270] aconst_null
+[ 271] putfield gamecanvas.sound
+[ 272] aload_0
+[ 273] iconst_0
+[ 274] putfield gamecanvas.pause
+[ 275] aload_0
+[ 276] aload_1
+[ 277] putfield gamecanvas.midlet
+[ 278] aload_0
+[ 279] invokevirtual game/gamecanvas.InitSpriteMaster
+[ 280] aload_0
+[ 281] invokevirtual game/gamecanvas.InitGFX
+[ 282] aload_0
+[ 283] bipush 9
+[ 284] iconst_3
+[ 285] multianewarray 100
+[ 286] putfield gamecanvas.levelinfo
+[ 287] aload_0
+[ 288] getfield gamecanvas.levelinfo
+[ 289] iconst_0
+[ 290] aaload
+[ 291] iconst_0
+[ 292] bipush 101
+[ 293] iastore
+[ 294] aload_0
+[ 295] getfield gamecanvas.levelinfo
+[ 296] iconst_0
+[ 297] aaload
+[ 298] iconst_1
+[ 299] iconst_1
+[ 300] iastore
+[ 301] aload_0
+[ 302] getfield gamecanvas.levelinfo
+[ 303] iconst_0
+[ 304] aaload
+[ 305] iconst_2
+[ 306] ldc 102
+[ 307] iastore
+[ 308] aload_0
+[ 309] getfield gamecanvas.levelinfo
+[ 310] iconst_1
+[ 311] aaload
+[ 312] iconst_0
+[ 313] bipush 102
+[ 314] iastore
+[ 315] aload_0
+[ 316] getfield gamecanvas.levelinfo
+[ 317] iconst_1
+[ 318] aaload
+[ 319] iconst_1
+[ 320] iconst_2
+[ 321] iastore
+[ 322] aload_0
+[ 323] getfield gamecanvas.levelinfo
+[ 324] iconst_1
+[ 325] aaload
+[ 326] iconst_2
+[ 327] ldc 102
+[ 328] iastore
+[ 329] aload_0
+[ 330] getfield gamecanvas.levelinfo
+[ 331] iconst_2
+[ 332] aaload
+[ 333] iconst_0
+[ 334] bipush 103
+[ 335] iastore
+[ 336] aload_0
+[ 337] getfield gamecanvas.levelinfo
+[ 338] iconst_2
+[ 339] aaload
+[ 340] iconst_1
+[ 341] iconst_1
+[ 342] iastore
+[ 343] aload_0
+[ 344] getfield gamecanvas.levelinfo
+[ 345] iconst_2
+[ 346] aaload
+[ 347] iconst_2
+[ 348] ldc 102
+[ 349] iastore
+[ 350] aload_0
+[ 351] getfield gamecanvas.levelinfo
+[ 352] iconst_3
+[ 353] aaload
+[ 354] iconst_0
+[ 355] sipush 204
+[ 356] iastore
+[ 357] aload_0
+[ 358] getfield gamecanvas.levelinfo
+[ 359] iconst_3
+[ 360] aaload
+[ 361] iconst_1
+[ 362] iconst_2
+[ 363] iastore
+[ 364] aload_0
+[ 365] getfield gamecanvas.levelinfo
+[ 366] iconst_3
+[ 367] aaload
+[ 368] iconst_2
+[ 369] ldc 103
+[ 370] iastore
+[ 371] aload_0
+[ 372] getfield gamecanvas.levelinfo
+[ 373] iconst_4
+[ 374] aaload
+[ 375] iconst_0
+[ 376] sipush 205
+[ 377] iastore
+[ 378] aload_0
+[ 379] getfield gamecanvas.levelinfo
+[ 380] iconst_4
+[ 381] aaload
+[ 382] iconst_1
+[ 383] iconst_1
+[ 384] iastore
+[ 385] aload_0
+[ 386] getfield gamecanvas.levelinfo
+[ 387] iconst_4
+[ 388] aaload
+[ 389] iconst_2
+[ 390] ldc 103
+[ 391] iastore
+[ 392] aload_0
+[ 393] getfield gamecanvas.levelinfo
+[ 394] iconst_5
+[ 395] aaload
+[ 396] iconst_0
+[ 397] sipush 206
+[ 398] iastore
+[ 399] aload_0
+[ 400] getfield gamecanvas.levelinfo
+[ 401] iconst_5
+[ 402] aaload
+[ 403] iconst_1
+[ 404] iconst_2
+[ 405] iastore
+[ 406] aload_0
+[ 407] getfield gamecanvas.levelinfo
+[ 408] iconst_5
+[ 409] aaload
+[ 410] iconst_2
+[ 411] ldc 103
+[ 412] iastore
+[ 413] aload_0
+[ 414] getfield gamecanvas.levelinfo
+[ 415] bipush 6
+[ 416] aaload
+[ 417] iconst_0
+[ 418] sipush 207
+[ 419] iastore
+[ 420] aload_0
+[ 421] getfield gamecanvas.levelinfo
+[ 422] bipush 6
+[ 423] aaload
+[ 424] iconst_1
+[ 425] iconst_3
+[ 426] iastore
+[ 427] aload_0
+[ 428] getfield gamecanvas.levelinfo
+[ 429] bipush 6
+[ 430] aaload
+[ 431] iconst_2
+[ 432] ldc 103
+[ 433] iastore
+[ 434] aload_0
+[ 435] getfield gamecanvas.levelinfo
+[ 436] bipush 7
+[ 437] aaload
+[ 438] iconst_0
+[ 439] sipush 208
+[ 440] iastore
+[ 441] aload_0
+[ 442] getfield gamecanvas.levelinfo
+[ 443] bipush 7
+[ 444] aaload
+[ 445] iconst_1
+[ 446] iconst_3
+[ 447] iastore
+[ 448] aload_0
+[ 449] getfield gamecanvas.levelinfo
+[ 450] bipush 7
+[ 451] aaload
+[ 452] iconst_2
+[ 453] ldc 103
+[ 454] iastore
+[ 455] aload_0
+[ 456] getfield gamecanvas.levelinfo
+[ 457] bipush 8
+[ 458] aaload
+[ 459] iconst_0
+[ 460] sipush 209
+[ 461] iastore
+[ 462] aload_0
+[ 463] getfield gamecanvas.levelinfo
+[ 464] bipush 8
+[ 465] aaload
+[ 466] iconst_1
+[ 467] iconst_3
+[ 468] iastore
+[ 469] aload_0
+[ 470] getfield gamecanvas.levelinfo
+[ 471] bipush 8
+[ 472] aaload
+[ 473] iconst_2
+[ 474] iconst_0
+[ 475] iastore
+[ 476] aload_0
+[ 477] new 104
+[ 478] dup
+[ 479] invokespecial java/util/Random.<init>
+[ 480] putfield gamecanvas.random
+[ 481] aload_0
+[ 482] bipush 6
+[ 483] anewarray 107
+[ 484] putfield gamecanvas.highscoreplayers
+[ 485] aload_0
+[ 486] bipush 6
+[ 487] newarray 10
+[ 488] putfield gamecanvas.highscorepoints
+[ 489] aload_0
+[ 490] bipush 7
+[ 491] newarray 5
+[ 492] putfield gamecanvas.playerNamechars
+[ 493] aload_0
+[ 494] invokevirtual game/gamecanvas.InitScores
+[ 495] aload_0
+[ 496] iconst_5
+[ 497] anewarray 107
+[ 498] putfield gamecanvas.tunes
+[ 499] aload_0
+[ 500] getfield gamecanvas.tunes
+[ 501] iconst_0
+[ 502] ldc 113
+[ 503] aastore
+[ 504] aload_0
+[ 505] getfield gamecanvas.tunes
+[ 506] iconst_1
+[ 507] ldc 114
+[ 508] aastore
+[ 509] aload_0
+[ 510] getfield gamecanvas.tunes
+[ 511] iconst_2
+[ 512] ldc 115
+[ 513] aastore
+[ 514] aload_0
+[ 515] getfield gamecanvas.tunes
+[ 516] iconst_3
+[ 517] ldc 116
+[ 518] aastore
+[ 519] aload_0
+[ 520] getfield gamecanvas.tunes
+[ 521] iconst_4
+[ 522] ldc 117
+[ 523] aastore
+[ 524] aload_0
+[ 525] new 118
+[ 526] dup
+[ 527] invokespecial java/util/Timer.<init>
+[ 528] putfield gamecanvas.animTimer
+[ 529] aload_0
+[ 530] getfield gamecanvas.animTimer
+[ 531] new 121
+[ 532] dup
+[ 533] aload_0
+[ 534] aload_0
+[ 535] getfield gamecanvas.midlet
+[ 536] invokespecial game/gamecanvas$AnimationTask.<init>
+[ 537] lconst_0
+[ 538] aload_0
+[ 539] getfield gamecanvas.animperiod
+[ 540] i2l
+[ 541] invokevirtual java/util/Timer.schedule
+[ 542] return

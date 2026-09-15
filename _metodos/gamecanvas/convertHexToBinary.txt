@@ -1,0 +1,72 @@
+// Classe: gamecanvas
+// Metodo: convertHexToBinary
+// Descritor: (Ljava/lang/String;)[B
+// Instrucoes: 67
+
+[   0] aload_0
+[   1] invokevirtual java/lang/String.length
+[   2] iconst_2
+[   3] irem
+[   4] ifeq 14
+[   5] new 151
+[   6] dup
+[   7] ldc_w 379
+[   8] invokespecial java/lang/Exception.<init>
+[   9] athrow
+[  10] aload_0
+[  11] invokevirtual java/lang/String.length
+[  12] iconst_2
+[  13] idiv
+[  14] newarray 8
+[  15] astore_1
+[  16] iconst_0
+[  17] istore_2
+[  18] iload_2
+[  19] aload_1
+[  20] arraylength
+[  21] if_icmpge 83
+[  22] aload_0
+[  23] iload_2
+[  24] iconst_2
+[  25] imul
+[  26] iload_2
+[  27] iconst_2
+[  28] imul
+[  29] iconst_2
+[  30] iadd
+[  31] invokevirtual java/lang/String.substring
+[  32] astore_3
+[  33] aload_3
+[  34] iconst_0
+[  35] invokevirtual java/lang/String.charAt
+[  36] bipush 45
+[  37] if_icmpne 14
+[  38] new 151
+[  39] dup
+[  40] ldc_w 379
+[  41] invokespecial java/lang/Exception.<init>
+[  42] athrow
+[  43] aload_3
+[  44] bipush 16
+[  45] invokestatic java/lang/Integer.parseInt
+[  46] istore 4
+[  47] goto 26
+[  48] astore 5
+[  49] new 151
+[  50] dup
+[  51] ldc_w 379
+[  52] aload_3
+[  53] invokestatic java/lang/String.valueOf
+[  54] invokestatic java/lang/String.valueOf
+[  55] invokevirtual java/lang/String.concat
+[  56] invokespecial java/lang/Exception.<init>
+[  57] athrow
+[  58] aload_1
+[  59] iload_2
+[  60] iload 4
+[  61] i2b
+[  62] bastore
+[  63] iinc 2
+[  64] goto -83
+[  65] aload_1
+[  66] areturn

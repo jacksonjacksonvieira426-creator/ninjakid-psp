@@ -1,0 +1,122 @@
+// Classe: gamecanvas
+// Metodo: checkHit
+// Descritor: ()V
+// Instrucoes: 117
+
+[   0] iconst_0
+[   1] istore_1
+[   2] iconst_0
+[   3] istore_2
+[   4] aload_0
+[   5] getfield gamecanvas.playerdir
+[   6] ifne 6
+[   7] bipush 24
+[   8] istore_2
+[   9] aload_0
+[  10] getfield gamecanvas.playerdir
+[  11] iconst_1
+[  12] if_icmpne 6
+[  13] bipush -10
+[  14] istore_2
+[  15] aload_0
+[  16] aload_0
+[  17] getfield gamecanvas.playerXpos
+[  18] sipush 1000
+[  19] idiv
+[  20] iload_2
+[  21] iadd
+[  22] aload_0
+[  23] getfield gamecanvas.playerYpos
+[  24] sipush 1000
+[  25] idiv
+[  26] bipush 10
+[  27] iadd
+[  28] invokevirtual game/gamecanvas.GetIcon
+[  29] istore_1
+[  30] iload_1
+[  31] aload_0
+[  32] getfield gamecanvas.MASK_VASE_START
+[  33] if_icmplt 150
+[  34] iload_1
+[  35] aload_0
+[  36] getfield gamecanvas.MASK_VASE_END
+[  37] if_icmpgt 142
+[  38] iload_1
+[  39] aload_0
+[  40] getfield gamecanvas.MASK_VASE_START
+[  41] isub
+[  42] istore_1
+[  43] aload_0
+[  44] aload_0
+[  45] getfield gamecanvas.playerXpos
+[  46] sipush 1000
+[  47] idiv
+[  48] iload_2
+[  49] iadd
+[  50] aload_0
+[  51] getfield gamecanvas.playerYpos
+[  52] sipush 1000
+[  53] idiv
+[  54] bipush 10
+[  55] iadd
+[  56] iconst_m1
+[  57] iconst_0
+[  58] bipush 80
+[  59] invokevirtual game/gamecanvas.SetIcon
+[  60] aload_0
+[  61] aload_0
+[  62] getfield gamecanvas.explo
+[  63] aload_0
+[  64] getfield gamecanvas.playerXpos
+[  65] sipush 1000
+[  66] idiv
+[  67] iload_2
+[  68] iadd
+[  69] aload_0
+[  70] getfield gamecanvas.playerYpos
+[  71] sipush 1000
+[  72] idiv
+[  73] bipush 10
+[  74] iadd
+[  75] invokevirtual game/gamecanvas.setSpritePos
+[  76] aload_0
+[  77] aload_0
+[  78] getfield gamecanvas.explo
+[  79] iconst_3
+[  80] invokevirtual game/gamecanvas.setSpriteAnim
+[  81] aload_0
+[  82] aload_0
+[  83] getfield gamecanvas.explo
+[  84] invokevirtual game/gamecanvas.showSprite
+[  85] aload_0
+[  86] iconst_5
+[  87] putfield gamecanvas.explowaiter
+[  88] aload_0
+[  89] iconst_1
+[  90] putfield gamecanvas.exploonly
+[  91] aload_0
+[  92] aload_0
+[  93] getfield gamecanvas.extra
+[  94] invokevirtual game/gamecanvas.getHide
+[  95] iconst_1
+[  96] if_icmpne 7
+[  97] aload_0
+[  98] invokevirtual game/gamecanvas.GetExtra
+[  99] aload_0
+[ 100] aload_0
+[ 101] getfield gamecanvas.extra
+[ 102] bipush 15
+[ 103] iload_1
+[ 104] iadd
+[ 105] invokevirtual game/gamecanvas.setSpriteAnim
+[ 106] aload_0
+[ 107] getfield gamecanvas.soundopt
+[ 108] ldc 11
+[ 109] if_acmpne 8
+[ 110] aload_0
+[ 111] iconst_3
+[ 112] invokevirtual game/gamecanvas.PlaySound
+[ 113] aload_0
+[ 114] iconst_0
+[ 115] invokevirtual game/gamecanvas.DrawIcons
+[ 116] return

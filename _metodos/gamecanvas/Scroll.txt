@@ -1,0 +1,273 @@
+// Classe: gamecanvas
+// Metodo: Scroll
+// Descritor: (II)V
+// Instrucoes: 268
+
+[   0] iload_1
+[   1] lookupswitch
+[   2] aload_0
+[   3] getfield gamecanvas.playerYpos
+[   4] sipush 1000
+[   5] idiv
+[   6] aload_0
+[   7] getfield gamecanvas.levelypos
+[   8] bipush 16
+[   9] imul
+[  10] isub
+[  11] aload_0
+[  12] getfield gamecanvas.screenY
+[  13] bipush 16
+[  14] iadd
+[  15] iconst_2
+[  16] idiv
+[  17] aload_0
+[  18] aload_0
+[  19] getfield gamecanvas.player
+[  20] invokevirtual game/gamecanvas.getSpriteHeight
+[  21] iconst_2
+[  22] idiv
+[  23] isub
+[  24] if_icmpge 270
+[  25] aload_0
+[  26] getfield gamecanvas.scrollY
+[  27] iload_2
+[  28] isub
+[  29] ifle 261
+[  30] aload_0
+[  31] aload_0
+[  32] getfield gamecanvas.scrollY
+[  33] iload_2
+[  34] isub
+[  35] putfield gamecanvas.scrollY
+[  36] goto 248
+[  37] aload_0
+[  38] getfield gamecanvas.playerYpos
+[  39] sipush 1000
+[  40] idiv
+[  41] aload_0
+[  42] getfield gamecanvas.levelypos
+[  43] bipush 16
+[  44] imul
+[  45] isub
+[  46] aload_0
+[  47] getfield gamecanvas.screenY
+[  48] bipush 16
+[  49] iadd
+[  50] iconst_2
+[  51] idiv
+[  52] aload_0
+[  53] aload_0
+[  54] getfield gamecanvas.player
+[  55] invokevirtual game/gamecanvas.getSpriteHeight
+[  56] iconst_2
+[  57] idiv
+[  58] isub
+[  59] if_icmple 209
+[  60] aload_0
+[  61] getfield gamecanvas.scrollY
+[  62] iload_2
+[  63] iadd
+[  64] aload_0
+[  65] getfield gamecanvas.screenY
+[  66] sipush 1000
+[  67] imul
+[  68] iadd
+[  69] aload_0
+[  70] getfield gamecanvas.levelhoehe
+[  71] sipush 16000
+[  72] imul
+[  73] if_icmpge 183
+[  74] aload_0
+[  75] aload_0
+[  76] getfield gamecanvas.scrollY
+[  77] iload_2
+[  78] iadd
+[  79] putfield gamecanvas.scrollY
+[  80] goto 170
+[  81] aload_0
+[  82] getfield gamecanvas.playerXpos
+[  83] sipush 1000
+[  84] idiv
+[  85] aload_0
+[  86] getfield gamecanvas.levelxpos
+[  87] bipush 16
+[  88] imul
+[  89] isub
+[  90] aload_0
+[  91] getfield gamecanvas.screenX
+[  92] bipush 16
+[  93] iadd
+[  94] iconst_2
+[  95] idiv
+[  96] aload_0
+[  97] aload_0
+[  98] getfield gamecanvas.player
+[  99] invokevirtual game/gamecanvas.getSpriteWidth
+[ 100] iconst_2
+[ 101] idiv
+[ 102] isub
+[ 103] if_icmple 131
+[ 104] aload_0
+[ 105] getfield gamecanvas.scrollX
+[ 106] iload_2
+[ 107] iadd
+[ 108] aload_0
+[ 109] getfield gamecanvas.screenX
+[ 110] sipush 1000
+[ 111] imul
+[ 112] iadd
+[ 113] aload_0
+[ 114] getfield gamecanvas.levelbreite
+[ 115] sipush 16000
+[ 116] imul
+[ 117] if_icmpge 105
+[ 118] aload_0
+[ 119] aload_0
+[ 120] getfield gamecanvas.scrollX
+[ 121] iload_2
+[ 122] iadd
+[ 123] putfield gamecanvas.scrollX
+[ 124] goto 92
+[ 125] aload_0
+[ 126] getfield gamecanvas.playerXpos
+[ 127] sipush 1000
+[ 128] idiv
+[ 129] aload_0
+[ 130] getfield gamecanvas.levelxpos
+[ 131] bipush 16
+[ 132] imul
+[ 133] isub
+[ 134] aload_0
+[ 135] getfield gamecanvas.screenX
+[ 136] bipush 16
+[ 137] iadd
+[ 138] iconst_2
+[ 139] idiv
+[ 140] aload_0
+[ 141] aload_0
+[ 142] getfield gamecanvas.player
+[ 143] invokevirtual game/gamecanvas.getSpriteWidth
+[ 144] iconst_2
+[ 145] idiv
+[ 146] isub
+[ 147] if_icmpge 53
+[ 148] aload_0
+[ 149] getfield gamecanvas.scrollX
+[ 150] iload_2
+[ 151] isub
+[ 152] ifle 44
+[ 153] aload_0
+[ 154] aload_0
+[ 155] getfield gamecanvas.scrollX
+[ 156] iload_2
+[ 157] isub
+[ 158] putfield gamecanvas.scrollX
+[ 159] goto 31
+[ 160] aload_0
+[ 161] aload_0
+[ 162] getfield gamecanvas.scrollX
+[ 163] iload_2
+[ 164] iadd
+[ 165] putfield gamecanvas.scrollX
+[ 166] bipush 6
+[ 167] istore_1
+[ 168] goto 15
+[ 169] aload_0
+[ 170] aload_0
+[ 171] getfield gamecanvas.scrollX
+[ 172] iload_2
+[ 173] isub
+[ 174] putfield gamecanvas.scrollX
+[ 175] iconst_4
+[ 176] istore_1
+[ 177] aload_0
+[ 178] aload_0
+[ 179] getfield gamecanvas.scrollX
+[ 180] sipush 16000
+[ 181] idiv
+[ 182] putfield gamecanvas.levelxpos
+[ 183] aload_0
+[ 184] aload_0
+[ 185] getfield gamecanvas.scrollY
+[ 186] sipush 16000
+[ 187] idiv
+[ 188] putfield gamecanvas.levelypos
+[ 189] aload_0
+[ 190] aload_0
+[ 191] getfield gamecanvas.scrollX
+[ 192] sipush 1000
+[ 193] idiv
+[ 194] aload_0
+[ 195] getfield gamecanvas.levelxpos
+[ 196] bipush 16
+[ 197] imul
+[ 198] isub
+[ 199] iconst_m1
+[ 200] imul
+[ 201] putfield gamecanvas.softxpos
+[ 202] aload_0
+[ 203] aload_0
+[ 204] getfield gamecanvas.scrollY
+[ 205] sipush 1000
+[ 206] idiv
+[ 207] aload_0
+[ 208] getfield gamecanvas.levelypos
+[ 209] bipush 16
+[ 210] imul
+[ 211] isub
+[ 212] iconst_m1
+[ 213] imul
+[ 214] putfield gamecanvas.softypos
+[ 215] aload_0
+[ 216] getfield gamecanvas.levelxpos
+[ 217] aload_0
+[ 218] getfield gamecanvas.lastlevelxpos
+[ 219] if_icmpeq 15
+[ 220] iload_1
+[ 221] bipush 6
+[ 222] if_icmpne 9
+[ 223] aload_0
+[ 224] bipush 6
+[ 225] invokevirtual game/gamecanvas.DrawIcons
+[ 226] aload_0
+[ 227] getfield gamecanvas.levelxpos
+[ 228] aload_0
+[ 229] getfield gamecanvas.lastlevelxpos
+[ 230] if_icmpeq 13
+[ 231] iload_1
+[ 232] iconst_4
+[ 233] if_icmpne 8
+[ 234] aload_0
+[ 235] iconst_4
+[ 236] invokevirtual game/gamecanvas.DrawIcons
+[ 237] aload_0
+[ 238] getfield gamecanvas.levelypos
+[ 239] aload_0
+[ 240] getfield gamecanvas.lastlevelypos
+[ 241] if_icmpeq 15
+[ 242] iload_1
+[ 243] bipush 8
+[ 244] if_icmpne 9
+[ 245] aload_0
+[ 246] bipush 8
+[ 247] invokevirtual game/gamecanvas.DrawIcons
+[ 248] aload_0
+[ 249] getfield gamecanvas.levelypos
+[ 250] aload_0
+[ 251] getfield gamecanvas.lastlevelypos
+[ 252] if_icmpeq 13
+[ 253] iload_1
+[ 254] iconst_2
+[ 255] if_icmpne 8
+[ 256] aload_0
+[ 257] iconst_2
+[ 258] invokevirtual game/gamecanvas.DrawIcons
+[ 259] aload_0
+[ 260] aload_0
+[ 261] getfield gamecanvas.levelxpos
+[ 262] putfield gamecanvas.lastlevelxpos
+[ 263] aload_0
+[ 264] aload_0
+[ 265] getfield gamecanvas.levelypos
+[ 266] putfield gamecanvas.lastlevelypos
+[ 267] return

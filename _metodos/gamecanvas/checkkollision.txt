@@ -1,0 +1,68 @@
+// Classe: gamecanvas
+// Metodo: checkkollision
+// Descritor: (IIII)I
+// Instrucoes: 63
+
+[   0] iconst_0
+[   1] istore 5
+[   2] aload_0
+[   3] iload_2
+[   4] invokevirtual game/gamecanvas.getHide
+[   5] iconst_1
+[   6] if_icmpne 92
+[   7] aload_0
+[   8] iload_1
+[   9] invokevirtual game/gamecanvas.getSpriteXpos
+[  10] iload_3
+[  11] iadd
+[  12] aload_0
+[  13] iload_2
+[  14] invokevirtual game/gamecanvas.getSpriteXpos
+[  15] if_icmple 77
+[  16] aload_0
+[  17] iload_1
+[  18] invokevirtual game/gamecanvas.getSpriteXpos
+[  19] aload_0
+[  20] iload_1
+[  21] invokevirtual game/gamecanvas.getSpriteWidth
+[  22] iadd
+[  23] iload_3
+[  24] isub
+[  25] aload_0
+[  26] iload_2
+[  27] invokevirtual game/gamecanvas.getSpriteXpos
+[  28] aload_0
+[  29] iload_2
+[  30] invokevirtual game/gamecanvas.getSpriteWidth
+[  31] iadd
+[  32] if_icmpge 50
+[  33] aload_0
+[  34] iload_1
+[  35] invokevirtual game/gamecanvas.getSpriteYpos
+[  36] iload 4
+[  37] iadd
+[  38] aload_0
+[  39] iload_2
+[  40] invokevirtual game/gamecanvas.getSpriteYpos
+[  41] if_icmple 34
+[  42] aload_0
+[  43] iload_1
+[  44] invokevirtual game/gamecanvas.getSpriteYpos
+[  45] aload_0
+[  46] iload_1
+[  47] invokevirtual game/gamecanvas.getSpriteHeight
+[  48] iadd
+[  49] iload 4
+[  50] isub
+[  51] aload_0
+[  52] iload_2
+[  53] invokevirtual game/gamecanvas.getSpriteYpos
+[  54] aload_0
+[  55] iload_2
+[  56] invokevirtual game/gamecanvas.getSpriteHeight
+[  57] iadd
+[  58] if_icmpge 6
+[  59] iconst_1
+[  60] istore 5
+[  61] iload 5
+[  62] ireturn

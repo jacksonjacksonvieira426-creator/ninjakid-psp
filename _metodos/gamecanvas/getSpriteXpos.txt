@@ -1,0 +1,12 @@
+// Classe: gamecanvas
+// Metodo: getSpriteXpos
+// Descritor: (I)I
+// Instrucoes: 7
+
+[   0] aload_0
+[   1] getfield gamecanvas.sprites
+[   2] iload_1
+[   3] aaload
+[   4] iconst_2
+[   5] iaload
+[   6] ireturn

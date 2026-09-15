@@ -1,0 +1,27 @@
+// Classe: gamecanvas
+// Metodo: LoadIcons
+// Descritor: (Ljava/lang/String;)V
+// Instrucoes: 22
+
+[   0] aload_0
+[   1] aconst_null
+[   2] putfield gamecanvas.loadicon
+[   3] invokestatic java/lang/System.gc
+[   4] aload_0
+[   5] ldc_w 342
+[   6] aload_1
+[   7] invokestatic java/lang/String.valueOf
+[   8] invokestatic java/lang/String.valueOf
+[   9] invokevirtual java/lang/String.concat
+[  10] invokestatic javax/microedition/lcdui/Image.createImage
+[  11] putfield gamecanvas.loadicon
+[  12] aload_0
+[  13] aload_0
+[  14] getfield gamecanvas.loadicon
+[  15] invokevirtual javax/microedition/lcdui/Image.getWidth
+[  16] bipush 16
+[  17] idiv
+[  18] putfield gamecanvas.anzahl_icons
+[  19] goto 4
+[  20] astore_2
+[  21] return

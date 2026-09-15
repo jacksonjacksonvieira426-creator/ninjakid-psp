@@ -1,0 +1,11 @@
+// Classe: gamecanvas
+// Metodo: getGFXHeight
+// Descritor: (I)I
+// Instrucoes: 6
+
+[   0] aload_0
+[   1] getfield gamecanvas.bobgfx
+[   2] iload_1
+[   3] aaload
+[   4] invokevirtual javax/microedition/lcdui/Image.getHeight
+[   5] ireturn

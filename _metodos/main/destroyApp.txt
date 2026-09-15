@@ -1,0 +1,18 @@
+// Classe: main
+// Metodo: destroyApp
+// Descritor: (Z)V
+// Instrucoes: 13
+
+[   0] aload_0
+[   1] pop
+[   2] getstatic gamecanvas.HighScore
+[   3] invokevirtual javax/microedition/rms/RecordStore.closeRecordStore
+[   4] goto 4
+[   5] astore_2
+[   6] aload_0
+[   7] getfield main.screen
+[   8] getfield gamecanvas.animTimer
+[   9] invokevirtual java/util/Timer.cancel
+[  10] aload_0
+[  11] invokevirtual javax/microedition/midlet/MIDlet.notifyDestroyed
+[  12] return

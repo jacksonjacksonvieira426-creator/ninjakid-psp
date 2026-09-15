@@ -1,0 +1,151 @@
+// Classe: gamecanvas
+// Metodo: MakeSprites
+// Descritor: ()V
+// Instrucoes: 146
+
+[   0] aload_0
+[   1] getfield gamecanvas.bobgfx
+[   2] bipush 14
+[   3] aconst_null
+[   4] aastore
+[   5] aload_0
+[   6] getfield gamecanvas.bobgfx
+[   7] bipush 30
+[   8] aconst_null
+[   9] aastore
+[  10] aload_0
+[  11] getfield gamecanvas.bobgfx
+[  12] bipush 23
+[  13] aconst_null
+[  14] aastore
+[  15] invokestatic java/lang/System.gc
+[  16] aload_0
+[  17] getfield gamecanvas.bobgfx
+[  18] bipush 14
+[  19] bipush 8
+[  20] bipush 27
+[  21] invokestatic javax/microedition/lcdui/Image.createImage
+[  22] aastore
+[  23] aload_0
+[  24] getfield gamecanvas.bobgfx
+[  25] bipush 14
+[  26] aaload
+[  27] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  28] astore_1
+[  29] aload_0
+[  30] getfield gamecanvas.leveldata2
+[  31] iconst_0
+[  32] baload
+[  33] istore_2
+[  34] aload_1
+[  35] aload_0
+[  36] getfield gamecanvas.loadicon
+[  37] iload_2
+[  38] iconst_1
+[  39] isub
+[  40] bipush 16
+[  41] imul
+[  42] ineg
+[  43] bipush -5
+[  44] bipush 20
+[  45] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  46] aload_0
+[  47] getfield gamecanvas.leveldata2
+[  48] iconst_0
+[  49] iconst_0
+[  50] bastore
+[  51] aload_0
+[  52] getfield gamecanvas.leveldata2
+[  53] iconst_1
+[  54] baload
+[  55] istore_2
+[  56] aload_1
+[  57] aload_0
+[  58] getfield gamecanvas.loadicon
+[  59] iload_2
+[  60] iconst_1
+[  61] isub
+[  62] bipush 16
+[  63] imul
+[  64] ineg
+[  65] bipush 11
+[  66] bipush 20
+[  67] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  68] aload_0
+[  69] getfield gamecanvas.leveldata2
+[  70] iconst_1
+[  71] iconst_0
+[  72] bastore
+[  73] aload_0
+[  74] getfield gamecanvas.bobgfx
+[  75] bipush 30
+[  76] bipush 16
+[  77] bipush 16
+[  78] iconst_0
+[  79] invokestatic com/nokia/mid/ui/DirectUtils.createImage
+[  80] aastore
+[  81] aload_0
+[  82] getfield gamecanvas.bobgfx
+[  83] bipush 30
+[  84] aaload
+[  85] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  86] astore_1
+[  87] aload_0
+[  88] getfield gamecanvas.leveldata2
+[  89] iconst_2
+[  90] baload
+[  91] istore_2
+[  92] aload_1
+[  93] aload_0
+[  94] getfield gamecanvas.loadicon
+[  95] iload_2
+[  96] iconst_1
+[  97] isub
+[  98] bipush 16
+[  99] imul
+[ 100] ineg
+[ 101] iconst_0
+[ 102] bipush 20
+[ 103] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 104] aload_0
+[ 105] getfield gamecanvas.leveldata2
+[ 106] iconst_2
+[ 107] iconst_0
+[ 108] bastore
+[ 109] aload_0
+[ 110] getfield gamecanvas.bobgfx
+[ 111] bipush 23
+[ 112] bipush 16
+[ 113] bipush 16
+[ 114] iconst_0
+[ 115] invokestatic com/nokia/mid/ui/DirectUtils.createImage
+[ 116] aastore
+[ 117] aload_0
+[ 118] getfield gamecanvas.bobgfx
+[ 119] bipush 23
+[ 120] aaload
+[ 121] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[ 122] astore_1
+[ 123] aload_0
+[ 124] getfield gamecanvas.leveldata2
+[ 125] iconst_3
+[ 126] baload
+[ 127] istore_2
+[ 128] aload_1
+[ 129] aload_0
+[ 130] getfield gamecanvas.loadicon
+[ 131] iload_2
+[ 132] iconst_1
+[ 133] isub
+[ 134] bipush 16
+[ 135] imul
+[ 136] ineg
+[ 137] iconst_0
+[ 138] bipush 20
+[ 139] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 140] aload_0
+[ 141] getfield gamecanvas.leveldata2
+[ 142] iconst_3
+[ 143] iconst_0
+[ 144] bastore
+[ 145] return

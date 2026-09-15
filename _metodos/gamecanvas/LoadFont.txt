@@ -1,0 +1,16 @@
+// Classe: gamecanvas
+// Metodo: LoadFont
+// Descritor: (Ljava/lang/String;)V
+// Instrucoes: 11
+
+[   0] aload_0
+[   1] ldc_w 342
+[   2] aload_1
+[   3] invokestatic java/lang/String.valueOf
+[   4] invokestatic java/lang/String.valueOf
+[   5] invokevirtual java/lang/String.concat
+[   6] invokestatic javax/microedition/lcdui/Image.createImage
+[   7] putfield gamecanvas.loadfont
+[   8] goto 4
+[   9] astore_2
+[  10] return

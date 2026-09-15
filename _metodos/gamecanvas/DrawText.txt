@@ -1,0 +1,387 @@
+// Classe: gamecanvas
+// Metodo: DrawText
+// Descritor: (Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+// Instrucoes: 382
+
+[   0] iconst_0
+[   1] istore 6
+[   2] aload_1
+[   3] invokevirtual javax/microedition/lcdui/Graphics.getClipX
+[   4] istore 7
+[   5] aload_1
+[   6] invokevirtual javax/microedition/lcdui/Graphics.getClipY
+[   7] istore 8
+[   8] aload_1
+[   9] invokevirtual javax/microedition/lcdui/Graphics.getClipHeight
+[  10] istore 9
+[  11] aload_1
+[  12] invokevirtual javax/microedition/lcdui/Graphics.getClipWidth
+[  13] istore 10
+[  14] iload 5
+[  15] iconst_3
+[  16] if_icmpne 20
+[  17] iload_3
+[  18] aload_2
+[  19] invokevirtual java/lang/String.length
+[  20] aload_0
+[  21] getfield gamecanvas.fontwidth
+[  22] imul
+[  23] iconst_2
+[  24] idiv
+[  25] isub
+[  26] istore_3
+[  27] iconst_0
+[  28] istore 5
+[  29] iload 5
+[  30] ifne 317
+[  31] aload_0
+[  32] iconst_0
+[  33] putfield gamecanvas.i
+[  34] aload_0
+[  35] getfield gamecanvas.i
+[  36] aload_2
+[  37] invokevirtual java/lang/String.length
+[  38] if_icmpge 301
+[  39] aload_2
+[  40] aload_0
+[  41] getfield gamecanvas.i
+[  42] invokevirtual java/lang/String.charAt
+[  43] istore 6
+[  44] iload 6
+[  45] bipush 46
+[  46] if_icmpne 59
+[  47] bipush 36
+[  48] istore 6
+[  49] aload_1
+[  50] iload_3
+[  51] aload_0
+[  52] getfield gamecanvas.i
+[  53] aload_0
+[  54] getfield gamecanvas.fontwidth
+[  55] imul
+[  56] iadd
+[  57] iload 4
+[  58] bipush 8
+[  59] bipush 8
+[  60] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[  61] aload_1
+[  62] aload_0
+[  63] getfield gamecanvas.loadfont
+[  64] iload_3
+[  65] aload_0
+[  66] getfield gamecanvas.i
+[  67] aload_0
+[  68] getfield gamecanvas.fontwidth
+[  69] imul
+[  70] iadd
+[  71] aload_0
+[  72] getfield gamecanvas.fontwidth
+[  73] iload 6
+[  74] imul
+[  75] isub
+[  76] iload 4
+[  77] bipush 20
+[  78] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  79] iload 6
+[  80] bipush 99
+[  81] if_icmpne 59
+[  82] bipush 37
+[  83] istore 6
+[  84] aload_1
+[  85] iload_3
+[  86] aload_0
+[  87] getfield gamecanvas.i
+[  88] aload_0
+[  89] getfield gamecanvas.fontwidth
+[  90] imul
+[  91] iadd
+[  92] iload 4
+[  93] bipush 8
+[  94] bipush 8
+[  95] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[  96] aload_1
+[  97] aload_0
+[  98] getfield gamecanvas.loadfont
+[  99] iload_3
+[ 100] aload_0
+[ 101] getfield gamecanvas.i
+[ 102] aload_0
+[ 103] getfield gamecanvas.fontwidth
+[ 104] imul
+[ 105] iadd
+[ 106] aload_0
+[ 107] getfield gamecanvas.fontwidth
+[ 108] iload 6
+[ 109] imul
+[ 110] isub
+[ 111] iload 4
+[ 112] bipush 20
+[ 113] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 114] iload 6
+[ 115] bipush 47
+[ 116] if_icmple 72
+[ 117] iload 6
+[ 118] bipush 58
+[ 119] if_icmpge 65
+[ 120] iload 6
+[ 121] bipush 48
+[ 122] isub
+[ 123] istore 6
+[ 124] aload_1
+[ 125] iload_3
+[ 126] aload_0
+[ 127] getfield gamecanvas.i
+[ 128] aload_0
+[ 129] getfield gamecanvas.fontwidth
+[ 130] imul
+[ 131] iadd
+[ 132] iload 4
+[ 133] bipush 8
+[ 134] bipush 8
+[ 135] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 136] aload_1
+[ 137] aload_0
+[ 138] getfield gamecanvas.loadfont
+[ 139] iload_3
+[ 140] aload_0
+[ 141] getfield gamecanvas.i
+[ 142] aload_0
+[ 143] getfield gamecanvas.fontwidth
+[ 144] imul
+[ 145] iadd
+[ 146] aload_0
+[ 147] getfield gamecanvas.fontwidth
+[ 148] iload 6
+[ 149] imul
+[ 150] isub
+[ 151] iload 4
+[ 152] bipush 20
+[ 153] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 154] goto 76
+[ 155] iload 6
+[ 156] bipush 64
+[ 157] if_icmple 69
+[ 158] iload 6
+[ 159] bipush 91
+[ 160] if_icmpge 62
+[ 161] iload 6
+[ 162] bipush 55
+[ 163] isub
+[ 164] istore 6
+[ 165] aload_1
+[ 166] iload_3
+[ 167] aload_0
+[ 168] getfield gamecanvas.i
+[ 169] aload_0
+[ 170] getfield gamecanvas.fontwidth
+[ 171] imul
+[ 172] iadd
+[ 173] iload 4
+[ 174] bipush 8
+[ 175] bipush 8
+[ 176] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 177] aload_1
+[ 178] aload_0
+[ 179] getfield gamecanvas.loadfont
+[ 180] iload_3
+[ 181] aload_0
+[ 182] getfield gamecanvas.i
+[ 183] aload_0
+[ 184] getfield gamecanvas.fontwidth
+[ 185] imul
+[ 186] iadd
+[ 187] aload_0
+[ 188] getfield gamecanvas.fontwidth
+[ 189] iload 6
+[ 190] imul
+[ 191] isub
+[ 192] iload 4
+[ 193] bipush 20
+[ 194] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 195] aload_0
+[ 196] dup
+[ 197] getfield gamecanvas.i
+[ 198] iconst_1
+[ 199] iadd
+[ 200] putfield gamecanvas.i
+[ 201] goto -306
+[ 202] iload 5
+[ 203] iconst_1
+[ 204] if_icmpne 309
+[ 205] iconst_0
+[ 206] istore 11
+[ 207] aload_0
+[ 208] aload_2
+[ 209] invokevirtual java/lang/String.length
+[ 210] iconst_1
+[ 211] isub
+[ 212] putfield gamecanvas.i
+[ 213] aload_0
+[ 214] getfield gamecanvas.i
+[ 215] iconst_m1
+[ 216] if_icmple 288
+[ 217] aload_2
+[ 218] aload_0
+[ 219] getfield gamecanvas.i
+[ 220] invokevirtual java/lang/String.charAt
+[ 221] istore 6
+[ 222] iload 6
+[ 223] bipush 46
+[ 224] if_icmpne 55
+[ 225] bipush 36
+[ 226] istore 6
+[ 227] aload_1
+[ 228] iload_3
+[ 229] iload 11
+[ 230] aload_0
+[ 231] getfield gamecanvas.fontwidth
+[ 232] imul
+[ 233] isub
+[ 234] iload 4
+[ 235] bipush 8
+[ 236] bipush 8
+[ 237] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 238] aload_1
+[ 239] aload_0
+[ 240] getfield gamecanvas.loadfont
+[ 241] iload_3
+[ 242] iload 11
+[ 243] aload_0
+[ 244] getfield gamecanvas.fontwidth
+[ 245] imul
+[ 246] isub
+[ 247] aload_0
+[ 248] getfield gamecanvas.fontwidth
+[ 249] iload 6
+[ 250] imul
+[ 251] isub
+[ 252] iload 4
+[ 253] bipush 20
+[ 254] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 255] iload 6
+[ 256] bipush 99
+[ 257] if_icmpne 55
+[ 258] bipush 37
+[ 259] istore 6
+[ 260] aload_1
+[ 261] iload_3
+[ 262] iload 11
+[ 263] aload_0
+[ 264] getfield gamecanvas.fontwidth
+[ 265] imul
+[ 266] isub
+[ 267] iload 4
+[ 268] bipush 8
+[ 269] bipush 8
+[ 270] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 271] aload_1
+[ 272] aload_0
+[ 273] getfield gamecanvas.loadfont
+[ 274] iload_3
+[ 275] iload 11
+[ 276] aload_0
+[ 277] getfield gamecanvas.fontwidth
+[ 278] imul
+[ 279] isub
+[ 280] aload_0
+[ 281] getfield gamecanvas.fontwidth
+[ 282] iload 6
+[ 283] imul
+[ 284] isub
+[ 285] iload 4
+[ 286] bipush 20
+[ 287] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 288] iload 6
+[ 289] bipush 47
+[ 290] if_icmple 68
+[ 291] iload 6
+[ 292] bipush 58
+[ 293] if_icmpge 61
+[ 294] iload 6
+[ 295] bipush 48
+[ 296] isub
+[ 297] istore 6
+[ 298] aload_1
+[ 299] iload_3
+[ 300] iload 11
+[ 301] aload_0
+[ 302] getfield gamecanvas.fontwidth
+[ 303] imul
+[ 304] isub
+[ 305] iload 4
+[ 306] bipush 8
+[ 307] bipush 8
+[ 308] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 309] aload_1
+[ 310] aload_0
+[ 311] getfield gamecanvas.loadfont
+[ 312] iload_3
+[ 313] iload 11
+[ 314] aload_0
+[ 315] getfield gamecanvas.fontwidth
+[ 316] imul
+[ 317] isub
+[ 318] aload_0
+[ 319] getfield gamecanvas.fontwidth
+[ 320] iload 6
+[ 321] imul
+[ 322] isub
+[ 323] iload 4
+[ 324] bipush 20
+[ 325] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 326] goto 72
+[ 327] iload 6
+[ 328] bipush 64
+[ 329] if_icmple 65
+[ 330] iload 6
+[ 331] bipush 91
+[ 332] if_icmpge 58
+[ 333] iload 6
+[ 334] bipush 55
+[ 335] isub
+[ 336] istore 6
+[ 337] aload_1
+[ 338] iload_3
+[ 339] iload 11
+[ 340] aload_0
+[ 341] getfield gamecanvas.fontwidth
+[ 342] imul
+[ 343] isub
+[ 344] iload 4
+[ 345] bipush 8
+[ 346] bipush 8
+[ 347] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 348] aload_1
+[ 349] aload_0
+[ 350] getfield gamecanvas.loadfont
+[ 351] iload_3
+[ 352] iload 11
+[ 353] aload_0
+[ 354] getfield gamecanvas.fontwidth
+[ 355] imul
+[ 356] isub
+[ 357] aload_0
+[ 358] getfield gamecanvas.fontwidth
+[ 359] iload 6
+[ 360] imul
+[ 361] isub
+[ 362] iload 4
+[ 363] bipush 20
+[ 364] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 365] iinc 11
+[ 366] aload_0
+[ 367] dup
+[ 368] getfield gamecanvas.i
+[ 369] iconst_1
+[ 370] isub
+[ 371] putfield gamecanvas.i
+[ 372] goto -290
+[ 373] aload_1
+[ 374] iload 7
+[ 375] iload 8
+[ 376] iload 10
+[ 377] iload 9
+[ 378] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 379] goto 5
+[ 380] astore 6
+[ 381] return

@@ -1,0 +1,37 @@
+// Classe: gamecanvas
+// Metodo: PlaySound
+// Descritor: (I)V
+// Instrucoes: 32
+
+[   0] aload_0
+[   1] aconst_null
+[   2] putfield gamecanvas.sound
+[   3] aconst_null
+[   4] astore_2
+[   5] aload_0
+[   6] getfield gamecanvas.tunes
+[   7] iload_1
+[   8] aaload
+[   9] invokestatic game/gamecanvas.convertHexToBinary
+[  10] astore_2
+[  11] goto 6
+[  12] astore_3
+[  13] aconst_null
+[  14] astore_2
+[  15] aload_0
+[  16] new 374
+[  17] dup
+[  18] aload_2
+[  19] iconst_1
+[  20] invokespecial com/nokia/mid/sound/Sound.<init>
+[  21] putfield gamecanvas.sound
+[  22] aload_0
+[  23] getfield gamecanvas.sound
+[  24] aload_2
+[  25] iconst_1
+[  26] invokevirtual com/nokia/mid/sound/Sound.init
+[  27] aload_0
+[  28] getfield gamecanvas.sound
+[  29] iconst_1
+[  30] invokevirtual com/nokia/mid/sound/Sound.play
+[  31] return

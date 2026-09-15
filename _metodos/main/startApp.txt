@@ -1,0 +1,18 @@
+// Classe: main
+// Metodo: startApp
+// Descritor: ()V
+// Instrucoes: 13
+
+[   0] aload_0
+[   1] getfield main.display
+[   2] ifnonnull 11
+[   3] aload_0
+[   4] aload_0
+[   5] invokestatic javax/microedition/lcdui/Display.getDisplay
+[   6] putfield main.display
+[   7] aload_0
+[   8] getfield main.display
+[   9] aload_0
+[  10] getfield main.screen
+[  11] invokevirtual javax/microedition/lcdui/Display.setCurrent
+[  12] return

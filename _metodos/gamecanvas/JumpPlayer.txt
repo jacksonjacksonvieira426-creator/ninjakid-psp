@@ -1,0 +1,149 @@
+// Classe: gamecanvas
+// Metodo: JumpPlayer
+// Descritor: ()V
+// Instrucoes: 144
+
+[   0] aload_0
+[   1] getfield gamecanvas.playerjumps
+[   2] iconst_1
+[   3] if_icmpne 280
+[   4] aload_0
+[   5] getfield gamecanvas.playerONlift
+[   6] ifne 273
+[   7] aload_0
+[   8] getfield gamecanvas.jumpspeed
+[   9] sipush 4450
+[  10] if_icmpge 110
+[  11] aload_0
+[  12] aload_0
+[  13] getfield gamecanvas.jumpspeed
+[  14] sipush 350
+[  15] iadd
+[  16] putfield gamecanvas.jumpspeed
+[  17] aload_0
+[  18] aload_0
+[  19] getfield gamecanvas.playerYpos
+[  20] aload_0
+[  21] getfield gamecanvas.jumpspeed
+[  22] iadd
+[  23] putfield gamecanvas.playerYpos
+[  24] aload_0
+[  25] getfield gamecanvas.jumpspeed
+[  26] ifge 17
+[  27] aload_0
+[  28] iconst_2
+[  29] aload_0
+[  30] getfield gamecanvas.jumpspeed
+[  31] iconst_m1
+[  32] imul
+[  33] invokevirtual game/gamecanvas.Scroll
+[  34] goto 13
+[  35] aload_0
+[  36] bipush 8
+[  37] aload_0
+[  38] getfield gamecanvas.jumpspeed
+[  39] invokevirtual game/gamecanvas.Scroll
+[  40] aload_0
+[  41] getfield gamecanvas.playerlostlive
+[  42] ifne 100
+[  43] aload_0
+[  44] aload_0
+[  45] getfield gamecanvas.player
+[  46] bipush 7
+[  47] invokevirtual game/gamecanvas.setSpriteAnim
+[  48] aload_0
+[  49] getfield gamecanvas.playerdir
+[  50] iconst_1
+[  51] if_icmpne 17
+[  52] aload_0
+[  53] aload_0
+[  54] getfield gamecanvas.player
+[  55] sipush 8192
+[  56] invokevirtual game/gamecanvas.setSpriteManipulation
+[  57] goto 68
+[  58] aload_0
+[  59] aload_0
+[  60] getfield gamecanvas.player
+[  61] iconst_0
+[  62] invokevirtual game/gamecanvas.setSpriteManipulation
+[  63] goto 56
+[  64] aload_0
+[  65] iconst_0
+[  66] putfield gamecanvas.playerjumps
+[  67] aload_0
+[  68] getfield gamecanvas.playerlostlive
+[  69] ifne 44
+[  70] aload_0
+[  71] aload_0
+[  72] getfield gamecanvas.player
+[  73] bipush 6
+[  74] invokevirtual game/gamecanvas.setSpriteAnim
+[  75] aload_0
+[  76] getfield gamecanvas.playerdir
+[  77] iconst_1
+[  78] if_icmpne 17
+[  79] aload_0
+[  80] aload_0
+[  81] getfield gamecanvas.player
+[  82] sipush 8192
+[  83] invokevirtual game/gamecanvas.setSpriteManipulation
+[  84] goto 12
+[  85] aload_0
+[  86] aload_0
+[  87] getfield gamecanvas.player
+[  88] iconst_0
+[  89] invokevirtual game/gamecanvas.setSpriteManipulation
+[  90] aload_0
+[  91] getfield gamecanvas.playerlostlive
+[  92] ifne 101
+[  93] aload_0
+[  94] getfield gamecanvas.jumpspeed
+[  95] ifle 41
+[  96] aload_0
+[  97] aload_0
+[  98] getfield gamecanvas.playerXpos
+[  99] sipush 1000
+[ 100] idiv
+[ 101] bipush 10
+[ 102] iadd
+[ 103] aload_0
+[ 104] getfield gamecanvas.playerYpos
+[ 105] sipush 1000
+[ 106] idiv
+[ 107] bipush 23
+[ 108] iadd
+[ 109] invokevirtual game/gamecanvas.GetIcon
+[ 110] aload_0
+[ 111] getfield gamecanvas.MASK_WALKWAY
+[ 112] if_icmpne 8
+[ 113] aload_0
+[ 114] iconst_0
+[ 115] putfield gamecanvas.playerjumps
+[ 116] aload_0
+[ 117] getfield gamecanvas.jumpspeed
+[ 118] ifge 49
+[ 119] aload_0
+[ 120] aload_0
+[ 121] getfield gamecanvas.playerXpos
+[ 122] sipush 1000
+[ 123] idiv
+[ 124] bipush 10
+[ 125] iadd
+[ 126] aload_0
+[ 127] getfield gamecanvas.playerYpos
+[ 128] sipush 1000
+[ 129] idiv
+[ 130] bipush 10
+[ 131] iadd
+[ 132] invokevirtual game/gamecanvas.GetIcon
+[ 133] aload_0
+[ 134] getfield gamecanvas.MASK_WALKWAY
+[ 135] if_icmpne 16
+[ 136] aload_0
+[ 137] iconst_0
+[ 138] putfield gamecanvas.playerjumps
+[ 139] goto 8
+[ 140] aload_0
+[ 141] iconst_0
+[ 142] putfield gamecanvas.playerjumps
+[ 143] return

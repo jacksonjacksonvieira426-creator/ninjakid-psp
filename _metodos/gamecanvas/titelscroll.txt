@@ -1,0 +1,53 @@
+// Classe: gamecanvas
+// Metodo: titelscroll
+// Descritor: ()V
+// Instrucoes: 48
+
+[   0] aload_0
+[   1] getfield gamecanvas.scrollX
+[   2] aload_0
+[   3] getfield gamecanvas.levelbreite
+[   4] sipush 16000
+[   5] imul
+[   6] ldc_w 372
+[   7] isub
+[   8] if_icmpne 8
+[   9] aload_0
+[  10] iconst_1
+[  11] putfield gamecanvas.titelscrolldir
+[  12] aload_0
+[  13] getfield gamecanvas.scrollX
+[  14] ifne 8
+[  15] aload_0
+[  16] iconst_0
+[  17] putfield gamecanvas.titelscrolldir
+[  18] aload_0
+[  19] getfield gamecanvas.titelscrolldir
+[  20] ifne 15
+[  21] aload_0
+[  22] bipush 60
+[  23] sipush 1000
+[  24] invokevirtual game/gamecanvas.Scroll
+[  25] goto 12
+[  26] aload_0
+[  27] bipush 40
+[  28] sipush 1000
+[  29] invokevirtual game/gamecanvas.Scroll
+[  30] aload_0
+[  31] getfield gamecanvas.tileimagebuffer
+[  32] iconst_0
+[  33] iconst_0
+[  34] sipush 128
+[  35] sipush 128
+[  36] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[  37] aload_0
+[  38] getfield gamecanvas.tileimagebuffer
+[  39] aload_0
+[  40] getfield gamecanvas.offimage
+[  41] aload_0
+[  42] getfield gamecanvas.softxpos
+[  43] aload_0
+[  44] getfield gamecanvas.softypos
+[  45] bipush 20
+[  46] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  47] return

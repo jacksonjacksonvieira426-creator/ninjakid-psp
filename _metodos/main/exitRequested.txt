@@ -1,0 +1,9 @@
+// Classe: main
+// Metodo: exitRequested
+// Descritor: ()V
+// Instrucoes: 4
+
+[   0] aload_0
+[   1] iconst_0
+[   2] invokevirtual game/main.destroyApp
+[   3] return

@@ -1,0 +1,139 @@
+// Classe: gamecanvas
+// Metodo: resetdata
+// Descritor: ()V
+// Instrucoes: 134
+
+[   0] aload_0
+[   1] iconst_0
+[   2] putfield gamecanvas.scrollX
+[   3] aload_0
+[   4] iconst_0
+[   5] putfield gamecanvas.scrollY
+[   6] aload_0
+[   7] iconst_0
+[   8] putfield gamecanvas.softxpos
+[   9] aload_0
+[  10] iconst_0
+[  11] putfield gamecanvas.softypos
+[  12] aload_0
+[  13] iconst_0
+[  14] putfield gamecanvas.jumpspeed
+[  15] aload_0
+[  16] iconst_0
+[  17] putfield gamecanvas.playerjumps
+[  18] aload_0
+[  19] iconst_m1
+[  20] putfield gamecanvas.lastlevelnr
+[  21] aload_0
+[  22] iconst_m1
+[  23] putfield gamecanvas.lastenemynr
+[  24] aload_0
+[  25] iconst_0
+[  26] putfield gamecanvas.keyuppressed
+[  27] aload_0
+[  28] iconst_0
+[  29] putfield gamecanvas.playerfalling
+[  30] aload_0
+[  31] iconst_0
+[  32] putfield gamecanvas.XposOffset
+[  33] aload_0
+[  34] iconst_0
+[  35] putfield gamecanvas.aufleiter
+[  36] aload_0
+[  37] iconst_0
+[  38] putfield gamecanvas.explowaiter
+[  39] aload_0
+[  40] iconst_0
+[  41] putfield gamecanvas.extrajumps
+[  42] aload_0
+[  43] iconst_0
+[  44] putfield gamecanvas.extrajumpspeed
+[  45] aload_0
+[  46] iconst_0
+[  47] putfield gamecanvas.extraypos
+[  48] aload_0
+[  49] iconst_0
+[  50] putfield gamecanvas.keys
+[  51] aload_0
+[  52] iconst_0
+[  53] putfield gamecanvas.diamant
+[  54] aload_0
+[  55] iconst_0
+[  56] putfield gamecanvas.playerhit
+[  57] aload_0
+[  58] iconst_0
+[  59] putfield gamecanvas.playerhitdir
+[  60] aload_0
+[  61] bipush 100
+[  62] putfield gamecanvas.playerpower
+[  63] aload_0
+[  64] iconst_0
+[  65] putfield gamecanvas.playerflashing
+[  66] aload_0
+[  67] iconst_0
+[  68] putfield gamecanvas.playerlostlive
+[  69] aload_0
+[  70] iconst_0
+[  71] putfield gamecanvas.hitrotate
+[  72] aload_0
+[  73] iconst_0
+[  74] putfield gamecanvas.hitrotatedelay
+[  75] aload_0
+[  76] iconst_0
+[  77] putfield gamecanvas.lastplayerxpos
+[  78] aload_0
+[  79] iconst_0
+[  80] putfield gamecanvas.lastplayerypos
+[  81] aload_0
+[  82] iconst_0
+[  83] putfield gamecanvas.lastscrollx
+[  84] aload_0
+[  85] iconst_0
+[  86] putfield gamecanvas.lastscrolly
+[  87] aload_0
+[  88] iconst_0
+[  89] putfield gamecanvas.exploonly
+[  90] aload_0
+[  91] iconst_0
+[  92] putfield gamecanvas.firereleased
+[  93] aload_0
+[  94] iconst_0
+[  95] putfield gamecanvas.playerONlift
+[  96] aload_0
+[  97] iconst_0
+[  98] putfield gamecanvas.extralife
+[  99] aload_0
+[ 100] iconst_0
+[ 101] putfield gamecanvas.swordpower
+[ 102] aload_0
+[ 103] iconst_0
+[ 104] putfield gamecanvas.energyfound
+[ 105] aload_0
+[ 106] iconst_0
+[ 107] putfield gamecanvas.levelok
+[ 108] aload_0
+[ 109] ldc 51
+[ 110] putfield gamecanvas.skycolor
+[ 111] aload_0
+[ 112] iconst_3
+[ 113] putfield gamecanvas.lives
+[ 114] aload_0
+[ 115] iconst_5
+[ 116] putfield gamecanvas.i
+[ 117] aload_0
+[ 118] getfield gamecanvas.i
+[ 119] aload_0
+[ 120] getfield gamecanvas.anzahlsprites
+[ 121] if_icmpge 24
+[ 122] aload_0
+[ 123] aload_0
+[ 124] getfield gamecanvas.i
+[ 125] invokevirtual game/gamecanvas.killSprite
+[ 126] aload_0
+[ 127] dup
+[ 128] getfield gamecanvas.i
+[ 129] iconst_1
+[ 130] iadd
+[ 131] putfield gamecanvas.i
+[ 132] goto -29
+[ 133] return
