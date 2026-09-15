@@ -82,7 +82,8 @@ typedef struct gamecanvas_AnimationTask_s gamecanvas_AnimationTask;
 typedef struct gamecanvas_AnimationTask_s gamecanvas_AnimationTask_s;
 typedef struct gamecanvas_s gamecanvas;
 typedef struct gamecanvas_s gamecanvas_s;
-typedef struct main_class_s main_cls;
+typedef struct main_cls_s main_cls;
+typedef struct main_cls_s main_cls_s;
 typedef struct main_class_s main_class_s;
 
 // Globais
